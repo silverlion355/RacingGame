@@ -1,1 +1,280 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnNjcmVlbnM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LlNjcmVlbkFkYXB0ZXI7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLkNvbG9yOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5HTDIwOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5PcnRob2dyYXBoaWNDYW1lcmE7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLlBlcnNwZWN0aXZlQ2FtZXJhOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nMmQuQml0bWFwRm9udDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzJkLlNwcml0ZUJhdGNoOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nM2QuRW52aXJvbm1lbnQ7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmczZC5Nb2RlbDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzNkLk1vZGVsQmF0Y2g7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmczZC5hdHRyaWJ1dGVzLkNvbG9yQXR0cmlidXRlOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nM2QuZW52aXJvbm1lbnQuRGlyZWN0aW9uYWxMaWdodDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzNkLmVudmlyb25tZW50LkFtYmllbnRMaWdodDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZ2x1dGlscy5TaGFwZVJlbmRlcmVyOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5tYXRoLlZlY3RvcjI7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLkdhbWVDb25zdGFudHM7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLlJhY2luZ0dhbWU7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzLkFJQ2FyOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5lbnRpdGllcy5DYXJGYWN0b3J5OwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5lbnRpdGllcy5QbGF5ZXJDYXI7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzLlRyYWNrOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5sZXZlbHMuTGV2ZWxDb25maWc7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLmxldmVscy5MZXZlbERlZmluaXRpb247CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXMuQ2FtZXJhQ29udHJvbGxlcjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUuc3lzdGVtcy5SYWNlTWFuYWdlcjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUuc3lzdGVtcy5Ub3VjaElucHV0Q29udHJvbGxlcjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUudXRpbHMuUmVjdDsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUudXRpbHMuVGV4dERyYXc7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzLlVpQnV0dG9uOwoKaW1wb3J0IGphdmEudXRpbC5BcnJheUxpc3Q7CmltcG9ydCBqYXZhLnV0aWwuTGlzdDsKCi8qKiDmoLjlv4MgM0Qg5q+U6LWb55WM6Z2i77ya6LWb6YGTL+i9pui+hua4suafk+OAgeinpuaOp+aTjeaOp+OAgUhVROOAgeWciOaVsOaOkuWQjeOAgeaaguWBnCAqLwpwdWJsaWMgY2xhc3MgR2FtZVNjcmVlbiBleHRlbmRzIFNjcmVlbkFkYXB0ZXIgewogICAgcHJpdmF0ZSBmaW5hbCBSYWNpbmdHYW1lIGdhbWU7CiAgICBwcml2YXRlIGZpbmFsIGludCBsZXZlbElkOwoKICAgIHByaXZhdGUgVHJhY2sgdHJhY2s7CiAgICBwcml2YXRlIFBsYXllckNhciBwbGF5ZXI7CiAgICBwcml2YXRlIGZpbmFsIExpc3Q8QUlDYXI+IGFpQ2FycyA9IG5ldyBBcnJheUxpc3Q8PigpOwogICAgcHJpdmF0ZSBmaW5hbCBMaXN0PE1vZGVsPiBjYXJNb2RlbHMgPSBuZXcgQXJyYXlMaXN0PD4oKTsKICAgIHByaXZhdGUgUmFjZU1hbmFnZXIgcmFjZU1hbmFnZXI7CgogICAgcHJpdmF0ZSBQZXJzcGVjdGl2ZUNhbWVyYSBjYW07CiAgICBwcml2YXRlIGZpbmFsIE1vZGVsQmF0Y2ggbW9kZWxCYXRjaCA9IG5ldyBNb2RlbEJhdGNoKCk7CiAgICBwcml2YXRlIEVudmlyb25tZW50IGVudmlyb25tZW50OwogICAgcHJpdmF0ZSBDYW1lcmFDb250cm9sbGVyIGNhbWVyYUNvbnRyb2xsZXI7CiAgICBwcml2YXRlIGZpbmFsIFRvdWNoSW5wdXRDb250cm9sbGVyIHRvdWNoID0gbmV3IFRvdWNoSW5wdXRDb250cm9sbGVyKCk7CgogICAgcHJpdmF0ZSBmaW5hbCBPcnRob2dyYXBoaWNDYW1lcmEgdWlDYW0gPSBuZXcgT3J0aG9ncmFwaGljQ2FtZXJhKCk7CiAgICBwcml2YXRlIGZpbmFsIFNoYXBlUmVuZGVyZXIgc3IgPSBuZXcgU2hhcGVSZW5kZXJlcigpOwogICAgcHJpdmF0ZSBmaW5hbCBTcHJpdGVCYXRjaCBiYXRjaCA9IG5ldyBTcHJpdGVCYXRjaCgpOwoKICAgIHByaXZhdGUgYm9vbGVhbiBwYXVzZWQgPSBmYWxzZTsKICAgIHByaXZhdGUgYm9vbGVhbiB0cmFuc2l0aW9uZWQgPSBmYWxzZTsKCiAgICAvLyDmmoLlgZzpga7nvanmjInpkq4KICAgIHByaXZhdGUgVWlCdXR0b24gcGF1c2VSZXN1bWUsIHBhdXNlUXVpdDsKCiAgICBwdWJsaWMgR2FtZVNjcmVlbihSYWNpbmdHYW1lIGdhbWUsIGludCBsZXZlbElkKSB7CiAgICAgICAgdGhpcy5nYW1lID0gZ2FtZTsKICAgICAgICB0aGlzLmxldmVsSWQgPSBsZXZlbElkOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgc2hvdygpIHsKICAgICAgICBHZHguaW5wdXQuc2V0SW5wdXRQcm9jZXNzb3IobnVsbCk7CiAgICAgICAgTGV2ZWxEZWZpbml0aW9uIGx2ID0gTGV2ZWxDb25maWcuZ2V0KGxldmVsSWQpOwoKICAgICAgICB0cmFjayA9IG5ldyBUcmFjayhsdik7CgogICAgICAgIC8vIOeOqeWutui9pgogICAgICAgIHBsYXllciA9IG5ldyBQbGF5ZXJDYXIoZ2FtZS5zZXR0aW5ncy5icmFuZCwgbHYucGxheWVyTWF4U3BlZWQpOwogICAgICAgIHBsYXllci5wb3NpdGlvbi5zZXQodHJhY2suZ2V0U3RhcnRQb3NpdGlvbigwKSk7CiAgICAgICAgcGxheWVyLmhlYWRpbmcgPSB0cmFjay5nZXRTdGFydEhlYWRpbmcoKTsKICAgICAgICBhdHRhY2hNb2RlbChwbGF5ZXIsIEdhbWVDb25zdGFudHMuQlJBTkRfQ09MT1JTW2dhbWUuc2V0dGluZ3MuYnJhbmRdKTsKCiAgICAgICAgLy8g5a+55omL6L2mCiAgICAgICAgZm9yIChpbnQgayA9IDA7IGsgPCBsdi5vcHBvbmVudENvdW50OyBrKyspIHsKICAgICAgICAgICAgaW50IGJyYW5kID0gKGsgKyAxKSAlIDM7CiAgICAgICAgICAgIEFJQ2FyIGFpID0gbmV3IEFJQ2FyKGJyYW5kLCBsdi5vcHBvbmVudFNwZWVkICsgayAqIDAuNmYpOwogICAgICAgICAgICBhaS50YXJnZXRXYXlwb2ludCA9IDM7CiAgICAgICAgICAgIGFpLnBvc2l0aW9uLnNldCh0cmFjay5nZXRTdGFydFBvc2l0aW9uKGsgKyAxKSk7CiAgICAgICAgICAgIGFpLmhlYWRpbmcgPSB0cmFjay5nZXRTdGFydEhlYWRpbmcoKTsKICAgICAgICAgICAgYXR0YWNoTW9kZWwoYWksIEdhbWVDb25zdGFudHMuQlJBTkRfQ09MT1JTW2JyYW5kXSk7CiAgICAgICAgICAgIGFpQ2Fycy5hZGQoYWkpOwogICAgICAgIH0KCiAgICAgICAgcmFjZU1hbmFnZXIgPSBuZXcgUmFjZU1hbmFnZXIodHJhY2ssIHBsYXllciwgYWlDYXJzLCBsdi5sYXBzKTsKCiAgICAgICAgLy8g5pGE5YOP5py6CiAgICAgICAgY2FtID0gbmV3IFBlcnNwZWN0aXZlQ2FtZXJhKDY3ZiwgR2R4LmdyYXBoaWNzLmdldFdpZHRoKCksIEdkeC5ncmFwaGljcy5nZXRIZWlnaHQoKSk7CiAgICAgICAgY2FtLm5lYXIgPSAwLjFmOwogICAgICAgIGNhbS5mYXIgPSAyMDAwZjsKICAgICAgICBWZWN0b3IyIGYgPSBwbGF5ZXIuZm9yd2FyZCgpOwogICAgICAgIGNhbS5wb3NpdGlvbi5zZXQocGxheWVyLnBvc2l0aW9uLnggLSBmLnggKiBHYW1lQ29uc3RhbnRzLkNIQVNFX0RJU1QsCiAgICAgICAgICAgICAgICBHYW1lQ29uc3RhbnRzLkNIQVNFX0hFSUdIVCwgcGxheWVyLnBvc2l0aW9uLnkgLSBmLnkgKiBHYW1lQ29uc3RhbnRzLkNIQVNFX0RJU1QpOwogICAgICAgIGNhbS5sb29rQXQocGxheWVyLnBvc2l0aW9uLngsIDFmLCBwbGF5ZXIucG9zaXRpb24ueSk7CiAgICAgICAgY2FtLnVwLnNldCgwLCAxLCAwKTsKICAgICAgICBjYW0udXBkYXRlKCk7CiAgICAgICAgY2FtZXJhQ29udHJvbGxlciA9IG5ldyBDYW1lcmFDb250cm9sbGVyKGNhbSwgZ2FtZS5zZXR0aW5ncy5jYW1lcmFNb2RlKTsKCiAgICAgICAgLy8g5YWJ54Wn546v5aKDCiAgICAgICAgZW52aXJvbm1lbnQgPSBuZXcgRW52aXJvbm1lbnQoKTsKICAgICAgICBlbnZpcm9ubWVudC5zZXQobmV3IENvbG9yQXR0cmlidXRlKENvbG9yQXR0cmlidXRlLkFtYmllbnRMaWdodCwgMC41NWYsIDAuNTVmLCAwLjZmLCAxZikpOwogICAgICAgIGVudmlyb25tZW50LmFkZChuZXcgRGlyZWN0aW9uYWxMaWdodCgpLnNldCgwLjlmLCAwLjlmLCAwLjg1ZiwgLTAuNWYsIC0xZiwgLTAuMzVmKSk7CgogICAgICAgIHJlc2l6ZShHZHguZ3JhcGhpY3MuZ2V0V2lkdGgoKSwgR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpKTsKCiAgICAgICAgZ2FtZS5hdWRpby5zdGFydEVuZ2luZSgpOwogICAgfQoKICAgIHByaXZhdGUgdm9pZCBhdHRhY2hNb2RlbChjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzLkNhciBjYXIsIENvbG9yIGNvbG9yKSB7CiAgICAgICAgTW9kZWwgbSA9IENhckZhY3RvcnkuYnVpbGRDYXJNb2RlbChjb2xvcik7CiAgICAgICAgY2FyTW9kZWxzLmFkZChtKTsKICAgICAgICBjYXIuaW5zdGFuY2UgPSBuZXcgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nM2QuTW9kZWxJbnN0YW5jZShtKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIHJlc2l6ZShpbnQgd2lkdGgsIGludCBoZWlnaHQpIHsKICAgICAgICBjYW0udmlld3BvcnRXaWR0aCA9IHdpZHRoOwogICAgICAgIGNhbS52aWV3cG9ydEhlaWdodCA9IGhlaWdodDsKICAgICAgICBjYW0udXBkYXRlKCk7CiAgICAgICAgdWlDYW0uc2V0VG9PcnRobyh0cnVlLCB3aWR0aCwgaGVpZ2h0KTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIHJlbmRlcihmbG9hdCBkZWx0YSkgewogICAgICAgIC8vIDEpIOi+k+WFpeS4jueJqeeQhgogICAgICAgIHRvdWNoLnVwZGF0ZSgpOwogICAgICAgIGlmICh0b3VjaC5jYW1lcmFFZGdlKSB7CiAgICAgICAgICAgIGNhbWVyYUNvbnRyb2xsZXIudG9nZ2xlKCk7CiAgICAgICAgICAgIGdhbWUuYXVkaW8ucGxheUNsaWNrKCk7CiAgICAgICAgfQogICAgICAgIGlmICh0b3VjaC5wYXVzZUVkZ2UpIHsKICAgICAgICAgICAgcGF1c2VkID0gIXBhdXNlZDsKICAgICAgICAgICAgZ2FtZS5hdWRpby5wbGF5Q2xpY2soKTsKICAgICAgICB9CgogICAgICAgIGlmICghcGF1c2VkICYmICF0cmFuc2l0aW9uZWQpIHsKICAgICAgICAgICAgcmFjZU1hbmFnZXIudXBkYXRlKGRlbHRhLCB0b3VjaC5zdGVlciwgdG91Y2gudGhyb3R0bGUgPyAxIDogMCwgdG91Y2guYnJha2UgPyAxIDogMCk7CiAgICAgICAgICAgIGdhbWUuYXVkaW8uc2V0RW5naW5lSW50ZW5zaXR5KE1hdGgubWluKDFmLCBNYXRoLmFicyhwbGF5ZXIuc3BlZWQpIC8gcGxheWVyLm1heFNwZWVkKSk7CiAgICAgICAgICAgIGlmIChyYWNlTWFuYWdlci5wbGF5ZXJIaXRUaGlzRnJhbWUpIGdhbWUuYXVkaW8ucGxheUNyYXNoKCk7CiAgICAgICAgICAgIGNhbWVyYUNvbnRyb2xsZXIudXBkYXRlKHBsYXllcik7CiAgICAgICAgfQoKICAgICAgICAvLyAyKSDlrozotZsg4oaSIOe7k+eulwogICAgICAgIGlmIChyYWNlTWFuYWdlci5yYWNlT3ZlciAmJiAhdHJhbnNpdGlvbmVkKSB7CiAgICAgICAgICAgIGZpbmlzaFJhY2UoKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgLy8gMykg5riy5p+TIDNECiAgICAgICAgR2R4LmdsLmdsQ2xlYXJDb2xvcigwLjQ1ZiwgMC42MmYsIDAuODVmLCAxZik7CiAgICAgICAgR2R4LmdsLmdsQ2xlYXIoR0wyMC5HTF9DT0xPUl9CVUZGRVJfQklUIHwgR0wyMC5HTF9ERVBUSF9CVUZGRVJfQklUKTsKICAgICAgICBtb2RlbEJhdGNoLmJlZ2luKGNhbSk7CiAgICAgICAgbW9kZWxCYXRjaC5yZW5kZXIodHJhY2suaW5zdGFuY2UsIGVudmlyb25tZW50KTsKICAgICAgICBtb2RlbEJhdGNoLnJlbmRlcihwbGF5ZXIuaW5zdGFuY2UsIGVudmlyb25tZW50KTsKICAgICAgICBmb3IgKEFJQ2FyIGFpIDogYWlDYXJzKSBtb2RlbEJhdGNoLnJlbmRlcihhaS5pbnN0YW5jZSwgZW52aXJvbm1lbnQpOwogICAgICAgIG1vZGVsQmF0Y2guZW5kKCk7CgogICAgICAgIC8vIDQpIOa4suafkyBIVUQgLyDop6bmjqfmjInpkq4KICAgICAgICBkcmF3SHVkKCk7CgogICAgICAgIC8vIDUpIOaaguWBnOmBrue9qQogICAgICAgIGlmIChwYXVzZWQpIGRyYXdQYXVzZU92ZXJsYXkoKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgZHJhd0h1ZCgpIHsKICAgICAgICBzci5zZXRQcm9qZWN0aW9uTWF0cml4KHVpQ2FtLmNvbWJpbmVkKTsKICAgICAgICBiYXRjaC5zZXRQcm9qZWN0aW9uTWF0cml4KHVpQ2FtLmNvbWJpbmVkKTsKCiAgICAgICAgaW50IHcgPSBHZHguZ3JhcGhpY3MuZ2V0V2lkdGgoKTsKICAgICAgICBpbnQgaCA9IEdkeC5ncmFwaGljcy5nZXRIZWlnaHQoKTsKCiAgICAgICAgLy8g6Kem5o6n5oyJ6ZKuCiAgICAgICAgdG91Y2guYnRuTGVmdC5kcmF3KHNyLCBiYXRjaCwgZ2FtZS5mb250LCB0b3VjaC5zdGVlciA9PSAtMSk7CiAgICAgICAgdG91Y2guYnRuUmlnaHQuZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgdG91Y2guc3RlZXIgPT0gMSk7CiAgICAgICAgdG91Y2guYnRuVGhyb3R0bGUuZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgdG91Y2gudGhyb3R0bGUpOwogICAgICAgIHRvdWNoLmJ0bkJyYWtlLmRyYXcoc3IsIGJhdGNoLCBnYW1lLmZvbnQsIHRvdWNoLmJyYWtlKTsKICAgICAgICBkcmF3U21hbGxCdXR0b24odG91Y2gucmVjdENhbWVyYSwgIuinhuinkiIpOwogICAgICAgIGRyYXdTbWFsbEJ1dHRvbih0b3VjaC5yZWN0UGF1c2UsICLmmoLlgZwiKTsKCiAgICAgICAgLy8g5L+h5oGv5paH5pysCiAgICAgICAgTGV2ZWxEZWZpbml0aW9uIGx2ID0gTGV2ZWxDb25maWcuZ2V0KGxldmVsSWQpOwogICAgICAgIGludCByYW5rID0gcmFjZU1hbmFnZXIuZ2V0UGxheWVyUmFuaygpOwogICAgICAgIGludCB0b3RhbCA9IGFpQ2Fycy5zaXplKCkgKyAxOwogICAgICAgIGludCBsYXAgPSBNYXRoLm1pbihwbGF5ZXIubGFwc0NvbXBsZXRlZCArIDEsIGx2LmxhcHMpOwogICAgICAgIGludCB0ID0gKGludCkgcmFjZU1hbmFnZXIucmFjZVRpbWU7CiAgICAgICAgU3RyaW5nIHRpbWUgPSBTdHJpbmcuZm9ybWF0KCIlMDJkOiUwMmQiLCB0IC8gNjAsIHQgJSA2MCk7CgogICAgICAgIGludCB0b3AgPSA5NjsKICAgICAgICBiYXRjaC5iZWdpbigpOwogICAgICAgIGdhbWUuZm9udC5zZXRDb2xvcihDb2xvci5XSElURSk7CiAgICAgICAgVGV4dERyYXcuZHJhdyhiYXRjaCwgZ2FtZS5mb250LCBsdi5uYW1lLCB3IC8gMmYgLSA0MGYsIHRvcCk7CiAgICAgICAgVGV4dERyYXcuZHJhdyhiYXRjaCwgZ2FtZS5mb250LAogICAgICAgICAgICAgICAgIuaOkuWQjSAiICsgcmFuayArICIvIiArIHRvdGFsICsgIiAgIOWciCAiICsgbGFwICsgIi8iICsgbHYubGFwcyArICIgICDml7bpl7QgIiArIHRpbWUsCiAgICAgICAgICAgICAgICB3IC8gMmYgLSAxMzBmLCB0b3AgKyAzNGYpOwogICAgICAgIFRleHREcmF3LmRyYXcoYmF0Y2gsIGdhbWUuZm9udCwKICAgICAgICAgICAgICAgICLpgJ/luqYgIiArIChpbnQpIChNYXRoLmFicyhwbGF5ZXIuc3BlZWQpICogMy42ZikgKyAiIGttL2giLAogICAgICAgICAgICAgICAgMjQsIGggLyAyZik7CiAgICAgICAgYmF0Y2guZW5kKCk7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIGRyYXdTbWFsbEJ1dHRvbihSZWN0IHIsIFN0cmluZyBsYWJlbCkgewogICAgICAgIHNyLmJlZ2luKFNoYXBlUmVuZGVyZXIuU2hhcGVUeXBlLkZpbGxlZCk7CiAgICAgICAgc3Iuc2V0Q29sb3IobmV3IENvbG9yKDAuMmYsIDAuNGYsIDAuN2YsIDAuOWYpKTsKICAgICAgICBzci5yZWN0KHIueCwgci55LCByLncsIHIuaCk7CiAgICAgICAgc3IuZW5kKCk7CiAgICAgICAgYmF0Y2guYmVnaW4oKTsKICAgICAgICBnYW1lLmZvbnQuc2V0Q29sb3IoQ29sb3IuV0hJVEUpOwogICAgICAgIFRleHREcmF3LmRyYXcoYmF0Y2gsIGdhbWUuZm9udCwgbGFiZWwsIHIueCArIHIudyAvIDJmIC0gMjRmLCByLnkgKyByLmggLyAyZiArIDhmKTsKICAgICAgICBiYXRjaC5lbmQoKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgZHJhd1BhdXNlT3ZlcmxheSgpIHsKICAgICAgICBpbnQgdyA9IEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpOwogICAgICAgIGludCBoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwoKICAgICAgICBzci5zZXRQcm9qZWN0aW9uTWF0cml4KHVpQ2FtLmNvbWJpbmVkKTsKICAgICAgICBiYXRjaC5zZXRQcm9qZWN0aW9uTWF0cml4KHVpQ2FtLmNvbWJpbmVkKTsKICAgICAgICBzci5iZWdpbihTaGFwZVJlbmRlcmVyLlNoYXBlVHlwZS5GaWxsZWQpOwogICAgICAgIHNyLnNldENvbG9yKDAsIDAsIDAsIDAuNmYpOwogICAgICAgIHNyLnJlY3QoMCwgMCwgdywgaCk7CiAgICAgICAgc3IuZW5kKCk7CgogICAgICAgIGZsb2F0IGJ3ID0gTWF0aC5taW4odyAqIDAuNmYsIDMyMGYpOwogICAgICAgIGZsb2F0IGJoID0gNjRmOwogICAgICAgIGZsb2F0IGN4ID0gdyAvIDJmIC0gYncgLyAyZjsKICAgICAgICBmbG9hdCB5ID0gaCAvIDJmIC0gYmg7CiAgICAgICAgcGF1c2VSZXN1bWUgPSBuZXcgVWlCdXR0b24oY3gsIHksIGJ3LCBiaCwgIue7p+e7rSIpOwogICAgICAgIHBhdXNlUXVpdCA9IG5ldyBVaUJ1dHRvbihjeCwgeSArIGJoICsgMTZmLCBidywgYmgsICLpgIDlh7rliLDoj5zljZUiKTsKCiAgICAgICAgcGF1c2VSZXN1bWUuZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgZmFsc2UpOwogICAgICAgIHBhdXNlUXVpdC5kcmF3KHNyLCBiYXRjaCwgZ2FtZS5mb250LCBmYWxzZSk7CgogICAgICAgIGlmIChHZHguaW5wdXQuanVzdFRvdWNoZWQoKSkgewogICAgICAgICAgICBpbnQgeCA9IEdkeC5pbnB1dC5nZXRYKCk7CiAgICAgICAgICAgIGludCB5MiA9IEdkeC5pbnB1dC5nZXRZKCk7CiAgICAgICAgICAgIGZsb2F0IHNoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwogICAgICAgICAgICBnYW1lLmF1ZGlvLnBsYXlDbGljaygpOwogICAgICAgICAgICBpZiAocGF1c2VSZXN1bWUucmVjdC5jb250YWlucyh4LCB5MikpIHsKICAgICAgICAgICAgICAgIHBhdXNlZCA9IGZhbHNlOwogICAgICAgICAgICB9IGVsc2UgaWYgKHBhdXNlUXVpdC5yZWN0LmNvbnRhaW5zKHgsIHkyKSkgewogICAgICAgICAgICAgICAgZ2FtZS5hdWRpby5zdG9wRW5naW5lKCk7CiAgICAgICAgICAgICAgICBkaXNwb3NlUmFjZSgpOwogICAgICAgICAgICAgICAgZ2FtZS5zZXRTY3JlZW4obmV3IE1haW5NZW51U2NyZWVuKGdhbWUpKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIHZvaWQgZmluaXNoUmFjZSgpIHsKICAgICAgICB0cmFuc2l0aW9uZWQgPSB0cnVlOwogICAgICAgIGludCByYW5rID0gcmFjZU1hbmFnZXIuZ2V0UGxheWVyUmFuaygpOwogICAgICAgIGludCBwb2ludHMgPSBHYW1lQ29uc3RhbnRzLnNjb3JlRm9yUmFuayhyYW5rKTsKICAgICAgICBnYW1lLnNjb3JlLmFkZFNjb3JlKHBvaW50cyk7CiAgICAgICAgZ2FtZS5hdWRpby5zdG9wRW5naW5lKCk7CiAgICAgICAgZ2FtZS5hdWRpby5wbGF5V2luKCk7CiAgICAgICAgZGlzcG9zZVJhY2UoKTsKICAgICAgICBnYW1lLnNldFNjcmVlbihuZXcgUmVzdWx0U2NyZWVuKGdhbWUsIGxldmVsSWQsIHJhbmssIHBvaW50cywgcmFjZU1hbmFnZXIucmFjZVRpbWUpKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgZGlzcG9zZVJhY2UoKSB7CiAgICAgICAgaWYgKHRyYWNrICE9IG51bGwpIHRyYWNrLmRpc3Bvc2UoKTsKICAgICAgICBmb3IgKE1vZGVsIG0gOiBjYXJNb2RlbHMpIG0uZGlzcG9zZSgpOwogICAgICAgIGNhck1vZGVscy5jbGVhcigpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgZGlzcG9zZSgpIHsKICAgICAgICBkaXNwb3NlUmFjZSgpOwogICAgICAgIG1vZGVsQmF0Y2guZGlzcG9zZSgpOwogICAgICAgIHNyLmRpc3Bvc2UoKTsKICAgICAgICBiYXRjaC5kaXNwb3NlKCk7CiAgICB9Cn0K
+package com.racinggame.core.screens;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.ScreenAdapter;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.PerspectiveCamera;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g3d.Environment;
+import com.badlogic.gdx.graphics.g3d.Model;
+import com.badlogic.gdx.graphics.g3d.ModelBatch;
+import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
+import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
+import com.badlogic.gdx.graphics.g3d.environment.AmbientLight;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.math.Vector2;
+import com.racinggame.core.GameConstants;
+import com.racinggame.core.RacingGame;
+import com.racinggame.core.entities.AICar;
+import com.racinggame.core.entities.CarFactory;
+import com.racinggame.core.entities.PlayerCar;
+import com.racinggame.core.entities.Track;
+import com.racinggame.core.levels.LevelConfig;
+import com.racinggame.core.levels.LevelDefinition;
+import com.racinggame.core.systems.CameraController;
+import com.racinggame.core.systems.RaceManager;
+import com.racinggame.core.systems.TouchInputController;
+import com.racinggame.core.utils.Rect;
+import com.racinggame.core.utils.TextDraw;
+import com.racinggame.core.utils.UiButton;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/** 核心 3D 比赛界面：赛道/车辆渲染、触控操控、HUD、圈数排名、暂停 */
+public class GameScreen extends ScreenAdapter {
+    private final RacingGame game;
+    private final int levelId;
+
+    private Track track;
+    private PlayerCar player;
+    private final List<AICar> aiCars = new ArrayList<>();
+    private final List<Model> carModels = new ArrayList<>();
+    private RaceManager raceManager;
+
+    private PerspectiveCamera cam;
+    private final ModelBatch modelBatch = new ModelBatch();
+    private Environment environment;
+    private CameraController cameraController;
+    private final TouchInputController touch = new TouchInputController();
+
+    private final OrthographicCamera uiCam = new OrthographicCamera();
+    private final ShapeRenderer sr = new ShapeRenderer();
+    private final SpriteBatch batch = new SpriteBatch();
+
+    private boolean paused = false;
+    private boolean transitioned = false;
+
+    // 暂停遮罩按钮
+    private UiButton pauseResume, pauseQuit;
+
+    public GameScreen(RacingGame game, int levelId) {
+        this.game = game;
+        this.levelId = levelId;
+    }
+
+    @Override
+    public void show() {
+        Gdx.input.setInputProcessor(null);
+        LevelDefinition lv = LevelConfig.get(levelId);
+
+        track = new Track(lv);
+
+        // 玩家车
+        player = new PlayerCar(game.settings.brand, lv.playerMaxSpeed);
+        player.position.set(track.getStartPosition(0));
+        player.heading = track.getStartHeading();
+        attachModel(player, GameConstants.BRAND_COLORS[game.settings.brand]);
+
+        // 对手车
+        for (int k = 0; k < lv.opponentCount; k++) {
+            int brand = (k + 1) % 3;
+            AICar ai = new AICar(brand, lv.opponentSpeed + k * 0.6f);
+            ai.targetWaypoint = 3;
+            ai.position.set(track.getStartPosition(k + 1));
+            ai.heading = track.getStartHeading();
+            attachModel(ai, GameConstants.BRAND_COLORS[brand]);
+            aiCars.add(ai);
+        }
+
+        raceManager = new RaceManager(track, player, aiCars, lv.laps);
+
+        // 摄像机
+        cam = new PerspectiveCamera(67f, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        cam.near = 0.1f;
+        cam.far = 2000f;
+        Vector2 f = player.forward();
+        cam.position.set(player.position.x - f.x * GameConstants.CHASE_DIST,
+                GameConstants.CHASE_HEIGHT, player.position.y - f.y * GameConstants.CHASE_DIST);
+        cam.lookAt(player.position.x, 1f, player.position.y);
+        cam.up.set(0, 1, 0);
+        cam.update();
+        cameraController = new CameraController(cam, game.settings.cameraMode);
+
+        // 光照环境
+        environment = new Environment();
+        environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.55f, 0.55f, 0.6f, 1f));
+        environment.add(new DirectionalLight().set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.35f));
+
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+
+        game.audio.startEngine();
+    }
+
+    private void attachModel(com.racinggame.core.entities.Car car, Color color) {
+        Model m = CarFactory.buildCarModel(color);
+        carModels.add(m);
+        car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(m);
+    }
+
+    @Override
+    public void resize(int width, int height) {
+        cam.viewportWidth = width;
+        cam.viewportHeight = height;
+        cam.update();
+        uiCam.setToOrtho(true, width, height);
+    }
+
+    @Override
+    public void render(float delta) {
+        // 1) 输入与物理
+        touch.update();
+        if (touch.cameraEdge) {
+            cameraController.toggle();
+            game.audio.playClick();
+        }
+        if (touch.pauseEdge) {
+            paused = !paused;
+            game.audio.playClick();
+        }
+
+        if (!paused && !transitioned) {
+            raceManager.update(delta, touch.steer, touch.throttle ? 1 : 0, touch.brake ? 1 : 0);
+            game.audio.setEngineIntensity(Math.min(1f, Math.abs(player.speed) / player.maxSpeed));
+            if (raceManager.playerHitThisFrame) game.audio.playCrash();
+            cameraController.update(player);
+        }
+
+        // 2) 完赛 → 结算
+        if (raceManager.raceOver && !transitioned) {
+            finishRace();
+            return;
+        }
+
+        // 3) 渲染 3D
+        Gdx.gl.glClearColor(0.45f, 0.62f, 0.85f, 1f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+        modelBatch.begin(cam);
+        modelBatch.render(track.instance, environment);
+        modelBatch.render(player.instance, environment);
+        for (AICar ai : aiCars) modelBatch.render(ai.instance, environment);
+        modelBatch.end();
+
+        // 4) 渲染 HUD / 触控按钮
+        drawHud();
+
+        // 5) 暂停遮罩
+        if (paused) drawPauseOverlay();
+    }
+
+    private void drawHud() {
+        sr.setProjectionMatrix(uiCam.combined);
+        batch.setProjectionMatrix(uiCam.combined);
+
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+
+        // 触控按钮
+        touch.btnLeft.draw(sr, batch, game.font, touch.steer == -1);
+        touch.btnRight.draw(sr, batch, game.font, touch.steer == 1);
+        touch.btnThrottle.draw(sr, batch, game.font, touch.throttle);
+        touch.btnBrake.draw(sr, batch, game.font, touch.brake);
+        drawSmallButton(touch.rectCamera, "视角");
+        drawSmallButton(touch.rectPause, "暂停");
+
+        // 信息文本
+        LevelDefinition lv = LevelConfig.get(levelId);
+        int rank = raceManager.getPlayerRank();
+        int total = aiCars.size() + 1;
+        int lap = Math.min(player.lapsCompleted + 1, lv.laps);
+        int t = (int) raceManager.raceTime;
+        String time = String.format("%02d:%02d", t / 60, t % 60);
+
+        int top = 96;
+        batch.begin();
+        game.font.setColor(Color.WHITE);
+        TextDraw.draw(batch, game.font, lv.name, w / 2f - 40f, top);
+        TextDraw.draw(batch, game.font,
+                "排名 " + rank + "/" + total + "   圈 " + lap + "/" + lv.laps + "   时间 " + time,
+                w / 2f - 130f, top + 34f);
+        TextDraw.draw(batch, game.font,
+                "速度 " + (int) (Math.abs(player.speed) * 3.6f) + " km/h",
+                24, h / 2f);
+        batch.end();
+    }
+
+    private void drawSmallButton(Rect r, String label) {
+        sr.begin(ShapeRenderer.ShapeType.Filled);
+        sr.setColor(new Color(0.2f, 0.4f, 0.7f, 0.9f));
+        sr.rect(r.x, r.y, r.w, r.h);
+        sr.end();
+        batch.begin();
+        game.font.setColor(Color.WHITE);
+        TextDraw.draw(batch, game.font, label, r.x + r.w / 2f - 24f, r.y + r.h / 2f + 8f);
+        batch.end();
+    }
+
+    private void drawPauseOverlay() {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+
+        sr.setProjectionMatrix(uiCam.combined);
+        batch.setProjectionMatrix(uiCam.combined);
+        sr.begin(ShapeRenderer.ShapeType.Filled);
+        sr.setColor(0, 0, 0, 0.6f);
+        sr.rect(0, 0, w, h);
+        sr.end();
+
+        float bw = Math.min(w * 0.6f, 320f);
+        float bh = 64f;
+        float cx = w / 2f - bw / 2f;
+        float y = h / 2f - bh;
+        pauseResume = new UiButton(cx, y, bw, bh, "继续");
+        pauseQuit = new UiButton(cx, y + bh + 16f, bw, bh, "退出到菜单");
+
+        pauseResume.draw(sr, batch, game.font, false);
+        pauseQuit.draw(sr, batch, game.font, false);
+
+        if (Gdx.input.justTouched()) {
+            int x = Gdx.input.getX();
+            int y2 = Gdx.input.getY();
+            float sh = Gdx.graphics.getHeight();
+            game.audio.playClick();
+            if (pauseResume.rect.contains(x, y2)) {
+                paused = false;
+            } else if (pauseQuit.rect.contains(x, y2)) {
+                game.audio.stopEngine();
+                disposeRace();
+                game.setScreen(new MainMenuScreen(game));
+            }
+        }
+    }
+
+    private void finishRace() {
+        transitioned = true;
+        int rank = raceManager.getPlayerRank();
+        int points = GameConstants.scoreForRank(rank);
+        game.score.addScore(points);
+        game.audio.stopEngine();
+        game.audio.playWin();
+        disposeRace();
+        game.setScreen(new ResultScreen(game, levelId, rank, points, raceManager.raceTime));
+    }
+
+    private void disposeRace() {
+        if (track != null) track.dispose();
+        for (Model m : carModels) m.dispose();
+        carModels.clear();
+    }
+
+    @Override
+    public void dispose() {
+        disposeRace();
+        modelBatch.dispose();
+        sr.dispose();
+        batch.dispose();
+    }
+}

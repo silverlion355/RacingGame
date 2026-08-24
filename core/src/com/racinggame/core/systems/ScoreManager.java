@@ -1,1 +1,39 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LlByZWZlcmVuY2VzOwoKLyoqCiAqIOenr+WIhuS4juiuvue9ruaMgeS5heWMlu+8iEFuZHJvaWQg5Y2zIFNoYXJlZFByZWZlcmVuY2Vz77yJ44CCCiAqIOe0r+iuoeaAu+WIhumaj+WFs+WNoee7k+eul+WFpei0pu+8m+WQjOaXtuWkjeeUqOWQjOS4gCBQcmVmZXJlbmNlcyDkv53lrZjpnZnpn7PlvIDlhbPjgIIKICovCnB1YmxpYyBjbGFzcyBTY29yZU1hbmFnZXIgewogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIFBSRUZfTkFNRSA9ICJyYWNpbmdnYW1lX3ByZWZzIjsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBLRVlfVE9UQUwgPSAidG90YWxfc2NvcmUiOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIEtFWV9NVVRFID0gIm11dGVkIjsKCiAgICBwcml2YXRlIGZpbmFsIFByZWZlcmVuY2VzIHByZWZzOwoKICAgIHB1YmxpYyBTY29yZU1hbmFnZXIoKSB7CiAgICAgICAgcHJlZnMgPSBHZHguYXBwLmdldFByZWZlcmVuY2VzKFBSRUZfTkFNRSk7CiAgICB9CgogICAgcHVibGljIGludCBnZXRUb3RhbFNjb3JlKCkgewogICAgICAgIHJldHVybiBwcmVmcy5nZXRJbnRlZ2VyKEtFWV9UT1RBTCwgMCk7CiAgICB9CgogICAgLyoqIOe7k+eul+aXtue0r+WKoOenr+WIhuW5tuiQveebmCAqLwogICAgcHVibGljIHZvaWQgYWRkU2NvcmUoaW50IHBvaW50cykgewogICAgICAgIHByZWZzLnB1dEludGVnZXIoS0VZX1RPVEFMLCBnZXRUb3RhbFNjb3JlKCkgKyBwb2ludHMpOwogICAgICAgIHByZWZzLmZsdXNoKCk7CiAgICB9CgogICAgcHVibGljIGJvb2xlYW4gaXNNdXRlZCgpIHsKICAgICAgICByZXR1cm4gcHJlZnMuZ2V0Qm9vbGVhbihLRVlfTVVURSwgZmFsc2UpOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIHNldE11dGVkKGJvb2xlYW4gbXV0ZWQpIHsKICAgICAgICBwcmVmcy5wdXRCb29sZWFuKEtFWV9NVVRFLCBtdXRlZCk7CiAgICAgICAgcHJlZnMuZmx1c2goKTsKICAgIH0KfQo=
+package com.racinggame.core.systems;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Preferences;
+
+/**
+ * 积分与设置持久化（Android 即 SharedPreferences）。
+ * 累计总分随关卡结算入账；同时复用同一 Preferences 保存静音开关。
+ */
+public class ScoreManager {
+    private static final String PREF_NAME = "racinggame_prefs";
+    private static final String KEY_TOTAL = "total_score";
+    private static final String KEY_MUTE = "muted";
+
+    private final Preferences prefs;
+
+    public ScoreManager() {
+        prefs = Gdx.app.getPreferences(PREF_NAME);
+    }
+
+    public int getTotalScore() {
+        return prefs.getInteger(KEY_TOTAL, 0);
+    }
+
+    /** 结算时累加积分并落盘 */
+    public void addScore(int points) {
+        prefs.putInteger(KEY_TOTAL, getTotalScore() + points);
+        prefs.flush();
+    }
+
+    public boolean isMuted() {
+        return prefs.getBoolean(KEY_MUTE, false);
+    }
+
+    public void setMuted(boolean muted) {
+        prefs.putBoolean(KEY_MUTE, muted);
+        prefs.flush();
+    }
+}

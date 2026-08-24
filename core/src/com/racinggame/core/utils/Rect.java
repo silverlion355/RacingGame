@@ -1,1 +1,26 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzOwoKLyoqIOWxj+W5leWdkOagh+efqeW9ou+8iOW3puS4iuinkuWOn+eCue+8jHkg5ZCR5LiL77yM5LiOIGxpYkdEWCDop6bmkbjlnZDmoIfkuIDoh7TvvIkgKi8KcHVibGljIGNsYXNzIFJlY3QgewogICAgcHVibGljIGZsb2F0IHgsIHksIHcsIGg7CgogICAgcHVibGljIFJlY3QoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgdywgZmxvYXQgaCkgewogICAgICAgIHRoaXMueCA9IHg7CiAgICAgICAgdGhpcy55ID0geTsKICAgICAgICB0aGlzLncgPSB3OwogICAgICAgIHRoaXMuaCA9IGg7CiAgICB9CgogICAgLyoqIOaYr+WQpuWMheWQq+afkOWxj+W5leeCue+8iGxpYkdEWCDop6bmkbjlnZDmoIflt7LmmK/lt6bkuIrop5Lljp/ngrkgeSDlkJHkuIvvvIkgKi8KICAgIHB1YmxpYyBib29sZWFuIGNvbnRhaW5zKGZsb2F0IHB4LCBmbG9hdCBweSkgewogICAgICAgIHJldHVybiBweCA+PSB4ICYmIHB4IDw9IHggKyB3ICYmIHB5ID49IHkgJiYgcHkgPD0geSArIGg7CiAgICB9CgogICAgcHVibGljIGZsb2F0IGNlbnRlclgoKSB7CiAgICAgICAgcmV0dXJuIHggKyB3IC8gMmY7CiAgICB9CgogICAgcHVibGljIGZsb2F0IGNlbnRlclkoKSB7CiAgICAgICAgcmV0dXJuIHkgKyBoIC8gMmY7CiAgICB9Cn0K
+package com.racinggame.core.utils;
+
+/** 屏幕坐标矩形（左上角原点，y 向下，与 libGDX 触摸坐标一致） */
+public class Rect {
+    public float x, y, w, h;
+
+    public Rect(float x, float y, float w, float h) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+
+    /** 是否包含某屏幕点（libGDX 触摸坐标已是左上角原点 y 向下） */
+    public boolean contains(float px, float py) {
+        return px >= x && px <= x + w && py >= y && py <= y + h;
+    }
+
+    public float centerX() {
+        return x + w / 2f;
+    }
+
+    public float centerY() {
+        return y + h / 2f;
+    }
+}

@@ -1,1 +1,10 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzOwoKLyoqIOeOqeWutui1m+i9pu+8muaTjeaOp+adpeiHqiBUb3VjaElucHV0Q29udHJvbGxlcu+8jOeJqeeQhumAu+i+keWkjeeUqOWfuuexuyAqLwpwdWJsaWMgY2xhc3MgUGxheWVyQ2FyIGV4dGVuZHMgQ2FyIHsKCiAgICBwdWJsaWMgUGxheWVyQ2FyKGludCBicmFuZCwgZmxvYXQgbWF4U3BlZWQpIHsKICAgICAgICBzdXBlcihtYXhTcGVlZCwgMjJmLCAzOGYsIDIuMmYsIDdmLCAyLjJmKTsKICAgICAgICB0aGlzLmJyYW5kID0gYnJhbmQ7CiAgICB9Cn0K
+package com.racinggame.core.entities;
+
+/** 玩家赛车：操控来自 TouchInputController，物理逻辑复用基类 */
+public class PlayerCar extends Car {
+
+    public PlayerCar(int brand, float maxSpeed) {
+        super(maxSpeed, 22f, 38f, 2.2f, 7f, 2.2f);
+        this.brand = brand;
+    }
+}

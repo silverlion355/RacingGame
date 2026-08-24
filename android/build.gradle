@@ -1,1 +1,96 @@
-YXBwbHkgcGx1Z2luOiAiY29tLmFuZHJvaWQuYXBwbGljYXRpb24iCgpjb25maWd1cmF0aW9ucyB7IG5hdGl2ZXMgfQoKZGVwZW5kZW5jaWVzIHsKICAgIGltcGxlbWVudGF0aW9uIHByb2plY3QoIjpjb3JlIikKICAgIGFwaSAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeC1iYWNrZW5kLWFuZHJvaWQ6JGdkeFZlcnNpb24iCiAgICBhcGkgImNvbS5iYWRsb2dpY2dhbWVzLmdkeDpnZHg6JGdkeFZlcnNpb24iCiAgICBhcGkgImNvbS5iYWRsb2dpY2dhbWVzLmdkeDpnZHgtZnJlZXR5cGU6JGdkeFZlcnNpb24iCgogICAgLy8g5Y6f55Sf5bqT77yI5oyJIEFCSSDmi7fotJ3liLAgam5pTGlic++8iQogICAgbmF0aXZlcyAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeC1wbGF0Zm9ybTokZ2R4VmVyc2lvbjpuYXRpdmVzLWFybWVhYmktdjdhIgogICAgbmF0aXZlcyAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeC1wbGF0Zm9ybTokZ2R4VmVyc2lvbjpuYXRpdmVzLWFybTY0LXY4YSIKICAgIG5hdGl2ZXMgImNvbS5iYWRsb2dpY2dhbWVzLmdkeDpnZHgtcGxhdGZvcm06JGdkeFZlcnNpb246bmF0aXZlcy14ODYiCiAgICBuYXRpdmVzICJjb20uYmFkbG9naWNnYW1lcy5nZHg6Z2R4LXBsYXRmb3JtOiRnZHhWZXJzaW9uOm5hdGl2ZXMteDg2XzY0IgogICAgbmF0aXZlcyAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeC1mcmVldHlwZS1wbGF0Zm9ybTokZ2R4VmVyc2lvbjpuYXRpdmVzLWFybWVhYmktdjdhIgogICAgbmF0aXZlcyAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeC1mcmVldHlwZS1wbGF0Zm9ybTokZ2R4VmVyc2lvbjpuYXRpdmVzLWFybTY0LXY4YSIKICAgIG5hdGl2ZXMgImNvbS5iYWRsb2dpY2dhbWVzLmdkeDpnZHgtZnJlZXR5cGUtcGxhdGZvcm06JGdkeFZlcnNpb246bmF0aXZlcy14ODYiCiAgICBuYXRpdmVzICJjb20uYmFkbG9naWNnYW1lcy5nZHg6Z2R4LWZyZWV0eXBlLXBsYXRmb3JtOiRnZHhWZXJzaW9uOm5hdGl2ZXMteDg2XzY0Igp9CgphbmRyb2lkIHsKICAgIG5hbWVzcGFjZSAnY29tLnJhY2luZ2dhbWUnCiAgICBjb21waWxlU2RrVmVyc2lvbiAzNAoKICAgIHNvdXJjZVNldHMgewogICAgICAgIG1haW4gewogICAgICAgICAgICBtYW5pZmVzdC5zcmNGaWxlICdBbmRyb2lkTWFuaWZlc3QueG1sJwogICAgICAgICAgICBqYXZhLnNyY0RpcnMgPSBbJ3NyYyddCiAgICAgICAgICAgIGFpZGwuc3JjRGlycyA9IFsnc3JjJ10KICAgICAgICAgICAgcmVzLnNyY0RpcnMgPSBbJ3JlcyddCiAgICAgICAgICAgIGFzc2V0cy5zcmNEaXJzID0gWydhc3NldHMnXQogICAgICAgICAgICBqbmlMaWJzLnNyY0RpcnMgPSBbJ2xpYnMnXQogICAgICAgIH0KICAgIH0KCiAgICBkZWZhdWx0Q29uZmlnIHsKICAgICAgICBhcHBsaWNhdGlvbklkICdjb20ucmFjaW5nZ2FtZScKICAgICAgICBtaW5TZGtWZXJzaW9uIDIxCiAgICAgICAgdGFyZ2V0U2RrVmVyc2lvbiAzNAogICAgICAgIHZlcnNpb25Db2RlIDEKICAgICAgICB2ZXJzaW9uTmFtZSAnMS4wJwogICAgfQoKICAgIGNvbXBpbGVPcHRpb25zIHsKICAgICAgICBzb3VyY2VDb21wYXRpYmlsaXR5ID0gSmF2YVZlcnNpb24uVkVSU0lPTl8xNwogICAgICAgIHRhcmdldENvbXBhdGliaWxpdHkgPSBKYXZhVmVyc2lvbi5WRVJTSU9OXzE3CiAgICB9CgogICAgYnVpbGRUeXBlcyB7CiAgICAgICAgcmVsZWFzZSB7CiAgICAgICAgICAgIG1pbmlmeUVuYWJsZWQgZmFsc2UKICAgICAgICAgICAgcHJvZ3VhcmRGaWxlcyBnZXREZWZhdWx0UHJvZ3VhcmRGaWxlKCdwcm9ndWFyZC1hbmRyb2lkLnR4dCcpLCAncHJvZ3VhcmQtcnVsZXMucHJvJwogICAgICAgIH0KICAgIH0KCiAgICBwYWNrYWdpbmdPcHRpb25zIHsKICAgICAgICByZXNvdXJjZXMgewogICAgICAgICAgICBleGNsdWRlcyArPSBbJ01FVEEtSU5GL3JvYm92bS9pb3Mvcm9ib3ZtLnhtbCcsCiAgICAgICAgICAgICAgICAgICAgJ01FVEEtSU5GL0RFUEVOREVOQ0lFUycsCiAgICAgICAgICAgICAgICAgICAgJ01FVEEtSU5GL0xJQ0VOU0UnLAogICAgICAgICAgICAgICAgICAgICdNRVRBLUlORi9MSUNFTlNFLnR4dCcsCiAgICAgICAgICAgICAgICAgICAgJ01FVEEtSU5GL05PVElDRSddCiAgICAgICAgfQogICAgfQp9CgovLyDlsIbljp/nlJ8gc28g5LuOIG5hdGl2ZXMg6YWN572u6Kej5Y6L5YiwIGxpYnMvPGFiaT4KdGFzayBjb3B5QW5kcm9pZE5hdGl2ZXMgewogICAgZG9GaXJzdCB7CiAgICAgICAgZmlsZSgibGlicy9hcm1lYWJpLXY3YS8iKS5ta2RpcnMoKQogICAgICAgIGZpbGUoImxpYnMvYXJtNjQtdjhhLyIpLm1rZGlycygpCiAgICAgICAgZmlsZSgibGlicy94ODZfNjQvIikubWtkaXJzKCkKICAgICAgICBmaWxlKCJsaWJzL3g4Ni8iKS5ta2RpcnMoKQogICAgfQogICAgZG9MYXN0IHsKICAgICAgICBjb25maWd1cmF0aW9ucy5uYXRpdmVzLmNvcHkoKS5maWxlcy5lYWNoIHsgamFyIC0+CiAgICAgICAgICAgIGRlZiBvdXRwdXREaXIgPSBudWxsCiAgICAgICAgICAgIGlmIChqYXIubmFtZS5lbmRzV2l0aCgibmF0aXZlcy1hcm1lYWJpLXY3YS5qYXIiKSkgb3V0cHV0RGlyID0gZmlsZSgibGlicy9hcm1lYWJpLXY3YSIpCiAgICAgICAgICAgIGlmIChqYXIubmFtZS5lbmRzV2l0aCgibmF0aXZlcy1hcm02NC12OGEuamFyIikpIG91dHB1dERpciA9IGZpbGUoImxpYnMvYXJtNjQtdjhhIikKICAgICAgICAgICAgaWYgKGphci5uYW1lLmVuZHNXaXRoKCJuYXRpdmVzLXg4Nl82NC5qYXIiKSkgb3V0cHV0RGlyID0gZmlsZSgibGlicy94ODZfNjQiKQogICAgICAgICAgICBpZiAoamFyLm5hbWUuZW5kc1dpdGgoIm5hdGl2ZXMteDg2LmphciIpKSBvdXRwdXREaXIgPSBmaWxlKCJsaWJzL3g4NiIpCiAgICAgICAgICAgIGlmIChvdXRwdXREaXIgIT0gbnVsbCkgewogICAgICAgICAgICAgICAgY29weSB7CiAgICAgICAgICAgICAgICAgICAgZnJvbSB6aXBUcmVlKGphcikKICAgICAgICAgICAgICAgICAgICBpbnRvIG91dHB1dERpcgogICAgICAgICAgICAgICAgICAgIGluY2x1ZGUgIiouc28iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn0KCnRhc2tzLm1hdGNoaW5nIHsgaXQubmFtZS5jb250YWlucygibWVyZ2UiKSAmJiBpdC5uYW1lLmNvbnRhaW5zKCJKbmlMaWJzIikgfS5jb25maWd1cmVFYWNoIHsKICAgIGRlcGVuZHNPbiBjb3B5QW5kcm9pZE5hdGl2ZXMKfQo=
+apply plugin: "com.android.application"
+
+configurations { natives }
+
+dependencies {
+    implementation project(":core")
+    api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+
+    // 原生库（按 ABI 拷贝到 jniLibs）
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
+}
+
+android {
+    namespace 'com.racinggame'
+    compileSdkVersion 34
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    defaultConfig {
+        applicationId 'com.racinggame'
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/robovm/ios/robovm.xml',
+                    'META-INF/DEPENDENCIES',
+                    'META-INF/LICENSE',
+                    'META-INF/LICENSE.txt',
+                    'META-INF/NOTICE']
+        }
+    }
+}
+
+// 将原生 so 从 natives 配置解压到 libs/<abi>
+task copyAndroidNatives {
+    doFirst {
+        file("libs/armeabi-v7a/").mkdirs()
+        file("libs/arm64-v8a/").mkdirs()
+        file("libs/x86_64/").mkdirs()
+        file("libs/x86/").mkdirs()
+    }
+    doLast {
+        configurations.natives.copy().files.each { jar ->
+            def outputDir = null
+            if (jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+            if (jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
+            if (jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
+            if (jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+            if (outputDir != null) {
+                copy {
+                    from zipTree(jar)
+                    into outputDir
+                    include "*.so"
+                }
+            }
+        }
+    }
+}
+
+tasks.matching { it.name.contains("merge") && it.name.contains("JniLibs") }.configureEach {
+    dependsOn copyAndroidNatives
+}

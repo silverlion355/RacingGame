@@ -1,1 +1,107 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwojIC0qLSBjb2Rpbmc6IHV0Zi04IC0qLQoiIiIK56iL5bqP5YyW55Sf5oiQ5ri45oiP6Z+z5pWIIFdBVu+8iOe6r+agh+WHhuW6kyB3YXZlL3N0cnVjdC9tYXRo77yM5peg6ZyA6IGU572R5oiW5aSW6YOo57Sg5p2Q77yJ44CCCui+k+WHuiA0IOS4quaWh+S7tuWIsCBhbmRyb2lkL2Fzc2V0cy9hdWRpby/vvJoKICAtIGVuZ2luZS53YXYgOiDkvY7popHlvqrnjq/lvJXmk47lo7DvvIjlj6/ml6DnvJ3lvqrnjq/vvIkKICAtIGNyYXNoLndhdiAgOiDnn63kv4Plmarlo7DniIbnoLTvvIjnorDmkp7vvIkKICAtIGNsaWNrLndhdiAgOiDnn63kv4Ppq5jpopHvvIjmjInpkq7ngrnlh7vvvIkKICAtIHdpbi53YXYgICAgOiDkuIrooYznkLbpn7PvvIjov4flhbPvvIkKCumHh+agt+eOhyA0NDEwMO+8jDE2Yml077yM5Y2V5aOw6YGT44CCCueUqOazlTogcHl0aG9uMyB0b29scy9nZW5fYXVkaW8ucHkgW+i+k+WHuuebruW9lV0KIiIiCgppbXBvcnQgbWF0aAppbXBvcnQgb3MKaW1wb3J0IHN0cnVjdAppbXBvcnQgc3lzCmltcG9ydCB3YXZlCgpTQU1QTEVfUkFURSA9IDQ0MTAwCkFNUCA9IDMyNzY3ICAjIDE2LWJpdCDls7DlgLwKCgpkZWYgd3JpdGVfd2F2KHBhdGgsIHNhbXBsZXMpOgogICAgIiIic2FtcGxlczogbGlzdFtmbG9hdF0gaW4gWy0xLCAxXSIiIgogICAgd2l0aCB3YXZlLm9wZW4ocGF0aCwgJ3cnKSBhcyB3OgogICAgICAgIHcuc2V0bmNoYW5uZWxzKDEpCiAgICAgICAgdy5zZXRzYW1wd2lkdGgoMikKICAgICAgICB3LnNldGZyYW1lcmF0ZShTQU1QTEVfUkFURSkKICAgICAgICBmcmFtZXMgPSBieXRlYXJyYXkoKQogICAgICAgIGZvciBzIGluIHNhbXBsZXM6CiAgICAgICAgICAgIHMgPSBtYXgoLTEuMCwgbWluKDEuMCwgcykpCiAgICAgICAgICAgIGZyYW1lcyArPSBzdHJ1Y3QucGFjaygnPGgnLCBpbnQocyAqIEFNUCkpCiAgICAgICAgdy53cml0ZWZyYW1lcyhieXRlcyhmcmFtZXMpKQogICAgcHJpbnQoIiAg55Sf5oiQOiIsIHBhdGgsICIoJWQg6YeH5qC3KSIgJSBsZW4oc2FtcGxlcykpCgoKZGVmIGdlbl9lbmdpbmUoZHVyYXRpb249MS4wKToKICAgICIiIuS9jumikeW8leaTjui9sOm4o++8jOmikeeOh+WPluaVtOaVsCBIeiDku6Xkv53or4Hml6DnvJ3lvqrnjq/jgIIiIiIKICAgIG4gPSBpbnQoU0FNUExFX1JBVEUgKiBkdXJhdGlvbikKICAgIG91dCA9IFtdCiAgICBmb3IgaSBpbiByYW5nZShuKToKICAgICAgICB0ID0gaSAvIFNBTVBMRV9SQVRFCiAgICAgICAgd29iID0gMC45ICsgMC4xICogbWF0aC5zaW4oMiAqIG1hdGgucGkgKiA4ICogdCkgICMgOEh6IOaKluWKqO+8jOaVtOaVsOWRqOacnwogICAgICAgIHMgPSAoMC4zMCAqIG1hdGguc2luKDIgKiBtYXRoLnBpICogNjAgKiB0KQogICAgICAgICAgICAgKyAwLjE4ICogbWF0aC5zaW4oMiAqIG1hdGgucGkgKiAxMjAgKiB0KQogICAgICAgICAgICAgKyAwLjA5ICogbWF0aC5zaW4oMiAqIG1hdGgucGkgKiAxODAgKiB0KSkgKiB3b2IKICAgICAgICBvdXQuYXBwZW5kKHMgKiAwLjYpCiAgICByZXR1cm4gb3V0CgoKZGVmIGdlbl9jcmFzaChkdXJhdGlvbj0wLjM1KToKICAgICIiIuefreS/g+WZquWjsOeIhuegtO+8jOaMh+aVsOihsOWHj+OAgiIiIgogICAgaW1wb3J0IHJhbmRvbQogICAgcmFuZG9tLnNlZWQoNDIpCiAgICBuID0gaW50KFNBTVBMRV9SQVRFICogZHVyYXRpb24pCiAgICBvdXQgPSBbXQogICAgZm9yIGkgaW4gcmFuZ2Uobik6CiAgICAgICAgdCA9IGkgLyBTQU1QTEVfUkFURQogICAgICAgIGRlY2F5ID0gbWF0aC5leHAoLXQgKiAxNC4wKQogICAgICAgIG91dC5hcHBlbmQoKHJhbmRvbS51bmlmb3JtKC0xLjAsIDEuMCkgKiBkZWNheSkgKiAwLjcpCiAgICByZXR1cm4gb3V0CgoKZGVmIGdlbl9jbGljayhkdXJhdGlvbj0wLjA2KToKICAgICIiIuefreS/g+mrmOmikeeCueWHu+OAgiIiIgogICAgbiA9IGludChTQU1QTEVfUkFURSAqIGR1cmF0aW9uKQogICAgb3V0ID0gW10KICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHQgPSBpIC8gU0FNUExFX1JBVEUKICAgICAgICBlbnYgPSBtYXRoLmV4cCgtdCAqIDkwLjApCiAgICAgICAgb3V0LmFwcGVuZChtYXRoLnNpbigyICogbWF0aC5waSAqIDE0MDAgKiB0KSAqIGVudiAqIDAuNSkKICAgIHJldHVybiBvdXQKCgpkZWYgZ2VuX3dpbigpOgogICAgIiIi5LiK6KGM55C26Z+z77yIQzUgRTUgRzUgQzbvvInvvIzluKbnroDljZXljIXnu5zjgIIiIiIKICAgIG5vdGVzID0gWzUyMy4yNSwgNjU5LjI1LCA3ODMuOTksIDEwNDYuNTBdCiAgICBub3RlX2R1ciA9IDAuMjIKICAgIG91dCA9IFtdCiAgICBmb3IgZiBpbiBub3RlczoKICAgICAgICBuID0gaW50KFNBTVBMRV9SQVRFICogbm90ZV9kdXIpCiAgICAgICAgZm9yIGkgaW4gcmFuZ2Uobik6CiAgICAgICAgICAgIHQgPSBpIC8gU0FNUExFX1JBVEUKICAgICAgICAgICAgIyBhdHRhY2stcmVsZWFzZSDljIXnu5wKICAgICAgICAgICAgaWYgdCA8IDAuMDI6CiAgICAgICAgICAgICAgICBlbnYgPSB0IC8gMC4wMgogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZW52ID0gbWF0aC5leHAoLSh0IC0gMC4wMikgKiA2LjApCiAgICAgICAgICAgIG91dC5hcHBlbmQobWF0aC5zaW4oMiAqIG1hdGgucGkgKiBmICogdCkgKiBlbnYgKiAwLjUpCiAgICByZXR1cm4gb3V0CgoKZGVmIG1haW4oKToKICAgIG91dF9kaXIgPSBzeXMuYXJndlsxXSBpZiBsZW4oc3lzLmFyZ3YpID4gMSBlbHNlICdhbmRyb2lkL2Fzc2V0cy9hdWRpbycKICAgIG9zLm1ha2VkaXJzKG91dF9kaXIsIGV4aXN0X29rPVRydWUpCiAgICBwcmludCgi6L6T5Ye655uu5b2VOiIsIG91dF9kaXIpCiAgICB3cml0ZV93YXYob3MucGF0aC5qb2luKG91dF9kaXIsICdlbmdpbmUud2F2JyksIGdlbl9lbmdpbmUoKSkKICAgIHdyaXRlX3dhdihvcy5wYXRoLmpvaW4ob3V0X2RpciwgJ2NyYXNoLndhdicpLCBnZW5fY3Jhc2goKSkKICAgIHdyaXRlX3dhdihvcy5wYXRoLmpvaW4ob3V0X2RpciwgJ2NsaWNrLndhdicpLCBnZW5fY2xpY2soKSkKICAgIHdyaXRlX3dhdihvcy5wYXRoLmpvaW4ob3V0X2RpciwgJ3dpbi53YXYnKSwgZ2VuX3dpbigpKQogICAgcHJpbnQoIuWFqOmDqOmfs+aViOW3sueUn+aIkOOAgiIpCgoKaWYgX19uYW1lX18gPT0gJ19fbWFpbl9fJzoKICAgIG1haW4oKQo=
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+程序化生成游戏音效 WAV（纯标准库 wave/struct/math，无需联网或外部素材）。
+输出 4 个文件到 android/assets/audio/：
+  - engine.wav : 低频循环引擎声（可无缝循环）
+  - crash.wav  : 短促噪声爆破（碰撞）
+  - click.wav  : 短促高频（按钮点击）
+  - win.wav    : 上行琶音（过关）
+
+采样率 44100，16bit，单声道。
+用法: python3 tools/gen_audio.py [输出目录]
+"""
+
+import math
+import os
+import struct
+import sys
+import wave
+
+SAMPLE_RATE = 44100
+AMP = 32767  # 16-bit 峰值
+
+
+def write_wav(path, samples):
+    """samples: list[float] in [-1, 1]"""
+    with wave.open(path, 'w') as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(SAMPLE_RATE)
+        frames = bytearray()
+        for s in samples:
+            s = max(-1.0, min(1.0, s))
+            frames += struct.pack('<h', int(s * AMP))
+        w.writeframes(bytes(frames))
+    print("  生成:", path, "(%d 采样)" % len(samples))
+
+
+def gen_engine(duration=1.0):
+    """低频引擎轰鸣，频率取整数 Hz 以保证无缝循环。"""
+    n = int(SAMPLE_RATE * duration)
+    out = []
+    for i in range(n):
+        t = i / SAMPLE_RATE
+        wob = 0.9 + 0.1 * math.sin(2 * math.pi * 8 * t)  # 8Hz 抖动，整数周期
+        s = (0.30 * math.sin(2 * math.pi * 60 * t)
+             + 0.18 * math.sin(2 * math.pi * 120 * t)
+             + 0.09 * math.sin(2 * math.pi * 180 * t)) * wob
+        out.append(s * 0.6)
+    return out
+
+
+def gen_crash(duration=0.35):
+    """短促噪声爆破，指数衰减。"""
+    import random
+    random.seed(42)
+    n = int(SAMPLE_RATE * duration)
+    out = []
+    for i in range(n):
+        t = i / SAMPLE_RATE
+        decay = math.exp(-t * 14.0)
+        out.append((random.uniform(-1.0, 1.0) * decay) * 0.7)
+    return out
+
+
+def gen_click(duration=0.06):
+    """短促高频点击。"""
+    n = int(SAMPLE_RATE * duration)
+    out = []
+    for i in range(n):
+        t = i / SAMPLE_RATE
+        env = math.exp(-t * 90.0)
+        out.append(math.sin(2 * math.pi * 1400 * t) * env * 0.5)
+    return out
+
+
+def gen_win():
+    """上行琶音（C5 E5 G5 C6），带简单包络。"""
+    notes = [523.25, 659.25, 783.99, 1046.50]
+    note_dur = 0.22
+    out = []
+    for f in notes:
+        n = int(SAMPLE_RATE * note_dur)
+        for i in range(n):
+            t = i / SAMPLE_RATE
+            # attack-release 包络
+            if t < 0.02:
+                env = t / 0.02
+            else:
+                env = math.exp(-(t - 0.02) * 6.0)
+            out.append(math.sin(2 * math.pi * f * t) * env * 0.5)
+    return out
+
+
+def main():
+    out_dir = sys.argv[1] if len(sys.argv) > 1 else 'android/assets/audio'
+    os.makedirs(out_dir, exist_ok=True)
+    print("输出目录:", out_dir)
+    write_wav(os.path.join(out_dir, 'engine.wav'), gen_engine())
+    write_wav(os.path.join(out_dir, 'crash.wav'), gen_crash())
+    write_wav(os.path.join(out_dir, 'click.wav'), gen_click())
+    write_wav(os.path.join(out_dir, 'win.wav'), gen_win())
+    print("全部音效已生成。")
+
+
+if __name__ == '__main__':
+    main()

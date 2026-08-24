@@ -1,1 +1,98 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnNjcmVlbnM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LlNjcmVlbkFkYXB0ZXI7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLkNvbG9yOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5PcnRob2dyYXBoaWNDYW1lcmE7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmcyZC5TcHJpdGVCYXRjaDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZ2x1dGlscy5TaGFwZVJlbmRlcmVyOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5SYWNpbmdHYW1lOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS51dGlscy5UZXh0RHJhdzsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUudXRpbHMuVWlCdXR0b247CgovKiog5Li76I+c5Y2V77ya5byA5aeL5ri45oiPIC8g6L2m5bqTIC8g6Z2Z6Z+z5YiH5o2i77yM5bm25bGV56S657Sv6K6h5oC75YiGICovCnB1YmxpYyBjbGFzcyBNYWluTWVudVNjcmVlbiBleHRlbmRzIFNjcmVlbkFkYXB0ZXIgewogICAgcHJpdmF0ZSBmaW5hbCBSYWNpbmdHYW1lIGdhbWU7CiAgICBwcml2YXRlIGZpbmFsIE9ydGhvZ3JhcGhpY0NhbWVyYSB1aUNhbSA9IG5ldyBPcnRob2dyYXBoaWNDYW1lcmEoKTsKICAgIHByaXZhdGUgZmluYWwgU3ByaXRlQmF0Y2ggYmF0Y2ggPSBuZXcgU3ByaXRlQmF0Y2goKTsKICAgIHByaXZhdGUgZmluYWwgU2hhcGVSZW5kZXJlciBzciA9IG5ldyBTaGFwZVJlbmRlcmVyKCk7CgogICAgcHJpdmF0ZSBVaUJ1dHRvbiBidG5TdGFydCwgYnRuR2FyYWdlLCBidG5NdXRlOwoKICAgIHB1YmxpYyBNYWluTWVudVNjcmVlbihSYWNpbmdHYW1lIGdhbWUpIHsKICAgICAgICB0aGlzLmdhbWUgPSBnYW1lOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgc2hvdygpIHsKICAgICAgICBHZHguaW5wdXQuc2V0SW5wdXRQcm9jZXNzb3IobnVsbCk7CiAgICAgICAgcmVzaXplKEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpLCBHZHguZ3JhcGhpY3MuZ2V0SGVpZ2h0KCkpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgcmVzaXplKGludCB3aWR0aCwgaW50IGhlaWdodCkgewogICAgICAgIHVpQ2FtLnNldFRvT3J0aG8odHJ1ZSwgd2lkdGgsIGhlaWdodCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCByZW5kZXIoZmxvYXQgZGVsdGEpIHsKICAgICAgICBpbnQgdyA9IEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpOwogICAgICAgIGludCBoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwoKICAgICAgICBmbG9hdCBidyA9IE1hdGgubWluKHcgKiAwLjZmLCAzNjBmKTsKICAgICAgICBmbG9hdCBiaCA9IDY0ZjsKICAgICAgICBmbG9hdCBnYXAgPSAxOGY7CiAgICAgICAgZmxvYXQgY3ggPSB3IC8gMmYgLSBidyAvIDJmOwogICAgICAgIGZsb2F0IHRvdGFsSCA9IGJoICogMiArIGdhcDsKICAgICAgICBmbG9hdCB5MCA9IGggLyAyZiAtIHRvdGFsSCAvIDJmICsgNDBmOwoKICAgICAgICBidG5TdGFydCA9IG5ldyBVaUJ1dHRvbihjeCwgeTAsIGJ3LCBiaCwgIuW8gOWni+a4uOaIjyIpOwogICAgICAgIGJ0bkdhcmFnZSA9IG5ldyBVaUJ1dHRvbihjeCwgeTAgKyBiaCArIGdhcCwgYncsIGJoLCAi6L2m5bqTIC8g6YCJ6L2mIik7CiAgICAgICAgYnRuTXV0ZSA9IG5ldyBVaUJ1dHRvbih3IC0gMTcwZiwgMjRmLCAxNTBmLCA0OGYsCiAgICAgICAgICAgICAgICBnYW1lLmF1ZGlvLmlzTXV0ZWQoKSA/ICLpn7PmlYg65YWzIiA6ICLpn7PmlYg65byAIiwKICAgICAgICAgICAgICAgIG5ldyBDb2xvcigwLjRmLCAwLjRmLCAwLjQ1ZiwgMC45ZikpOwoKICAgICAgICBoYW5kbGVJbnB1dCgpOwoKICAgICAgICBHZHguZ2wuZ2xDbGVhckNvbG9yKDAuMDdmLCAwLjA5ZiwgMC4xNmYsIDFmKTsKICAgICAgICBHZHguZ2wuZ2xDbGVhcihHZHguZ2wuR0xfQ09MT1JfQlVGRkVSX0JJVCk7CgogICAgICAgIHNyLnNldFByb2plY3Rpb25NYXRyaXgodWlDYW0uY29tYmluZWQpOwogICAgICAgIGJhdGNoLnNldFByb2plY3Rpb25NYXRyaXgodWlDYW0uY29tYmluZWQpOwoKICAgICAgICAvLyDmoIfpopgKICAgICAgICBiYXRjaC5iZWdpbigpOwogICAgICAgIGdhbWUuYmlnRm9udC5zZXRDb2xvcihDb2xvci5XSElURSk7CiAgICAgICAgVGV4dERyYXcuZHJhdyhiYXRjaCwgZ2FtZS5iaWdGb250LCAi5p6B6YCf6LWb6L2mIiwgY3ggLSA0MGYsIHkwIC0gOTBmKTsKICAgICAgICBnYW1lLmZvbnQuc2V0Q29sb3IobmV3IENvbG9yKDAuN2YsIDAuOGYsIDFmLCAxZikpOwogICAgICAgIFRleHREcmF3LmRyYXcoYmF0Y2gsIGdhbWUuZm9udCwgIue0r+iuoeaAu+WIhjogIiArIGdhbWUuc2NvcmUuZ2V0VG90YWxTY29yZSgpLCBjeCAtIDEwZiwgeTAgLSA1MGYpOwogICAgICAgIGJhdGNoLmVuZCgpOwoKICAgICAgICBidG5TdGFydC5kcmF3KHNyLCBiYXRjaCwgZ2FtZS5mb250LCBmYWxzZSk7CiAgICAgICAgYnRuR2FyYWdlLmRyYXcoc3IsIGJhdGNoLCBnYW1lLmZvbnQsIGZhbHNlKTsKICAgICAgICBidG5NdXRlLmRyYXcoc3IsIGJhdGNoLCBnYW1lLmZvbnQsIGZhbHNlKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgaGFuZGxlSW5wdXQoKSB7CiAgICAgICAgaWYgKCFHZHguaW5wdXQuanVzdFRvdWNoZWQoKSkgcmV0dXJuOwogICAgICAgIGludCB4ID0gR2R4LmlucHV0LmdldFgoKTsKICAgICAgICBpbnQgeSA9IEdkeC5pbnB1dC5nZXRZKCk7CiAgICAgICAgZmxvYXQgc2ggPSBHZHguZ3JhcGhpY3MuZ2V0SGVpZ2h0KCk7CiAgICAgICAgZ2FtZS5hdWRpby5wbGF5Q2xpY2soKTsKICAgICAgICBpZiAoYnRuU3RhcnQucmVjdC5jb250YWlucyh4LCB5KSkgewogICAgICAgICAgICBnYW1lLnNldFNjcmVlbihuZXcgTGV2ZWxTZWxlY3RTY3JlZW4oZ2FtZSkpOwogICAgICAgIH0gZWxzZSBpZiAoYnRuR2FyYWdlLnJlY3QuY29udGFpbnMoeCwgeSkpIHsKICAgICAgICAgICAgZ2FtZS5zZXRTY3JlZW4obmV3IEdhcmFnZVNjcmVlbihnYW1lKSk7CiAgICAgICAgfSBlbHNlIGlmIChidG5NdXRlLnJlY3QuY29udGFpbnMoeCwgeSkpIHsKICAgICAgICAgICAgYm9vbGVhbiBtID0gIWdhbWUuYXVkaW8uaXNNdXRlZCgpOwogICAgICAgICAgICBnYW1lLmF1ZGlvLnNldE11dGVkKG0pOwogICAgICAgICAgICBnYW1lLnNjb3JlLnNldE11dGVkKG0pOwogICAgICAgIH0KICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIGRpc3Bvc2UoKSB7CiAgICAgICAgYmF0Y2guZGlzcG9zZSgpOwogICAgICAgIHNyLmRpc3Bvc2UoKTsKICAgIH0KfQo=
+package com.racinggame.core.screens;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.ScreenAdapter;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.racinggame.core.RacingGame;
+import com.racinggame.core.utils.TextDraw;
+import com.racinggame.core.utils.UiButton;
+
+/** 主菜单：开始游戏 / 车库 / 静音切换，并展示累计总分 */
+public class MainMenuScreen extends ScreenAdapter {
+    private final RacingGame game;
+    private final OrthographicCamera uiCam = new OrthographicCamera();
+    private final SpriteBatch batch = new SpriteBatch();
+    private final ShapeRenderer sr = new ShapeRenderer();
+
+    private UiButton btnStart, btnGarage, btnMute;
+
+    public MainMenuScreen(RacingGame game) {
+        this.game = game;
+    }
+
+    @Override
+    public void show() {
+        Gdx.input.setInputProcessor(null);
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+    }
+
+    @Override
+    public void resize(int width, int height) {
+        uiCam.setToOrtho(true, width, height);
+    }
+
+    @Override
+    public void render(float delta) {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+
+        float bw = Math.min(w * 0.6f, 360f);
+        float bh = 64f;
+        float gap = 18f;
+        float cx = w / 2f - bw / 2f;
+        float totalH = bh * 2 + gap;
+        float y0 = h / 2f - totalH / 2f + 40f;
+
+        btnStart = new UiButton(cx, y0, bw, bh, "开始游戏");
+        btnGarage = new UiButton(cx, y0 + bh + gap, bw, bh, "车库 / 选车");
+        btnMute = new UiButton(w - 170f, 24f, 150f, 48f,
+                game.audio.isMuted() ? "音效:关" : "音效:开",
+                new Color(0.4f, 0.4f, 0.45f, 0.9f));
+
+        handleInput();
+
+        Gdx.gl.glClearColor(0.07f, 0.09f, 0.16f, 1f);
+        Gdx.gl.glClear(Gdx.gl.GL_COLOR_BUFFER_BIT);
+
+        sr.setProjectionMatrix(uiCam.combined);
+        batch.setProjectionMatrix(uiCam.combined);
+
+        // 标题
+        batch.begin();
+        game.bigFont.setColor(Color.WHITE);
+        TextDraw.draw(batch, game.bigFont, "极速赛车", cx - 40f, y0 - 90f);
+        game.font.setColor(new Color(0.7f, 0.8f, 1f, 1f));
+        TextDraw.draw(batch, game.font, "累计总分: " + game.score.getTotalScore(), cx - 10f, y0 - 50f);
+        batch.end();
+
+        btnStart.draw(sr, batch, game.font, false);
+        btnGarage.draw(sr, batch, game.font, false);
+        btnMute.draw(sr, batch, game.font, false);
+    }
+
+    private void handleInput() {
+        if (!Gdx.input.justTouched()) return;
+        int x = Gdx.input.getX();
+        int y = Gdx.input.getY();
+        float sh = Gdx.graphics.getHeight();
+        game.audio.playClick();
+        if (btnStart.rect.contains(x, y)) {
+            game.setScreen(new LevelSelectScreen(game));
+        } else if (btnGarage.rect.contains(x, y)) {
+            game.setScreen(new GarageScreen(game));
+        } else if (btnMute.rect.contains(x, y)) {
+            boolean m = !game.audio.isMuted();
+            game.audio.setMuted(m);
+            game.score.setMuted(m);
+        }
+    }
+
+    @Override
+    public void dispose() {
+        batch.dispose();
+        sr.dispose();
+    }
+}

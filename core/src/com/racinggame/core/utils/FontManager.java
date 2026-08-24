@@ -1,1 +1,48 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguR2R4OwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5maWxlcy5GaWxlSGFuZGxlOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nMmQuQml0bWFwRm9udDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzJkLmZyZWV0eXBlLkZyZWVUeXBlRm9udEdlbmVyYXRvcjsKCi8qKgogKiDlrZfkvZPlt6XljoLvvJrkvJjlhYjnlKjns7vnu58gQ0pLIOWtl+S9k++8iEFuZHJvaWQg6Ieq5bimIE5vdG8gQ0pL77yJ6YCa6L+HIEZyZWVUeXBlIOeUn+aIkO+8jAogKiDku6Xkv53or4HkuK3mlocgVUkg5q2j5bi45pi+56S677yb5om+5LiN5Yiw5YiZ5Zue6YCA5YiwIGxpYkdEWCDpu5jorqTlrZfkvZPvvIjku4UgQVNDSUnvvInjgIIKICovCnB1YmxpYyBmaW5hbCBjbGFzcyBGb250TWFuYWdlciB7CgogICAgcHJpdmF0ZSBGb250TWFuYWdlcigpIHsKICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgQ0pLX0NIQVJTID0KICAgICAgICAgICAgIuS4reaWh+i1m+i9pua4uOaIj+W8gOWni+iPnOWNlemAieWFs+WFs+WNoeaOkuihjOenr+WIhuaAu+aaguWBnOinhuinkuWIh+aNouayuemXqOWIuei9puWAkui9puiDnOWIqeWujOaIkOi/lOWbnuS4i+S4gOmHjeeOqei9puW6k+mTtueureazleaLieWIqeS/neaXtuaNt+esrOS4gOS6jOS4ieWbm+S6lOWQjeWciOmAn+W6puaXtumXtOi3r+S9oOaIkeeahOS4juWPiuacgOmavuW6pumAkuWinuabtOmVv+W8r+mBk+WvueaJi+W/q+i/m+iuviI7CgogICAgcHVibGljIHN0YXRpYyBCaXRtYXBGb250IGNyZWF0ZUZvbnQoaW50IHNpemUpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBTdHJpbmdbXSBjYW5kaWRhdGVzID0gewogICAgICAgICAgICAgICAgICAgICIvc3lzdGVtL2ZvbnRzL05vdG9TYW5zQ0pLLVJlZ3VsYXIudHRjIiwKICAgICAgICAgICAgICAgICAgICAiL3N5c3RlbS9mb250cy9Ob3RvU2Fuc0NKS3NjLVJlZ3VsYXIudHRjIiwKICAgICAgICAgICAgICAgICAgICAiL3N5c3RlbS9mb250cy9Ob3RvU2Fuc1NDLVJlZ3VsYXIub3RmIiwKICAgICAgICAgICAgICAgICAgICAiL3N5c3RlbS9mb250cy9Ecm9pZFNhbnNGYWxsYmFjay50dGYiLAogICAgICAgICAgICAgICAgICAgICIvc3lzdGVtL2ZvbnRzL0Ryb2lkU2Fuc0ZhbGxiYWNrRnVsbC50dGYiCiAgICAgICAgICAgIH07CiAgICAgICAgICAgIGZvciAoU3RyaW5nIHBhdGggOiBjYW5kaWRhdGVzKSB7CiAgICAgICAgICAgICAgICBGaWxlSGFuZGxlIGYgPSBHZHguZmlsZXMuYWJzb2x1dGUocGF0aCk7CiAgICAgICAgICAgICAgICBpZiAoZi5leGlzdHMoKSkgewogICAgICAgICAgICAgICAgICAgIEZyZWVUeXBlRm9udEdlbmVyYXRvciBnZW4gPSBuZXcgRnJlZVR5cGVGb250R2VuZXJhdG9yKGYpOwogICAgICAgICAgICAgICAgICAgIEZyZWVUeXBlRm9udEdlbmVyYXRvci5GcmVlVHlwZUZvbnRQYXJhbWV0ZXIgcCA9CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXcgRnJlZVR5cGVGb250R2VuZXJhdG9yLkZyZWVUeXBlRm9udFBhcmFtZXRlcigpOwogICAgICAgICAgICAgICAgICAgIHAuc2l6ZSA9IHNpemU7CiAgICAgICAgICAgICAgICAgICAgcC5jaGFyYWN0ZXJzID0gRnJlZVR5cGVGb250R2VuZXJhdG9yLkRFRkFVTFRfQ0hBUlMgKyBDSktfQ0hBUlM7CiAgICAgICAgICAgICAgICAgICAgcC5mbGlwID0gZmFsc2U7CiAgICAgICAgICAgICAgICAgICAgQml0bWFwRm9udCBmb250ID0gZ2VuLmdlbmVyYXRlRm9udChwKTsKICAgICAgICAgICAgICAgICAgICBnZW4uZGlzcG9zZSgpOwogICAgICAgICAgICAgICAgICAgIHJldHVybiBmb250OwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfSBjYXRjaCAoRXhjZXB0aW9uIGlnbm9yZWQpIHsKICAgICAgICAgICAgLy8g5Zue6YCA6buY6K6k5a2X5L2TCiAgICAgICAgfQogICAgICAgIHJldHVybiBuZXcgQml0bWFwRm9udCgpOwogICAgfQp9Cg==
+package com.racinggame.core.utils;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+
+/**
+ * 字体工厂：优先用系统 CJK 字体（Android 自带 Noto CJK）通过 FreeType 生成，
+ * 以保证中文 UI 正常显示；找不到则回退到 libGDX 默认字体（仅 ASCII）。
+ */
+public final class FontManager {
+
+    private FontManager() {
+    }
+
+    private static final String CJK_CHARS =
+            "中文赛车游戏开始菜单选关关卡排行积分总暂停视角切换油门刹车倒车胜利完成返回下一重玩车库银箭法拉利保时捷第一二三四五名圈速度时间路你我的与及最难度递增更长弯道对手快进设";
+
+    public static BitmapFont createFont(int size) {
+        try {
+            String[] candidates = {
+                    "/system/fonts/NotoSansCJK-Regular.ttc",
+                    "/system/fonts/NotoSansCJKsc-Regular.ttc",
+                    "/system/fonts/NotoSansSC-Regular.otf",
+                    "/system/fonts/DroidSansFallback.ttf",
+                    "/system/fonts/DroidSansFallbackFull.ttf"
+            };
+            for (String path : candidates) {
+                FileHandle f = Gdx.files.absolute(path);
+                if (f.exists()) {
+                    FreeTypeFontGenerator gen = new FreeTypeFontGenerator(f);
+                    FreeTypeFontGenerator.FreeTypeFontParameter p =
+                            new FreeTypeFontGenerator.FreeTypeFontParameter();
+                    p.size = size;
+                    p.characters = FreeTypeFontGenerator.DEFAULT_CHARS + CJK_CHARS;
+                    p.flip = false;
+                    BitmapFont font = gen.generateFont(p);
+                    gen.dispose();
+                    return font;
+                }
+            }
+        } catch (Exception ignored) {
+            // 回退默认字体
+        }
+        return new BitmapFont();
+    }
+}

@@ -1,1 +1,48 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuQ29sb3I7CgovKioKICog5YWo5bGA5bi46YeP6ZuG5Lit5a6a5LmJ77yM5L6/5LqO57uf5LiA6LCD5Y+C5LiO5omp5bGV44CCCiAqLwpwdWJsaWMgZmluYWwgY2xhc3MgR2FtZUNvbnN0YW50cyB7CgogICAgcHJpdmF0ZSBHYW1lQ29uc3RhbnRzKCkgewogICAgfQoKICAgIC8vID09PT09IOaRhOWDj+acuu+8iOebuOWvuSAzRCDop4bop5LvvIk9PT09PQogICAgLyoqIOi/veWwvuinhuinku+8muaRhOWDj+acuuWcqOi9puWQjuaWueeahOawtOW5s+i3neemuyAqLwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBmbG9hdCBDSEFTRV9ESVNUID0gMTVmOwogICAgLyoqIOi/veWwvuinhuinku+8muaRhOWDj+acuumrmOW6piAqLwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBmbG9hdCBDSEFTRV9IRUlHSFQgPSA3ZjsKICAgIC8qKiDov73lsL7op4bop5LvvJrms6jop4bngrnlnKjliY3mlrnnmoTot53nprsgKi8KICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgZmxvYXQgQ0hBU0VfTE9PS19BSEVBRCA9IDE0ZjsKICAgIC8qKiDovablhoXnrKzkuIDop4bop5LvvJrmkYTlg4/mnLrpq5jluqbvvIjov5HkvLzpqb7pqbbkurrlpLTpg6jvvIkgKi8KICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgZmxvYXQgQ09DS1BJVF9IRUlHSFQgPSAxLjdmOwogICAgLyoqIOi9puWGheesrOS4gOinhuinku+8muaRhOWDj+acuuebuOWvuei9puWktOeVpeW+ruWJjeenuyAqLwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBmbG9hdCBDT0NLUElUX0ZPUldBUkQgPSAwLjNmOwoKICAgIC8vID09PT09IOi1m+mBk+S4jueJqeeQhu+8iOihl+acuuW8j+eugOWMlu+8iT09PT09CiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGZsb2F0IFRSQUNLX1dJRFRIID0gMTZmOyAgICAgLy8g6LWb6YGT5a695bqmCiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGZsb2F0IFJBSUxfSEVJR0hUID0gMS42ZjsgICAgLy8g5oqk5qCP6auY5bqmCiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGZsb2F0IFJPQURfWSA9IDAuMWY7ICAgICAgICAgLy8g6Lev6Z2i56a75Zyw6auY5bqmCiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGZsb2F0IENBUl9SQURJVVMgPSAyLjJmOyAgICAgLy8g56Kw5pKe5ZyG5Y2K5b6ECgogICAgLy8gPT09PT0g5ZOB54mM6YWN6Imy77yI56iL5bqP5YyW6L+R5Ly85ZCN6L2m77yJPT09PT0KICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgQ29sb3IgQ09MT1JfRkVSUkFSSSA9IG5ldyBDb2xvcigwLjgzZiwgMC4wN2YsIDAuMTdmLCAxZik7IC8vIOe6ouiJsj3ms5Xmi4nliKkKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgQ29sb3IgQ09MT1JfUE9SU0NIRSA9IG5ldyBDb2xvcigwLjk2ZiwgMC43NmYsIDAuMDVmLCAxZik7IC8vIOm7hOiJsj3kv53ml7bmjbcKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgQ29sb3IgQ09MT1JfU0lMVkVSID0gbmV3IENvbG9yKDAuNzRmLCAwLjc2ZiwgMC44MmYsIDFmKTsgIC8vIOmTtuiJsj3lhbblroMKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgQ29sb3JbXSBCUkFORF9DT0xPUlMgPSB7Q09MT1JfRkVSUkFSSSwgQ09MT1JfUE9SU0NIRSwgQ09MT1JfU0lMVkVSfTsKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgU3RyaW5nW10gQlJBTkRfTkFNRVMgPSB7IuazleaLieWIqSIsICLkv53ml7bmjbciLCAi6ZO2566tIn07CgogICAgLy8gPT09PT0g56ev5YiG6KeE5YiZID09PT09CiAgICAvKioKICAgICAqIOagueaNruacgOe7iOaOkuWQjeiuoeeul+enr+WIhu+8muesrDHlkI09MTAw77yM56ysMj02MO+8jOesrDM9MzDvvIzlrozotZs9MTDjgIIKICAgICAqLwogICAgcHVibGljIHN0YXRpYyBpbnQgc2NvcmVGb3JSYW5rKGludCByYW5rKSB7CiAgICAgICAgaWYgKHJhbmsgPT0gMSkgcmV0dXJuIDEwMDsKICAgICAgICBpZiAocmFuayA9PSAyKSByZXR1cm4gNjA7CiAgICAgICAgaWYgKHJhbmsgPT0gMykgcmV0dXJuIDMwOwogICAgICAgIHJldHVybiAxMDsgLy8g5a6M6LWb77yI56ysNOWQjeWPiuS7peWQju+8iQogICAgfQp9Cg==
+package com.racinggame.core;
+
+import com.badlogic.gdx.graphics.Color;
+
+/**
+ * 全局常量集中定义，便于统一调参与扩展。
+ */
+public final class GameConstants {
+
+    private GameConstants() {
+    }
+
+    // ===== 摄像机（相对 3D 视角）=====
+    /** 追尾视角：摄像机在车后方的水平距离 */
+    public static final float CHASE_DIST = 15f;
+    /** 追尾视角：摄像机高度 */
+    public static final float CHASE_HEIGHT = 7f;
+    /** 追尾视角：注视点在前方的距离 */
+    public static final float CHASE_LOOK_AHEAD = 14f;
+    /** 车内第一视角：摄像机高度（近似驾驶人头部） */
+    public static final float COCKPIT_HEIGHT = 1.7f;
+    /** 车内第一视角：摄像机相对车头略微前移 */
+    public static final float COCKPIT_FORWARD = 0.3f;
+
+    // ===== 赛道与物理（街机式简化）=====
+    public static final float TRACK_WIDTH = 16f;     // 赛道宽度
+    public static final float RAIL_HEIGHT = 1.6f;    // 护栏高度
+    public static final float ROAD_Y = 0.1f;         // 路面离地高度
+    public static final float CAR_RADIUS = 2.2f;     // 碰撞圆半径
+
+    // ===== 品牌配色（程序化近似名车）=====
+    public static final Color COLOR_FERRARI = new Color(0.83f, 0.07f, 0.17f, 1f); // 红色=法拉利
+    public static final Color COLOR_PORSCHE = new Color(0.96f, 0.76f, 0.05f, 1f); // 黄色=保时捷
+    public static final Color COLOR_SILVER = new Color(0.74f, 0.76f, 0.82f, 1f);  // 银色=其它
+    public static final Color[] BRAND_COLORS = {COLOR_FERRARI, COLOR_PORSCHE, COLOR_SILVER};
+    public static final String[] BRAND_NAMES = {"法拉利", "保时捷", "银箭"};
+
+    // ===== 积分规则 =====
+    /**
+     * 根据最终排名计算积分：第1名=100，第2=60，第3=30，完赛=10。
+     */
+    public static int scoreForRank(int rank) {
+        if (rank == 1) return 100;
+        if (rank == 2) return 60;
+        if (rank == 3) return 30;
+        return 10; // 完赛（第4名及以后）
+    }
+}

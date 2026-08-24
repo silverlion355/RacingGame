@@ -1,1 +1,139 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXM7CgppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5lbnRpdGllcy5BSUNhcjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUuZW50aXRpZXMuQ2FyOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5lbnRpdGllcy5QbGF5ZXJDYXI7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzLlRyYWNrOwoKaW1wb3J0IGphdmEudXRpbC5BcnJheUxpc3Q7CmltcG9ydCBqYXZhLnV0aWwuQ29sbGVjdGlvbnM7CmltcG9ydCBqYXZhLnV0aWwuQ29tcGFyYXRvcjsKaW1wb3J0IGphdmEudXRpbC5MaXN0OwoKLyoqCiAqIOavlOi1m+euoeeQhuWZqO+8muaOqOi/m+aJgOaciei9pui+hueJqeeQhuOAgei+ueeVjC/ovabovobnorDmkp7jgIHlnIjmlbDkuI7mjpLlkI3liKTlrprjgIHlrozotZvmo4DmtYvjgIIKICovCnB1YmxpYyBjbGFzcyBSYWNlTWFuYWdlciB7CiAgICBwdWJsaWMgZmluYWwgVHJhY2sgdHJhY2s7CiAgICBwdWJsaWMgZmluYWwgUGxheWVyQ2FyIHBsYXllcjsKICAgIHB1YmxpYyBmaW5hbCBMaXN0PEFJQ2FyPiBhaUNhcnM7CiAgICBwdWJsaWMgZmluYWwgaW50IGxhcFRhcmdldDsKCiAgICBwdWJsaWMgZmxvYXQgcmFjZVRpbWUgPSAwOwogICAgcHVibGljIGJvb2xlYW4gcmFjZU92ZXIgPSBmYWxzZTsKICAgIHB1YmxpYyBib29sZWFuIHBsYXllckZpbmlzaGVkID0gZmFsc2U7CiAgICBwdWJsaWMgYm9vbGVhbiBwbGF5ZXJIaXRUaGlzRnJhbWUgPSBmYWxzZTsgLy8g5L6bIEdhbWVTY3JlZW4g6Kem5Y+R56Kw5pKe6Z+z5pWICgogICAgcHVibGljIFJhY2VNYW5hZ2VyKFRyYWNrIHRyYWNrLCBQbGF5ZXJDYXIgcGxheWVyLCBMaXN0PEFJQ2FyPiBhaUNhcnMsIGludCBsYXBUYXJnZXQpIHsKICAgICAgICB0aGlzLnRyYWNrID0gdHJhY2s7CiAgICAgICAgdGhpcy5wbGF5ZXIgPSBwbGF5ZXI7CiAgICAgICAgdGhpcy5haUNhcnMgPSBhaUNhcnM7CiAgICAgICAgdGhpcy5sYXBUYXJnZXQgPSBsYXBUYXJnZXQ7CiAgICAgICAgaW5pdFByb2dyZXNzKCk7CiAgICB9CgogICAgLyoqIOWIneWni+WMluWQhOi9pui/m+W6pu+8jOmBv+WFjei1t+i3keWNs+ivr+WIpOWciOaVsCAqLwogICAgcHVibGljIHZvaWQgaW5pdFByb2dyZXNzKCkgewogICAgICAgIFRyYWNrLlNhbXBsZSBzID0gdHJhY2suc2FtcGxlKHBsYXllci5wb3NpdGlvbik7CiAgICAgICAgcGxheWVyLmxhc3RQcm9ncmVzcyA9IHMucHJvZ3Jlc3M7CiAgICAgICAgcGxheWVyLnRvdGFsRGlzdGFuY2UgPSBzLmRpc3RhbmNlOwogICAgICAgIGZvciAoQUlDYXIgYWkgOiBhaUNhcnMpIHsKICAgICAgICAgICAgVHJhY2suU2FtcGxlIGFzID0gdHJhY2suc2FtcGxlKGFpLnBvc2l0aW9uKTsKICAgICAgICAgICAgYWkubGFzdFByb2dyZXNzID0gYXMucHJvZ3Jlc3M7CiAgICAgICAgICAgIGFpLnRvdGFsRGlzdGFuY2UgPSBhcy5kaXN0YW5jZTsKICAgICAgICB9CiAgICB9CgogICAgcHVibGljIHZvaWQgdXBkYXRlKGZsb2F0IGR0LCBmbG9hdCBzdGVlciwgZmxvYXQgdGhyb3R0bGUsIGZsb2F0IGJyYWtlKSB7CiAgICAgICAgaWYgKHJhY2VPdmVyKSByZXR1cm47CiAgICAgICAgcmFjZVRpbWUgKz0gZHQ7CiAgICAgICAgcGxheWVySGl0VGhpc0ZyYW1lID0gZmFsc2U7CgogICAgICAgIC8vIDEpIOaOqOi/m+eJqeeQhgogICAgICAgIHBsYXllci5hcHBseUNvbnRyb2woc3RlZXIsIHRocm90dGxlLCBicmFrZSwgZHQpOwogICAgICAgIGZvciAoQUlDYXIgYWkgOiBhaUNhcnMpIGFpLnVwZGF0ZUFJKHRyYWNrLCBkdCk7CgogICAgICAgIC8vIDIpIOi+ueeVjOmHh+agtyArIOi2iueVjOWHj+mAn++8iOaKk+WcsOWKm+S4i+mZje+8iQogICAgICAgIFRyYWNrLlNhbXBsZSBwcyA9IHRyYWNrLnNhbXBsZShwbGF5ZXIucG9zaXRpb24pOwogICAgICAgIHBsYXllci5vZmZUcmFjayA9IHBzLm9mZlRyYWNrOwogICAgICAgIGlmIChwbGF5ZXIub2ZmVHJhY2spIHBsYXllci5zcGVlZCAqPSAwLjk1ZjsKICAgICAgICBmb3IgKEFJQ2FyIGFpIDogYWlDYXJzKSB7CiAgICAgICAgICAgIFRyYWNrLlNhbXBsZSBhcyA9IHRyYWNrLnNhbXBsZShhaS5wb3NpdGlvbik7CiAgICAgICAgICAgIGFpLm9mZlRyYWNrID0gYXMub2ZmVHJhY2s7CiAgICAgICAgICAgIGlmIChhaS5vZmZUcmFjaykgYWkuc3BlZWQgKj0gMC45NmY7CiAgICAgICAgfQoKICAgICAgICAvLyAzKSDovabovabnorDmkp4KICAgICAgICBoYW5kbGVDYXJDb2xsaXNpb25zKCk7CgogICAgICAgIC8vIDQpIOWciOaVsCAvIOi/m+W6pgogICAgICAgIHVwZGF0ZVByb2dyZXNzKHBsYXllciwgcHMpOwogICAgICAgIGZvciAoQUlDYXIgYWkgOiBhaUNhcnMpIHsKICAgICAgICAgICAgVHJhY2suU2FtcGxlIGFzID0gdHJhY2suc2FtcGxlKGFpLnBvc2l0aW9uKTsKICAgICAgICAgICAgdXBkYXRlUHJvZ3Jlc3MoYWksIGFzKTsKICAgICAgICB9CgogICAgICAgIC8vIDUpIOWujOi1mwogICAgICAgIGlmICghcGxheWVyRmluaXNoZWQgJiYgcGxheWVyLmxhcHNDb21wbGV0ZWQgPj0gbGFwVGFyZ2V0KSB7CiAgICAgICAgICAgIHBsYXllci5maW5pc2hlZCA9IHRydWU7CiAgICAgICAgICAgIHBsYXllckZpbmlzaGVkID0gdHJ1ZTsKICAgICAgICAgICAgcmFjZU92ZXIgPSB0cnVlOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIHZvaWQgdXBkYXRlUHJvZ3Jlc3MoQ2FyIGNhciwgVHJhY2suU2FtcGxlIHMpIHsKICAgICAgICBmbG9hdCBwID0gcy5wcm9ncmVzczsKICAgICAgICBpZiAoY2FyLmxhc3RQcm9ncmVzcyA+IDAuOGYgJiYgcCA8IDAuMmYpIGNhci5sYXBzQ29tcGxldGVkKys7CiAgICAgICAgZWxzZSBpZiAoY2FyLmxhc3RQcm9ncmVzcyA8IDAuMmYgJiYgcCA+IDAuOGYpIGNhci5sYXBzQ29tcGxldGVkID0gTWF0aC5tYXgoMCwgY2FyLmxhcHNDb21wbGV0ZWQgLSAxKTsKICAgICAgICBjYXIubGFzdFByb2dyZXNzID0gcDsKICAgICAgICBjYXIudG90YWxEaXN0YW5jZSA9IGNhci5sYXBzQ29tcGxldGVkICogdHJhY2suZ2V0VG90YWxMZW5ndGgoKSArIHMuZGlzdGFuY2U7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIGhhbmRsZUNhckNvbGxpc2lvbnMoKSB7CiAgICAgICAgTGlzdDxDYXI+IGFsbCA9IG5ldyBBcnJheUxpc3Q8PigpOwogICAgICAgIGFsbC5hZGQocGxheWVyKTsKICAgICAgICBhbGwuYWRkQWxsKGFpQ2Fycyk7CiAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBhbGwuc2l6ZSgpOyBpKyspIHsKICAgICAgICAgICAgZm9yIChpbnQgaiA9IGkgKyAxOyBqIDwgYWxsLnNpemUoKTsgaisrKSB7CiAgICAgICAgICAgICAgICBDYXIgYSA9IGFsbC5nZXQoaSksIGIgPSBhbGwuZ2V0KGopOwogICAgICAgICAgICAgICAgZmxvYXQgZCA9IGEucG9zaXRpb24uZHN0KGIucG9zaXRpb24pOwogICAgICAgICAgICAgICAgZmxvYXQgbWluID0gYS5yYWRpdXMgKyBiLnJhZGl1czsKICAgICAgICAgICAgICAgIGlmIChkIDwgbWluICYmIGQgPiAxZS00ZikgewogICAgICAgICAgICAgICAgICAgIGZsb2F0IG92ZXJsYXAgPSAobWluIC0gZCk7CiAgICAgICAgICAgICAgICAgICAgZmxvYXQgbnggPSAoYi5wb3NpdGlvbi54IC0gYS5wb3NpdGlvbi54KSAvIGQ7CiAgICAgICAgICAgICAgICAgICAgZmxvYXQgbnkgPSAoYi5wb3NpdGlvbi55IC0gYS5wb3NpdGlvbi55KSAvIGQ7CiAgICAgICAgICAgICAgICAgICAgYS5wb3NpdGlvbi54IC09IG54ICogb3ZlcmxhcCAqIDAuNWY7CiAgICAgICAgICAgICAgICAgICAgYS5wb3NpdGlvbi55IC09IG55ICogb3ZlcmxhcCAqIDAuNWY7CiAgICAgICAgICAgICAgICAgICAgYi5wb3NpdGlvbi54ICs9IG54ICogb3ZlcmxhcCAqIDAuNWY7CiAgICAgICAgICAgICAgICAgICAgYi5wb3NpdGlvbi55ICs9IG55ICogb3ZlcmxhcCAqIDAuNWY7CiAgICAgICAgICAgICAgICAgICAgYS5zcGVlZCAqPSAwLjg2ZjsKICAgICAgICAgICAgICAgICAgICBiLnNwZWVkICo9IDAuODZmOwogICAgICAgICAgICAgICAgICAgIGlmIChhID09IHBsYXllciB8fCBiID09IHBsYXllcikgcGxheWVySGl0VGhpc0ZyYW1lID0gdHJ1ZTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICAvKiog546p5a625b2T5YmN5o6S5ZCN77yIMSDkuLrnrKzkuIDvvIkgKi8KICAgIHB1YmxpYyBpbnQgZ2V0UGxheWVyUmFuaygpIHsKICAgICAgICBpbnQgcmFuayA9IDE7CiAgICAgICAgZm9yIChBSUNhciBhaSA6IGFpQ2FycykgewogICAgICAgICAgICBpZiAoYWkudG90YWxEaXN0YW5jZSA+IHBsYXllci50b3RhbERpc3RhbmNlKSByYW5rKys7CiAgICAgICAgfQogICAgICAgIHJldHVybiByYW5rOwogICAgfQoKICAgIC8qKiDlhajpg6jovabovobmjInov5vluqbmjpLluo/vvIjnrKzkuIDlkI3lnKjliY3vvIkgKi8KICAgIHB1YmxpYyBMaXN0PENhcj4gZ2V0U3RhbmRpbmdzKCkgewogICAgICAgIExpc3Q8Q2FyPiBhbGwgPSBuZXcgQXJyYXlMaXN0PD4oKTsKICAgICAgICBhbGwuYWRkKHBsYXllcik7CiAgICAgICAgYWxsLmFkZEFsbChhaUNhcnMpOwogICAgICAgIENvbGxlY3Rpb25zLnNvcnQoYWxsLCBuZXcgQ29tcGFyYXRvcjxDYXI+KCkgewogICAgICAgICAgICBAT3ZlcnJpZGUKICAgICAgICAgICAgcHVibGljIGludCBjb21wYXJlKENhciBhLCBDYXIgYikgewogICAgICAgICAgICAgICAgcmV0dXJuIEZsb2F0LmNvbXBhcmUoYi50b3RhbERpc3RhbmNlLCBhLnRvdGFsRGlzdGFuY2UpOwogICAgICAgICAgICB9CiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIGFsbDsKICAgIH0KfQo=
+package com.racinggame.core.systems;
+
+import com.racinggame.core.entities.AICar;
+import com.racinggame.core.entities.Car;
+import com.racinggame.core.entities.PlayerCar;
+import com.racinggame.core.entities.Track;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+/**
+ * 比赛管理器：推进所有车辆物理、边界/车辆碰撞、圈数与排名判定、完赛检测。
+ */
+public class RaceManager {
+    public final Track track;
+    public final PlayerCar player;
+    public final List<AICar> aiCars;
+    public final int lapTarget;
+
+    public float raceTime = 0;
+    public boolean raceOver = false;
+    public boolean playerFinished = false;
+    public boolean playerHitThisFrame = false; // 供 GameScreen 触发碰撞音效
+
+    public RaceManager(Track track, PlayerCar player, List<AICar> aiCars, int lapTarget) {
+        this.track = track;
+        this.player = player;
+        this.aiCars = aiCars;
+        this.lapTarget = lapTarget;
+        initProgress();
+    }
+
+    /** 初始化各车进度，避免起跑即误判圈数 */
+    public void initProgress() {
+        Track.Sample s = track.sample(player.position);
+        player.lastProgress = s.progress;
+        player.totalDistance = s.distance;
+        for (AICar ai : aiCars) {
+            Track.Sample as = track.sample(ai.position);
+            ai.lastProgress = as.progress;
+            ai.totalDistance = as.distance;
+        }
+    }
+
+    public void update(float dt, float steer, float throttle, float brake) {
+        if (raceOver) return;
+        raceTime += dt;
+        playerHitThisFrame = false;
+
+        // 1) 推进物理
+        player.applyControl(steer, throttle, brake, dt);
+        for (AICar ai : aiCars) ai.updateAI(track, dt);
+
+        // 2) 边界采样 + 越界减速（抓地力下降）
+        Track.Sample ps = track.sample(player.position);
+        player.offTrack = ps.offTrack;
+        if (player.offTrack) player.speed *= 0.95f;
+        for (AICar ai : aiCars) {
+            Track.Sample as = track.sample(ai.position);
+            ai.offTrack = as.offTrack;
+            if (ai.offTrack) ai.speed *= 0.96f;
+        }
+
+        // 3) 车车碰撞
+        handleCarCollisions();
+
+        // 4) 圈数 / 进度
+        updateProgress(player, ps);
+        for (AICar ai : aiCars) {
+            Track.Sample as = track.sample(ai.position);
+            updateProgress(ai, as);
+        }
+
+        // 5) 完赛
+        if (!playerFinished && player.lapsCompleted >= lapTarget) {
+            player.finished = true;
+            playerFinished = true;
+            raceOver = true;
+        }
+    }
+
+    private void updateProgress(Car car, Track.Sample s) {
+        float p = s.progress;
+        if (car.lastProgress > 0.8f && p < 0.2f) car.lapsCompleted++;
+        else if (car.lastProgress < 0.2f && p > 0.8f) car.lapsCompleted = Math.max(0, car.lapsCompleted - 1);
+        car.lastProgress = p;
+        car.totalDistance = car.lapsCompleted * track.getTotalLength() + s.distance;
+    }
+
+    private void handleCarCollisions() {
+        List<Car> all = new ArrayList<>();
+        all.add(player);
+        all.addAll(aiCars);
+        for (int i = 0; i < all.size(); i++) {
+            for (int j = i + 1; j < all.size(); j++) {
+                Car a = all.get(i), b = all.get(j);
+                float d = a.position.dst(b.position);
+                float min = a.radius + b.radius;
+                if (d < min && d > 1e-4f) {
+                    float overlap = (min - d);
+                    float nx = (b.position.x - a.position.x) / d;
+                    float ny = (b.position.y - a.position.y) / d;
+                    a.position.x -= nx * overlap * 0.5f;
+                    a.position.y -= ny * overlap * 0.5f;
+                    b.position.x += nx * overlap * 0.5f;
+                    b.position.y += ny * overlap * 0.5f;
+                    a.speed *= 0.86f;
+                    b.speed *= 0.86f;
+                    if (a == player || b == player) playerHitThisFrame = true;
+                }
+            }
+        }
+    }
+
+    /** 玩家当前排名（1 为第一） */
+    public int getPlayerRank() {
+        int rank = 1;
+        for (AICar ai : aiCars) {
+            if (ai.totalDistance > player.totalDistance) rank++;
+        }
+        return rank;
+    }
+
+    /** 全部车辆按进度排序（第一名在前） */
+    public List<Car> getStandings() {
+        List<Car> all = new ArrayList<>();
+        all.add(player);
+        all.addAll(aiCars);
+        Collections.sort(all, new Comparator<Car>() {
+            @Override
+            public int compare(Car a, Car b) {
+                return Float.compare(b.totalDistance, a.totalDistance);
+            }
+        });
+        return all;
+    }
+}

@@ -1,1 +1,48 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuQ29sb3I7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLkdMMjA7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmczZC5Nb2RlbDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzNkLmF0dHJpYnV0ZXMuQ29sb3JBdHRyaWJ1dGU7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmczZC51dGlscy5NZXNoUGFydEJ1aWxkZXI7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmczZC51dGlscy5Nb2RlbEJ1aWxkZXI7CgovKiog5oyJ5ZOB54mM6YWN6Imy56iL5bqP5YyW55Sf5oiQ5L2O5aSa6L655b2i6L2m5L2T77yI5peg6ZyA5aSW6YOo5qih5Z6L6LWE5rqQ77yJICovCnB1YmxpYyBmaW5hbCBjbGFzcyBDYXJGYWN0b3J5IHsKCiAgICBwcml2YXRlIENhckZhY3RvcnkoKSB7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBNb2RlbCBidWlsZENhck1vZGVsKENvbG9yIGJvZHlDb2xvcikgewogICAgICAgIE1vZGVsQnVpbGRlciBtYiA9IG5ldyBNb2RlbEJ1aWxkZXIoKTsKICAgICAgICBtYi5iZWdpbigpOwoKICAgICAgICBNYXRlcmlhbCBib2R5TWF0ID0gbmV3IE1hdGVyaWFsKENvbG9yQXR0cmlidXRlLmNyZWF0ZURpZmZ1c2UoYm9keUNvbG9yKSk7CiAgICAgICAgTWF0ZXJpYWwgZ2xhc3NNYXQgPSBuZXcgTWF0ZXJpYWwoQ29sb3JBdHRyaWJ1dGUuY3JlYXRlRGlmZnVzZShuZXcgQ29sb3IoMC4xM2YsIDAuMTVmLCAwLjIyZiwgMWYpKSk7CiAgICAgICAgTWF0ZXJpYWwgdGlyZU1hdCA9IG5ldyBNYXRlcmlhbChDb2xvckF0dHJpYnV0ZS5jcmVhdGVEaWZmdXNlKG5ldyBDb2xvcigwLjA3ZiwgMC4wN2YsIDAuMDhmLCAxZikpKTsKCiAgICAgICAgaW50IGF0dHJzID0gTWVzaFBhcnRCdWlsZGVyLlZlcnRleFVzYWdlLlBvc2l0aW9uIHwgTWVzaFBhcnRCdWlsZGVyLlZlcnRleFVzYWdlLk5vcm1hbDsKCiAgICAgICAgLy8g6L2m6Lqr5bqV55uYCiAgICAgICAgbWIubm9kZSgpLnRyYW5zbGF0aW9uLnNldCgwZiwgMC41NWYsIDBmKTsKICAgICAgICBtYi5wYXJ0KCJib2R5IiwgR0wyMC5HTF9UUklBTkdMRVMsIGF0dHJzLCBib2R5TWF0KQogICAgICAgICAgICAgICAgLmJveCgtMC45ZiwgLTAuM2YsIC0yZiwgMS44ZiwgMC42ZiwgNGYpOwoKICAgICAgICAvLyDovabpobbluqfoiLEKICAgICAgICBtYi5ub2RlKCkudHJhbnNsYXRpb24uc2V0KDBmLCAwLjk1ZiwgMC4yZik7CiAgICAgICAgbWIucGFydCgicm9vZiIsIEdMMjAuR0xfVFJJQU5HTEVTLCBhdHRycywgZ2xhc3NNYXQpCiAgICAgICAgICAgICAgICAuYm94KC0wLjdmLCAtMC4yNWYsIC0xZiwgMS40ZiwgMC41ZiwgMmYpOwoKICAgICAgICAvLyDlm5vkuKrovabova4KICAgICAgICBmbG9hdFtdW10gd2hlZWxzID0gewogICAgICAgICAgICAgICAgezAuOTVmLCAxLjNmfSwgey0wLjk1ZiwgMS4zZn0sIHswLjk1ZiwgLTEuM2Z9LCB7LTAuOTVmLCAtMS4zZn0KICAgICAgICB9OwogICAgICAgIGZvciAoZmxvYXRbXSB3IDogd2hlZWxzKSB7CiAgICAgICAgICAgIG1iLm5vZGUoKS50cmFuc2xhdGlvbi5zZXQod1swXSwgMC4zNWYsIHdbMV0pOwogICAgICAgICAgICBtYi5wYXJ0KCJ3aGVlbCIsIEdMMjAuR0xfVFJJQU5HTEVTLCBhdHRycywgdGlyZU1hdCkKICAgICAgICAgICAgICAgICAgICAuYm94KC0wLjJmLCAtMC4zNWYsIC0wLjQ1ZiwgMC40ZiwgMC43ZiwgMC45Zik7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gbWIuZW5kKCk7CiAgICB9Cn0K
+package com.racinggame.core.entities;
+
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g3d.Model;
+import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
+import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
+import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
+
+/** 按品牌配色程序化生成低多边形车体（无需外部模型资源） */
+public final class CarFactory {
+
+    private CarFactory() {
+    }
+
+    public static Model buildCarModel(Color bodyColor) {
+        ModelBuilder mb = new ModelBuilder();
+        mb.begin();
+
+        Material bodyMat = new Material(ColorAttribute.createDiffuse(bodyColor));
+        Material glassMat = new Material(ColorAttribute.createDiffuse(new Color(0.13f, 0.15f, 0.22f, 1f)));
+        Material tireMat = new Material(ColorAttribute.createDiffuse(new Color(0.07f, 0.07f, 0.08f, 1f)));
+
+        int attrs = MeshPartBuilder.VertexUsage.Position | MeshPartBuilder.VertexUsage.Normal;
+
+        // 车身底盘
+        mb.node().translation.set(0f, 0.55f, 0f);
+        mb.part("body", GL20.GL_TRIANGLES, attrs, bodyMat)
+                .box(-0.9f, -0.3f, -2f, 1.8f, 0.6f, 4f);
+
+        // 车顶座舱
+        mb.node().translation.set(0f, 0.95f, 0.2f);
+        mb.part("roof", GL20.GL_TRIANGLES, attrs, glassMat)
+                .box(-0.7f, -0.25f, -1f, 1.4f, 0.5f, 2f);
+
+        // 四个车轮
+        float[][] wheels = {
+                {0.95f, 1.3f}, {-0.95f, 1.3f}, {0.95f, -1.3f}, {-0.95f, -1.3f}
+        };
+        for (float[] w : wheels) {
+            mb.node().translation.set(w[0], 0.35f, w[1]);
+            mb.part("wheel", GL20.GL_TRIANGLES, attrs, tireMat)
+                    .box(-0.2f, -0.35f, -0.45f, 0.4f, 0.7f, 0.9f);
+        }
+
+        return mb.end();
+    }
+}

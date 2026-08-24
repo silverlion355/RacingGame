@@ -1,1 +1,83 @@
-IyDmnoHpgJ/otZvovaYgKFJhY2luZ0dhbWUpCgrkuIDmrL7ln7rkuo4gKipsaWJHRFggMS4xMi54Kiog55qEIEFuZHJvaWQgM0Qg6LWb6L2m5bCP5ri45oiP77yI55u45a+5IDNE77ya6L2m5YaF56ys5LiA6KeG6KeSIC8g6L2m5aSW6L+95bC+6KeG6KeS5Y+v5YiH5o2i77yJ44CCCuWFqOmDqOe+juacr+S4jumfs+mikeWdh+eUseS7o+eggeaIluiEmuacrOeoi+W6j+WMlueUn+aIkO+8jCoq5peg6ZyA5Lu75L2V6IGU572R5LiL6L2955qE56ys5LiJ5pa56LWE5rqQKirjgIIKCiMjIOeJueaApwoKLSDnqIvluo/ljJbkvY7lpJrovrnlvaIgM0Qg6LWb6YGT5LiO6LWb6L2m77yI5oyJ5ZOB54mM6YWN6Imy6L+R5Ly85ZCN6L2m77ya57qiPeazleaLieWIqeOAgem7hD3kv53ml7bmjbfjgIHpk7Y95YW25a6D77yJ44CCCi0g6Kem5o6n5pON5o6n77ya5bGP5bmV5bem5L6n5bem5Y+z6L2s5ZCR77yM5Y+z5L6n44CM5rK56Zeo44CN44CM5Yi56L2mL+WAkui9puOAjeaMiemSru+8iOaUr+aMgeWkmueCueinpuaOp+WQjOaXtuaTjeS9nO+8ieOAggotIDMg5Liq6YCS5aKe6Zq+5bqm5YWz5Y2h77yI5pu06ZW/6LWb6YGTIC8g5pu05aSa5byv6YGTIC8g5pu05b+r5a+55omL77yJ77yM5oyJ5o6S5ZCN6I635b6X56ev5YiG77yI56ysMT0xMDDjgIHnrKwyPTYw44CB56ysMz0zMOOAgeWujOi1mz0xMO+8ieOAggotIOenr+WIhumAmui/hyBgUHJlZmVyZW5jZXNg77yIQW5kcm9pZCA9IGBTaGFyZWRQcmVmZXJlbmNlc2DvvInmjIHkuYXljJbntK/orqHjgIIKLSDpn7PmlYjvvJrlvqrnjq/lvJXmk47lo7DjgIHnorDmkp7lo7DjgIHngrnlh7vlo7DjgIHov4flhbPpn7PmlYjvvIzlnYfnlLEgYHRvb2xzL2dlbl9hdWRpby5weWAg55Sf5oiQIFdBVuOAggotIOWujOaVtOWPr+eOqemXreeOr++8muS4u+iPnOWNlSDihpIg6YCJ5YWzIOKGkiDmr5TotZsg4oaSIOe7k+eulyDihpIg6L+U5Zue44CCCgojIyDlt6XnqIvnu5PmnoQKCmBgYApSYWNpbmdHYW1lLwrilJzilIDilIAgc2V0dGluZ3MuZ3JhZGxlIC8gYnVpbGQuZ3JhZGxlIC8gZ3JhZGxlLnByb3BlcnRpZXMK4pSc4pSA4pSAIGdyYWRsZXcgLyBncmFkbGV3LmJhdCAvIGdyYWRsZS93cmFwcGVyLyAgICAgICMgR3JhZGxlIDguNSDljIXoo4UK4pSc4pSA4pSAIC5naXRodWIvd29ya2Zsb3dzL2J1aWxkLnltbCAgICAgICAgICAgICAgICAgICMgR2l0SHViIEFjdGlvbnMg5p6E5bu6IEFQSwrilJzilIDilIAgdG9vbHMvZ2VuX2F1ZGlvLnB5ICAgICAgICAgICAgICAgICAgICAgICAgICAgIyDnqIvluo/ljJbnlJ/miJAgV0FWIOiEmuacrArilJzilIDilIAgY29yZS8gICAgICAgICMg5YWx5Lqr5ri45oiP6YC76L6R77yI5a6e5L2TL+ezu+e7ny/nlYzpnaIv5YWz5Y2h77yJCuKUnOKUgOKUgCBhbmRyb2lkLyAgICAgIyBBbmRyb2lkIOWPkeW4g+ebruagh++8iOWQqyBhc3NldHMvYXVkaW8vKi53YXbvvIkK4pSU4pSA4pSAIGRlc2t0b3AvICAgICAjIExXSkdMIOahjOmdouWGkueDn+a1i+ivlQpgYGAKCiMjIOeOr+Wig+imgeaxggoKLSAqKkFuZHJvaWQg5p6E5bu6KirvvJpKREsgMTcgKyBBbmRyb2lkIFNES++8iGNvbXBpbGVTZGsvdGFyZ2V0U2RrIDM077yMbWluU2RrIDIx77yJ44CCCi0gKirmoYzpnaLov5DooYwqKu+8mkpESyAxNyAr77yITFdKR0wg5Y6f55Sf5bqT55Sx5L6d6LWW6Ieq5Yqo5o+Q5L6b77yJ44CCCi0gKirpn7PmlYjnlJ/miJAqKu+8mlB5dGhvbiAz77yI5qCH5YeG5bqT5Y2z5Y+v77yJ44CCCgojIyDmnKzlnLDov5DooYwgLyDmnoTlu7oKCiMjIyAxKSDnlJ/miJDpn7PmlYjvvIjpppbmrKHmiJbmuIXnkIblkI7vvIkKYGBgYmFzaApweXRob24zIHRvb2xzL2dlbl9hdWRpby5weSBhbmRyb2lkL2Fzc2V0cy9hdWRpbwpgYGAKCiMjIyAyKSDmoYzpnaLlhpLng5/mtYvor5XvvIjpnIDmnKzmnLrmnIkgSkRLMTcg5LiO5Zu+5b2i546v5aKD77yJCmBgYGJhc2gKLi9ncmFkbGV3IGRlc2t0b3A6cnVuCmBgYAoKIyMjIDMpIOaehOW7uiBBbmRyb2lkIEFQSwpgYGBiYXNoCi4vZ3JhZGxldyBhbmRyb2lkOmFzc2VtYmxlRGVidWcKIyDkuqfniak6IGFuZHJvaWQvYnVpbGQvb3V0cHV0cy9hcGsvZGVidWcvYW5kcm9pZC1kZWJ1Zy5hcGsKYGBgCj4g5Lmf5Y+v55u05o6lIGAuL2dyYWRsZXcgYXNzZW1ibGVEZWJ1Z2Ag5p6E5bu65YWo6YOo5qih5Z2X44CCCgojIyMgNCkg5Y+R5biD5Yiw5omL5py6CuWwhiBgYW5kcm9pZC1kZWJ1Zy5hcGtgIOaLt+i0neWIsOaJi+acuuWuieijhe+8jOaIluWcqCBBbmRyb2lkIFN0dWRpbyDmiZPlvIDmnKzlt6XnqIvlkI7ov5DooYzliLDorr7lpIfjgIIKCiMjIEdpdEh1YiBBY3Rpb25zIOiHquWKqOaehOW7ugoK5o6o6YCB5YiwIGBtYWluYC9gbWFzdGVyYCDmiJblj5HotbcgUFIg5Y2z6Kem5Y+R77yaCjEuIGBjaGVja291dGAg5Luj56CBCjIuIGBzZXR1cC1qYXZhQDE3YO+8iFRlbXVyaW7vvIkKMy4gYGFuZHJvaWQtYWN0aW9ucy9zZXR1cC1hbmRyb2lkYCDlubYgYHNka21hbmFnZXIgLS1saWNlbnNlc2Ag5o6l5Y+X5Y2P6K6u44CB5a6J6KOFIGBwbGF0Zm9ybS0zNGAg5LiOIGBidWlsZC10b29sczszNC4wLjBgCjQuIOi/kOihjCBQeXRob24g6ISa5pys55Sf5oiQ6Z+z5pWICjUuIGAuL2dyYWRsZXcgYXNzZW1ibGVEZWJ1Z2AKNi4g5LiK5LygIGBhbmRyb2lkL2J1aWxkL291dHB1dHMvYXBrLyoqLyouYXBrYCDkuLogQXJ0aWZhY3TvvIjlkI3kuLogYHJhY2luZy1nYW1lLWFwa2DvvIkKCuS4i+i9vSBBcnRpZmFjdCDljbPlj6/ojrflvpflj6/lronoo4XnmoTosIPor5UgQVBL44CCCgojIyDku6PnoIHliIbljIUKCi0gYGNvcmUvc2NyZWVucy9g77yaYE1haW5NZW51U2NyZWVuYOOAgWBMZXZlbFNlbGVjdFNjcmVlbmDjgIFgR2FtZVNjcmVlbmDjgIFgUmVzdWx0U2NyZWVuYOOAgWBHYXJhZ2VTY3JlZW5gCi0gYGNvcmUvZW50aXRpZXMvYO+8mmBQbGF5ZXJDYXJg44CBYEFJQ2FyYOOAgWBUcmFja2DvvIjot6/ngrkv6L6555WML+e9keagvO+8ieOAgWBDYXJGYWN0b3J5YO+8iOWTgeeJjOmFjeiJsui9puS9k++8iQotIGBjb3JlL3N5c3RlbXMvYO+8mmBUb3VjaElucHV0Q29udHJvbGxlcmDjgIFgUmFjZU1hbmFnZXJg44CBYFNjb3JlTWFuYWdlcmDjgIFgQXVkaW9NYW5hZ2VyYOOAgWBDYW1lcmFDb250cm9sbGVyYAotIGBjb3JlL2xldmVscy9g77yaYExldmVsRGVmaW5pdGlvbmAgKyBgTGV2ZWxDb25maWdg77yIMyDlhbPlj4LmlbDvvIkKLSBgY29yZS91dGlscy9g77yaYE1hdGhVdGlsYOOAgWBVaUJ1dHRvbmDjgIFgUmVjdGDjgIFgRm9udE1hbmFnZXJgCi0gYEdhbWVDb25zdGFudHNg77ya6ZuG5Lit5bi46YeP77yI6KeG6KeS44CB54mp55CG44CB6YWN6Imy44CB56ev5YiG6KeE5YiZ77yJCgojIyDlt7Lnn6XpmZDliLbkuI7lkI7nu63ljYfnuqcKCi0g6LWb6L2m5Li656iL5bqP5YyW5L2O5aSa6L655b2i77yM5Y+v5pu/5o2i5Li655yf5a6eIGdsVEYvb2JqIOaooeWei++8iOS/neeVmSBgQ2FyRmFjdG9yeWAg5o6l5Y+j5Y2z5Y+v77yJ44CCCi0g5b2T5YmN5Li66KGX5py65byP566A5YyW54mp55CG77yI6Z2eIEJ1bGxldC9Cb3gyRO+8ie+8jOWPr+WNh+e6p+S4uuecn+WunueJqeeQhuOAggotIOmYtOW9seS9v+eUqOWfuuehgOaWueWQkeWFie+8jOWPr+WKoOWFpSBgTW9kZWxCYXRjaGAg6Zi05b2x5oiWIFBDRiDkvJjljJbjgIIKLSDlhbPljaHnm67liY0gMyDkuKrvvIzmianlsZXlj6rpnIDlnKggYExldmVsQ29uZmlnLkxFVkVMU2Ag5aKe5YqgIGBMZXZlbERlZmluaXRpb25g44CCCi0g5Lit5paHIFVJIOS+nei1luezu+e7nyBDSksg5a2X5L2T77yIQW5kcm9pZCDoh6rluKbvvInvvJvoi6Xnm67moIforr7lpIfml6AgQ0pLIOWtl+S9k++8jOS8muWbnumAgOS4uum7mOiupOWtl+S9k++8iEFTQ0lJ77yJ44CCCg==
+# 极速赛车 (RacingGame)
+
+一款基于 **libGDX 1.12.x** 的 Android 3D 赛车小游戏（相对 3D：车内第一视角 / 车外追尾视角可切换）。
+全部美术与音频均由代码或脚本程序化生成，**无需任何联网下载的第三方资源**。
+
+## 特性
+
+- 程序化低多边形 3D 赛道与赛车（按品牌配色近似名车：红=法拉利、黄=保时捷、银=其它）。
+- 触控操控：屏幕左侧左右转向，右侧「油门」「刹车/倒车」按钮（支持多点触控同时操作）。
+- 3 个递增难度关卡（更长赛道 / 更多弯道 / 更快对手），按排名获得积分（第1=100、第2=60、第3=30、完赛=10）。
+- 积分通过 `Preferences`（Android = `SharedPreferences`）持久化累计。
+- 音效：循环引擎声、碰撞声、点击声、过关音效，均由 `tools/gen_audio.py` 生成 WAV。
+- 完整可玩闭环：主菜单 → 选关 → 比赛 → 结算 → 返回。
+
+## 工程结构
+
+```
+RacingGame/
+├── settings.gradle / build.gradle / gradle.properties
+├── gradlew / gradlew.bat / gradle/wrapper/      # Gradle 8.5 包装
+├── .github/workflows/build.yml                  # GitHub Actions 构建 APK
+├── tools/gen_audio.py                           # 程序化生成 WAV 脚本
+├── core/        # 共享游戏逻辑（实体/系统/界面/关卡）
+├── android/     # Android 发布目标（含 assets/audio/*.wav）
+└── desktop/     # LWJGL 桌面冒烟测试
+```
+
+## 环境要求
+
+- **Android 构建**：JDK 17 + Android SDK（compileSdk/targetSdk 34，minSdk 21）。
+- **桌面运行**：JDK 17 +（LWJGL 原生库由依赖自动提供）。
+- **音效生成**：Python 3（标准库即可）。
+
+## 本地运行 / 构建
+
+### 1) 生成音效（首次或清理后）
+```bash
+python3 tools/gen_audio.py android/assets/audio
+```
+
+### 2) 桌面冒烟测试（需本机有 JDK17 与图形环境）
+```bash
+./gradlew desktop:run
+```
+
+### 3) 构建 Android APK
+```bash
+./gradlew android:assembleDebug
+# 产物: android/build/outputs/apk/debug/android-debug.apk
+```
+> 也可直接 `./gradlew assembleDebug` 构建全部模块。
+
+### 4) 发布到手机
+将 `android-debug.apk` 拷贝到手机安装，或在 Android Studio 打开本工程后运行到设备。
+
+## GitHub Actions 自动构建
+
+推送到 `main`/`master` 或发起 PR 即触发：
+1. `checkout` 代码
+2. `setup-java@17`（Temurin）
+3. `android-actions/setup-android` 并 `sdkmanager --licenses` 接受协议、安装 `platform-34` 与 `build-tools;34.0.0`
+4. 运行 Python 脚本生成音效
+5. `./gradlew assembleDebug`
+6. 上传 `android/build/outputs/apk/**/*.apk` 为 Artifact（名为 `racing-game-apk`）
+
+下载 Artifact 即可获得可安装的调试 APK。
+
+## 代码分包
+
+- `core/screens/`：`MainMenuScreen`、`LevelSelectScreen`、`GameScreen`、`ResultScreen`、`GarageScreen`
+- `core/entities/`：`PlayerCar`、`AICar`、`Track`（路点/边界/网格）、`CarFactory`（品牌配色车体）
+- `core/systems/`：`TouchInputController`、`RaceManager`、`ScoreManager`、`AudioManager`、`CameraController`
+- `core/levels/`：`LevelDefinition` + `LevelConfig`（3 关参数）
+- `core/utils/`：`MathUtil`、`UiButton`、`Rect`、`FontManager`
+- `GameConstants`：集中常量（视角、物理、配色、积分规则）
+
+## 已知限制与后续升级
+
+- 赛车为程序化低多边形，可替换为真实 glTF/obj 模型（保留 `CarFactory` 接口即可）。
+- 当前为街机式简化物理（非 Bullet/Box2D），可升级为真实物理。
+- 阴影使用基础方向光，可加入 `ModelBatch` 阴影或 PCF 优化。
+- 关卡目前 3 个，扩展只需在 `LevelConfig.LEVELS` 增加 `LevelDefinition`。
+- 中文 UI 依赖系统 CJK 字体（Android 自带）；若目标设备无 CJK 字体，会回退为默认字体（ASCII）。

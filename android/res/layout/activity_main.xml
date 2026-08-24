@@ -1,1 +1,6 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPFJlbGF0aXZlTGF5b3V0IHhtbG5zOmFuZHJvaWQ9Imh0dHA6Ly9zY2hlbWFzLmFuZHJvaWQuY29tL2Fway9yZXMvYW5kcm9pZCIKICAgIGFuZHJvaWQ6bGF5b3V0X3dpZHRoPSJtYXRjaF9wYXJlbnQiCiAgICBhbmRyb2lkOmxheW91dF9oZWlnaHQ9Im1hdGNoX3BhcmVudCI+CiAgICA8IS0tIGxpYkdEWCDpgJrov4cgQW5kcm9pZEFwcGxpY2F0aW9uIOiHquihjOeuoeeQhuinhuWbvu+8jOatpOW4g+WxgOS7heS9nOWNoOS9jSAtLT4KPC9SZWxhdGl2ZUxheW91dD4K
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- libGDX 通过 AndroidApplication 自行管理视图，此布局仅作占位 -->
+</RelativeLayout>

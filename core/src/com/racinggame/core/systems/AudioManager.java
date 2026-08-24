@@ -1,1 +1,77 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmF1ZGlvLlNvdW5kOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC51dGlscy5EaXNwb3NhYmxlOwoKLyoqCiAqIOmfs+aViOeuoeeQhu+8muW8leaTjuW+queOr+WjsOOAgeeisOaSnuOAgeeCueWHu+OAgei/h+WFs+mfs+aViOOAggogKiDotYTmupDlnYfkuLrnqIvluo/ljJbnlJ/miJDnmoQgV0FW77yI5L2N5LqOIGFuZHJvaWQvYXNzZXRzL2F1ZGlvL++8ieOAggogKiDmj5DkvpvpnZnpn7PlvIDlhbPkuI7lvJXmk47pmo/pgJ/luqblj5josIPjgIIKICovCnB1YmxpYyBjbGFzcyBBdWRpb01hbmFnZXIgaW1wbGVtZW50cyBEaXNwb3NhYmxlIHsKICAgIHByaXZhdGUgU291bmQgZW5naW5lLCBjcmFzaCwgY2xpY2ssIHdpbjsKICAgIHByaXZhdGUgbG9uZyBlbmdpbmVJZCA9IC0xOwogICAgcHJpdmF0ZSBib29sZWFuIG11dGVkID0gZmFsc2U7CiAgICBwcml2YXRlIGJvb2xlYW4gbG9hZGVkID0gZmFsc2U7CgogICAgcHVibGljIHZvaWQgbG9hZCgpIHsKICAgICAgICBlbmdpbmUgPSBHZHguYXVkaW8ubmV3U291bmQoR2R4LmZpbGVzLmludGVybmFsKCJhdWRpby9lbmdpbmUud2F2IikpOwogICAgICAgIGNyYXNoID0gR2R4LmF1ZGlvLm5ld1NvdW5kKEdkeC5maWxlcy5pbnRlcm5hbCgiYXVkaW8vY3Jhc2gud2F2IikpOwogICAgICAgIGNsaWNrID0gR2R4LmF1ZGlvLm5ld1NvdW5kKEdkeC5maWxlcy5pbnRlcm5hbCgiYXVkaW8vY2xpY2sud2F2IikpOwogICAgICAgIHdpbiA9IEdkeC5hdWRpby5uZXdTb3VuZChHZHguZmlsZXMuaW50ZXJuYWwoImF1ZGlvL3dpbi53YXYiKSk7CiAgICAgICAgbG9hZGVkID0gdHJ1ZTsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBzdGFydEVuZ2luZSgpIHsKICAgICAgICBpZiAoIWxvYWRlZCB8fCBtdXRlZCB8fCBlbmdpbmVJZCAhPSAtMSkgcmV0dXJuOwogICAgICAgIGVuZ2luZUlkID0gZW5naW5lLmxvb3AoMC40Zik7CiAgICB9CgogICAgcHVibGljIHZvaWQgc3RvcEVuZ2luZSgpIHsKICAgICAgICBpZiAoZW5naW5lSWQgIT0gLTEpIHsKICAgICAgICAgICAgZW5naW5lLnN0b3AoZW5naW5lSWQpOwogICAgICAgICAgICBlbmdpbmVJZCA9IC0xOwogICAgICAgIH0KICAgIH0KCiAgICAvKiog5qC55o2u6YCf5bqm5q+UKDAuLjEp6LCD6IqC5byV5pOO6Z+z6auYICovCiAgICBwdWJsaWMgdm9pZCBzZXRFbmdpbmVJbnRlbnNpdHkoZmxvYXQgc3BlZWRSYXRpbykgewogICAgICAgIGlmIChlbmdpbmVJZCAhPSAtMSkgewogICAgICAgICAgICBlbmdpbmUuc2V0UGl0Y2goZW5naW5lSWQsIDAuNWYgKyBzcGVlZFJhdGlvICogMS4yZik7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyB2b2lkIHBsYXlDcmFzaCgpIHsKICAgICAgICBpZiAoIW11dGVkKSBjcmFzaC5wbGF5KDAuNmYpOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIHBsYXlDbGljaygpIHsKICAgICAgICBpZiAoIW11dGVkKSBjbGljay5wbGF5KDAuNWYpOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIHBsYXlXaW4oKSB7CiAgICAgICAgaWYgKCFtdXRlZCkgd2luLnBsYXkoMC44Zik7CiAgICB9CgogICAgcHVibGljIHZvaWQgc2V0TXV0ZWQoYm9vbGVhbiBtKSB7CiAgICAgICAgbXV0ZWQgPSBtOwogICAgICAgIGlmIChtKSBzdG9wRW5naW5lKCk7CiAgICB9CgogICAgcHVibGljIGJvb2xlYW4gaXNNdXRlZCgpIHsKICAgICAgICByZXR1cm4gbXV0ZWQ7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBkaXNwb3NlKCkgewogICAgICAgIHN0b3BFbmdpbmUoKTsKICAgICAgICBpZiAobG9hZGVkKSB7CiAgICAgICAgICAgIGVuZ2luZS5kaXNwb3NlKCk7CiAgICAgICAgICAgIGNyYXNoLmRpc3Bvc2UoKTsKICAgICAgICAgICAgY2xpY2suZGlzcG9zZSgpOwogICAgICAgICAgICB3aW4uZGlzcG9zZSgpOwogICAgICAgICAgICBsb2FkZWQgPSBmYWxzZTsKICAgICAgICB9CiAgICB9Cn0K
+package com.racinggame.core.systems;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.utils.Disposable;
+
+/**
+ * 音效管理：引擎循环声、碰撞、点击、过关音效。
+ * 资源均为程序化生成的 WAV（位于 android/assets/audio/）。
+ * 提供静音开关与引擎随速度变调。
+ */
+public class AudioManager implements Disposable {
+    private Sound engine, crash, click, win;
+    private long engineId = -1;
+    private boolean muted = false;
+    private boolean loaded = false;
+
+    public void load() {
+        engine = Gdx.audio.newSound(Gdx.files.internal("audio/engine.wav"));
+        crash = Gdx.audio.newSound(Gdx.files.internal("audio/crash.wav"));
+        click = Gdx.audio.newSound(Gdx.files.internal("audio/click.wav"));
+        win = Gdx.audio.newSound(Gdx.files.internal("audio/win.wav"));
+        loaded = true;
+    }
+
+    public void startEngine() {
+        if (!loaded || muted || engineId != -1) return;
+        engineId = engine.loop(0.4f);
+    }
+
+    public void stopEngine() {
+        if (engineId != -1) {
+            engine.stop(engineId);
+            engineId = -1;
+        }
+    }
+
+    /** 根据速度比(0..1)调节引擎音高 */
+    public void setEngineIntensity(float speedRatio) {
+        if (engineId != -1) {
+            engine.setPitch(engineId, 0.5f + speedRatio * 1.2f);
+        }
+    }
+
+    public void playCrash() {
+        if (!muted) crash.play(0.6f);
+    }
+
+    public void playClick() {
+        if (!muted) click.play(0.5f);
+    }
+
+    public void playWin() {
+        if (!muted) win.play(0.8f);
+    }
+
+    public void setMuted(boolean m) {
+        muted = m;
+        if (m) stopEngine();
+    }
+
+    public boolean isMuted() {
+        return muted;
+    }
+
+    @Override
+    public void dispose() {
+        stopEngine();
+        if (loaded) {
+            engine.dispose();
+            crash.dispose();
+            click.dispose();
+            win.dispose();
+            loaded = false;
+        }
+    }
+}

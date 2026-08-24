@@ -1,1 +1,11 @@
-YXBwbHkgcGx1Z2luOiAiamF2YS1saWJyYXJ5IgoKZGVwZW5kZW5jaWVzIHsKICAgIGFwaSAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeDokZ2R4VmVyc2lvbiIKICAgIGFwaSAiY29tLmJhZGxvZ2ljZ2FtZXMuZ2R4OmdkeC1mcmVldHlwZTokZ2R4VmVyc2lvbiIKfQoKamF2YSB7CiAgICBzb3VyY2VDb21wYXRpYmlsaXR5ID0gSmF2YVZlcnNpb24uVkVSU0lPTl8xNwogICAgdGFyZ2V0Q29tcGF0aWJpbGl0eSA9IEphdmFWZXJzaW9uLlZFUlNJT05fMTcKfQo=
+apply plugin: "java-library"
+
+dependencies {
+    api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}

@@ -1,1 +1,4 @@
-IyDpu5jorqTkuI3lvIDlkK/mt7fmt4bvvIhidWlsZC5ncmFkbGUg5LitIG1pbmlmeUVuYWJsZWQ9ZmFsc2XvvInjgIIKIyDoi6XlsIbmnaXlvIDlkK8gcmVsZWFzZSDmt7fmt4bvvIzlj6/lnKjmraTmt7vliqDkv53nlZnop4TliJnvvIzkvovlpoLvvJoKIyAta2VlcCBjbGFzcyBjb20uYmFkbG9naWMuZ2R4LioqIHsgKjsgfQojIC1rZWVwIGNsYXNzIGNvbS5yYWNpbmdnYW1lLioqIHsgKjsgfQo=
+# 默认不开启混淆（build.gradle 中 minifyEnabled=false）。
+# 若将来开启 release 混淆，可在此添加保留规则，例如：
+# -keep class com.badlogic.gdx.** { *; }
+# -keep class com.racinggame.** { *; }

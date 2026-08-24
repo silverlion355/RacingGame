@@ -1,1 +1,10 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlcz4KICAgIDwhLS0gbGliR0RYIOWQr+WKqCBBY3Rpdml0eSDkvb/nlKjnmoTlhajlsY/ml6DmoIfpopjkuLvpopggLS0+CiAgICA8c3R5bGUgbmFtZT0iR2R4VGhlbWUiIHBhcmVudD0iQGFuZHJvaWQ6c3R5bGUvVGhlbWUuTm9UaXRsZUJhci5GdWxsc2NyZWVuIj4KICAgICAgICA8aXRlbSBuYW1lPSJhbmRyb2lkOndpbmRvd0JhY2tncm91bmQiPkBhbmRyb2lkOmNvbG9yL2JsYWNrPC9pdGVtPgogICAgICAgIDxpdGVtIG5hbWU9ImFuZHJvaWQ6Y29sb3JGb3JlZ3JvdW5kIj4jZmZmZmZmZmY8L2l0ZW0+CiAgICAgICAgPGl0ZW0gbmFtZT0iYW5kcm9pZDp3aW5kb3dOb1RpdGxlIj50cnVlPC9pdGVtPgogICAgICAgIDxpdGVtIG5hbWU9ImFuZHJvaWQ6d2luZG93RnVsbHNjcmVlbiI+dHJ1ZTwvaXRlbT4KICAgIDwvc3R5bGU+CjwvcmVzb3VyY2VzPgo=
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- libGDX 启动 Activity 使用的全屏无标题主题 -->
+    <style name="GdxTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorForeground">#ffffffff</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

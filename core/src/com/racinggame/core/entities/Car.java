@@ -1,1 +1,90 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzNkLk1vZGVsSW5zdGFuY2U7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4Lm1hdGguTWF0aFV0aWxzOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5tYXRoLlZlY3RvcjI7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4Lm1hdGguVmVjdG9yMzsKCi8qKgogKiDotZvovabln7rnsbvvvIjooZfmnLrlvI/niannkIbvvIzpnZ7nnJ/lrp7niannkIblvJXmk47vvInjgIIKICog5L2N572u55SoIDJEIOW5s+mdoiAoeCx6Ke+8jGhlYWRpbmcg5Li65pyd5ZCR5byn5bqm77ybM0Qg5qih5Z6L5q+P5bin6Lef6ZqP5pu05paw44CCCiAqLwpwdWJsaWMgYWJzdHJhY3QgY2xhc3MgQ2FyIHsKICAgIHB1YmxpYyBWZWN0b3IyIHBvc2l0aW9uID0gbmV3IFZlY3RvcjIoKTsKICAgIHB1YmxpYyBmbG9hdCBoZWFkaW5nOyAgICAgICAgICAvLyDmnJ3lkJHlvKfluqbvvIgwIOaMh+WQkSArWO+8iQogICAgcHVibGljIGZsb2F0IHNwZWVkOyAgICAgICAgICAgIC8vIOW9k+WJjemAn+W6pu+8iOayv+acneWQke+8jOWPr+S4uui0nz3lgJLovabvvIkKICAgIHB1YmxpYyBmbG9hdCBtYXhTcGVlZDsKICAgIHB1YmxpYyBmbG9hdCBhY2NlbDsKICAgIHB1YmxpYyBmbG9hdCBicmFrZVBvd2VyOwogICAgcHVibGljIGZsb2F0IHN0ZWVyUmF0ZTsgICAgICAgIC8vIOi9rOWQkemAn+eOhyByYWQvcwogICAgcHVibGljIGZsb2F0IGZyaWN0aW9uOyAgICAgICAgIC8vIOiHqueEtumYu+WKmwogICAgcHVibGljIGZsb2F0IHJhZGl1czsgICAgICAgICAgIC8vIOeisOaSnuWchuWNiuW+hAogICAgcHVibGljIGludCBicmFuZDsgICAgICAgICAgICAgLy8g5ZOB54mML+mFjeiJsue0ouW8lQogICAgcHVibGljIE1vZGVsSW5zdGFuY2UgaW5zdGFuY2U7CgogICAgLy8g5q+U6LWb6L+b5bqm54q25oCBCiAgICBwdWJsaWMgaW50IGxhcHNDb21wbGV0ZWQgPSAwOwogICAgcHVibGljIGZsb2F0IGxhc3RQcm9ncmVzcyA9IDA7ICAgICAvLyDkuIrkuIDluKfotZvpgZPov5vluqYgMC4uMQogICAgcHVibGljIGZsb2F0IHRvdGFsRGlzdGFuY2UgPSAwOyAgICAvLyDntK/orqHmsr/otZvpgZPot53nprvvvIznlKjkuo7mjpLlkI0KICAgIHB1YmxpYyBib29sZWFuIG9mZlRyYWNrID0gZmFsc2U7CiAgICBwdWJsaWMgYm9vbGVhbiBmaW5pc2hlZCA9IGZhbHNlOwoKICAgIHB1YmxpYyBDYXIoZmxvYXQgbWF4U3BlZWQsIGZsb2F0IGFjY2VsLCBmbG9hdCBicmFrZVBvd2VyLCBmbG9hdCBzdGVlclJhdGUsIGZsb2F0IGZyaWN0aW9uLCBmbG9hdCByYWRpdXMpIHsKICAgICAgICB0aGlzLm1heFNwZWVkID0gbWF4U3BlZWQ7CiAgICAgICAgdGhpcy5hY2NlbCA9IGFjY2VsOwogICAgICAgIHRoaXMuYnJha2VQb3dlciA9IGJyYWtlUG93ZXI7CiAgICAgICAgdGhpcy5zdGVlclJhdGUgPSBzdGVlclJhdGU7CiAgICAgICAgdGhpcy5mcmljdGlvbiA9IGZyaWN0aW9uOwogICAgICAgIHRoaXMucmFkaXVzID0gcmFkaXVzOwogICAgfQoKICAgIC8qKiDlvZPliY3liY3ov5vmlrnlkJHvvIhYWiDlubPpnaLvvIkgKi8KICAgIHB1YmxpYyBWZWN0b3IyIGZvcndhcmQoKSB7CiAgICAgICAgcmV0dXJuIG5ldyBWZWN0b3IyKChmbG9hdCkgTWF0aC5jb3MoaGVhZGluZyksIChmbG9hdCkgTWF0aC5zaW4oaGVhZGluZykpOwogICAgfQoKICAgIC8qKgogICAgICog5bqU55So5pON5o6n5bm25o6o6L+b5LiA5bin54mp55CG44CCCiAgICAgKiBAcGFyYW0gc3RlZXIgICDovazlkJHovpPlhaUgLTEo5bemKS4uKzEo5Y+zKQogICAgICogQHBhcmFtIHRocm90dGxlIOayuemXqCAwLi4xCiAgICAgKiBAcGFyYW0gYnJha2UgICAg5Yi56L2mL+WAkui9piAwLi4xCiAgICAgKi8KICAgIHB1YmxpYyB2b2lkIGFwcGx5Q29udHJvbChmbG9hdCBzdGVlciwgZmxvYXQgdGhyb3R0bGUsIGZsb2F0IGJyYWtlLCBmbG9hdCBkdCkgewogICAgICAgIC8vIOi9rOWQke+8mumAn+W6pui2iumrmOi9rOWQkeeVpemSne+8jOaJi+aEn+abtOeoswogICAgICAgIGZsb2F0IHNwZWVkRmFjdG9yID0gMC41NWYgKyAwLjQ1ZiAqIE1hdGgubWluKDFmLCBNYXRoLmFicyhzcGVlZCkgLyBtYXhTcGVlZCk7CiAgICAgICAgaGVhZGluZyArPSBzdGVlciAqIHN0ZWVyUmF0ZSAqIHNwZWVkRmFjdG9yICogZHQ7CgogICAgICAgIC8vIOayuemXqOWKoOmAnwogICAgICAgIGlmICh0aHJvdHRsZSA+IDApIHsKICAgICAgICAgICAgc3BlZWQgKz0gYWNjZWwgKiB0aHJvdHRsZSAqIGR0OwogICAgICAgIH0KICAgICAgICAvLyDliLnovaYgLyDlgJLovaYKICAgICAgICBpZiAoYnJha2UgPiAwKSB7CiAgICAgICAgICAgIGlmIChzcGVlZCA+IDApIHsKICAgICAgICAgICAgICAgIHNwZWVkIC09IGJyYWtlUG93ZXIgKiBicmFrZSAqIGR0OwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgc3BlZWQgLT0gYWNjZWwgKiAwLjZmICogYnJha2UgKiBkdDsgLy8g5YCS6L2mCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgLy8g6Ieq54S26Zi75Yqb77yI5peg6L6T5YWl5pe25ruR6KGM5YeP6YCf77yJCiAgICAgICAgaWYgKHRocm90dGxlID09IDAgJiYgYnJha2UgPT0gMCkgewogICAgICAgICAgICBmbG9hdCBkcm9wID0gZnJpY3Rpb24gKiBkdDsKICAgICAgICAgICAgaWYgKE1hdGguYWJzKHNwZWVkKSA8PSBkcm9wKSBzcGVlZCA9IDA7CiAgICAgICAgICAgIGVsc2Ugc3BlZWQgLT0gTWF0aC5zaWdudW0oc3BlZWQpICogZHJvcDsKICAgICAgICB9CgogICAgICAgIC8vIOmZkOmAn++8iOWAkui9puacgOmrmOmAn+W6puS4uuWJjei/m+eahCA0MCXvvIkKICAgICAgICBzcGVlZCA9IE1hdGhVdGlscy5jbGFtcChzcGVlZCwgLW1heFNwZWVkICogMC40ZiwgbWF4U3BlZWQpOwoKICAgICAgICAvLyDkvY3np7sKICAgICAgICBWZWN0b3IyIGYgPSBmb3J3YXJkKCk7CiAgICAgICAgcG9zaXRpb24ueCArPSBmLnggKiBzcGVlZCAqIGR0OwogICAgICAgIHBvc2l0aW9uLnkgKz0gZi55ICogc3BlZWQgKiBkdDsKCiAgICAgICAgLy8g5ZCM5q2lIDNEIOaooeWeiwogICAgICAgIGlmIChpbnN0YW5jZSAhPSBudWxsKSB7CiAgICAgICAgICAgIGluc3RhbmNlLnRyYW5zZm9ybS5zZXRUb1RyYW5zbGF0aW9uKHBvc2l0aW9uLngsIDAsIHBvc2l0aW9uLnkpOwogICAgICAgICAgICBpbnN0YW5jZS50cmFuc2Zvcm0ucm90YXRlUmFkKFZlY3RvcjMuWSwgKGZsb2F0KSAoTWF0aC5QSSAvIDIgLSBoZWFkaW5nKSk7CiAgICAgICAgfQogICAgfQp9Cg==
+package com.racinggame.core.entities;
+
+import com.badlogic.gdx.graphics.g3d.ModelInstance;
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
+
+/**
+ * 赛车基类（街机式物理，非真实物理引擎）。
+ * 位置用 2D 平面 (x,z)，heading 为朝向弧度；3D 模型每帧跟随更新。
+ */
+public abstract class Car {
+    public Vector2 position = new Vector2();
+    public float heading;          // 朝向弧度（0 指向 +X）
+    public float speed;            // 当前速度（沿朝向，可为负=倒车）
+    public float maxSpeed;
+    public float accel;
+    public float brakePower;
+    public float steerRate;        // 转向速率 rad/s
+    public float friction;         // 自然阻力
+    public float radius;           // 碰撞圆半径
+    public int brand;             // 品牌/配色索引
+    public ModelInstance instance;
+
+    // 比赛进度状态
+    public int lapsCompleted = 0;
+    public float lastProgress = 0;     // 上一帧赛道进度 0..1
+    public float totalDistance = 0;    // 累计沿赛道距离，用于排名
+    public boolean offTrack = false;
+    public boolean finished = false;
+
+    public Car(float maxSpeed, float accel, float brakePower, float steerRate, float friction, float radius) {
+        this.maxSpeed = maxSpeed;
+        this.accel = accel;
+        this.brakePower = brakePower;
+        this.steerRate = steerRate;
+        this.friction = friction;
+        this.radius = radius;
+    }
+
+    /** 当前前进方向（XZ 平面） */
+    public Vector2 forward() {
+        return new Vector2((float) Math.cos(heading), (float) Math.sin(heading));
+    }
+
+    /**
+     * 应用操控并推进一帧物理。
+     * @param steer   转向输入 -1(左)..+1(右)
+     * @param throttle 油门 0..1
+     * @param brake    刹车/倒车 0..1
+     */
+    public void applyControl(float steer, float throttle, float brake, float dt) {
+        // 转向：速度越高转向略钝，手感更稳
+        float speedFactor = 0.55f + 0.45f * Math.min(1f, Math.abs(speed) / maxSpeed);
+        heading += steer * steerRate * speedFactor * dt;
+
+        // 油门加速
+        if (throttle > 0) {
+            speed += accel * throttle * dt;
+        }
+        // 刹车 / 倒车
+        if (brake > 0) {
+            if (speed > 0) {
+                speed -= brakePower * brake * dt;
+            } else {
+                speed -= accel * 0.6f * brake * dt; // 倒车
+            }
+        }
+        // 自然阻力（无输入时滑行减速）
+        if (throttle == 0 && brake == 0) {
+            float drop = friction * dt;
+            if (Math.abs(speed) <= drop) speed = 0;
+            else speed -= Math.signum(speed) * drop;
+        }
+
+        // 限速（倒车最高速度为前进的 40%）
+        speed = MathUtils.clamp(speed, -maxSpeed * 0.4f, maxSpeed);
+
+        // 位移
+        Vector2 f = forward();
+        position.x += f.x * speed * dt;
+        position.y += f.y * speed * dt;
+
+        // 同步 3D 模型
+        if (instance != null) {
+            instance.transform.setToTranslation(position.x, 0, position.y);
+            instance.transform.rotateRad(Vector3.Y, (float) (Math.PI / 2 - heading));
+        }
+    }
+}

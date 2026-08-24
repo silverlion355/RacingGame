@@ -1,1 +1,106 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnNjcmVlbnM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LlNjcmVlbkFkYXB0ZXI7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLkNvbG9yOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5PcnRob2dyYXBoaWNDYW1lcmE7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmcyZC5TcHJpdGVCYXRjaDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZ2x1dGlscy5TaGFwZVJlbmRlcmVyOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5SYWNpbmdHYW1lOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5sZXZlbHMuTGV2ZWxDb25maWc7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLmxldmVscy5MZXZlbERlZmluaXRpb247CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzLlRleHREcmF3OwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS51dGlscy5VaUJ1dHRvbjsKCi8qKiDpgInlhbPvvJrlsZXnpLogMyDkuKrpgJLlop7pmr7luqblhbPljaHvvIzngrnlh7vov5vlhaXmr5TotZsgKi8KcHVibGljIGNsYXNzIExldmVsU2VsZWN0U2NyZWVuIGV4dGVuZHMgU2NyZWVuQWRhcHRlciB7CiAgICBwcml2YXRlIGZpbmFsIFJhY2luZ0dhbWUgZ2FtZTsKICAgIHByaXZhdGUgZmluYWwgT3J0aG9ncmFwaGljQ2FtZXJhIHVpQ2FtID0gbmV3IE9ydGhvZ3JhcGhpY0NhbWVyYSgpOwogICAgcHJpdmF0ZSBmaW5hbCBTcHJpdGVCYXRjaCBiYXRjaCA9IG5ldyBTcHJpdGVCYXRjaCgpOwogICAgcHJpdmF0ZSBmaW5hbCBTaGFwZVJlbmRlcmVyIHNyID0gbmV3IFNoYXBlUmVuZGVyZXIoKTsKCiAgICBwcml2YXRlIFVpQnV0dG9uW10gbGV2ZWxCdG5zID0gbmV3IFVpQnV0dG9uW0xldmVsQ29uZmlnLmNvdW50KCldOwogICAgcHJpdmF0ZSBVaUJ1dHRvbiBidG5CYWNrOwoKICAgIHB1YmxpYyBMZXZlbFNlbGVjdFNjcmVlbihSYWNpbmdHYW1lIGdhbWUpIHsKICAgICAgICB0aGlzLmdhbWUgPSBnYW1lOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgc2hvdygpIHsKICAgICAgICBHZHguaW5wdXQuc2V0SW5wdXRQcm9jZXNzb3IobnVsbCk7CiAgICAgICAgcmVzaXplKEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpLCBHZHguZ3JhcGhpY3MuZ2V0SGVpZ2h0KCkpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgcmVzaXplKGludCB3aWR0aCwgaW50IGhlaWdodCkgewogICAgICAgIHVpQ2FtLnNldFRvT3J0aG8odHJ1ZSwgd2lkdGgsIGhlaWdodCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCByZW5kZXIoZmxvYXQgZGVsdGEpIHsKICAgICAgICBpbnQgdyA9IEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpOwogICAgICAgIGludCBoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwoKICAgICAgICBmbG9hdCBjYXJkVyA9IE1hdGgubWluKHcgKiAwLjhmLCA1MjBmKTsKICAgICAgICBmbG9hdCBjYXJkSCA9IDg4ZjsKICAgICAgICBmbG9hdCBnYXAgPSAxNmY7CiAgICAgICAgZmxvYXQgY3ggPSB3IC8gMmYgLSBjYXJkVyAvIDJmOwogICAgICAgIGZsb2F0IHkwID0gaCAvIDJmIC0gKGNhcmRIICogbGV2ZWxCdG5zLmxlbmd0aCArIGdhcCAqIChsZXZlbEJ0bnMubGVuZ3RoIC0gMSkpIC8gMmYgKyAyMGY7CgogICAgICAgIGZvciAoaW50IGkgPSAwOyBpIDwgbGV2ZWxCdG5zLmxlbmd0aDsgaSsrKSB7CiAgICAgICAgICAgIExldmVsRGVmaW5pdGlvbiBsdiA9IExldmVsQ29uZmlnLkxFVkVMUy5nZXQoaSk7CiAgICAgICAgICAgIGxldmVsQnRuc1tpXSA9IG5ldyBVaUJ1dHRvbihjeCwgeTAgKyBpICogKGNhcmRIICsgZ2FwKSwgY2FyZFcsIGNhcmRILAogICAgICAgICAgICAgICAgICAgIChpICsgMSkgKyAiLiAiICsgbHYubmFtZSArICIgICgiICsgbHYubGFwcyArICLlnIgvIiArIGx2Lm9wcG9uZW50Q291bnQgKyAi5a+55omLKSIpOwogICAgICAgIH0KICAgICAgICBidG5CYWNrID0gbmV3IFVpQnV0dG9uKDI0ZiwgMjRmLCAxMjBmLCA0OGYsICLov5Tlm54iLAogICAgICAgICAgICAgICAgbmV3IENvbG9yKDAuNGYsIDAuNGYsIDAuNDVmLCAwLjlmKSk7CgogICAgICAgIGhhbmRsZUlucHV0KCk7CgogICAgICAgIEdkeC5nbC5nbENsZWFyQ29sb3IoMC4wN2YsIDAuMDlmLCAwLjE2ZiwgMWYpOwogICAgICAgIEdkeC5nbC5nbENsZWFyKEdkeC5nbC5HTF9DT0xPUl9CVUZGRVJfQklUKTsKCiAgICAgICAgc3Iuc2V0UHJvamVjdGlvbk1hdHJpeCh1aUNhbS5jb21iaW5lZCk7CiAgICAgICAgYmF0Y2guc2V0UHJvamVjdGlvbk1hdHJpeCh1aUNhbS5jb21iaW5lZCk7CgogICAgICAgIGJhdGNoLmJlZ2luKCk7CiAgICAgICAgZ2FtZS5iaWdGb250LnNldENvbG9yKENvbG9yLldISVRFKTsKICAgICAgICBUZXh0RHJhdy5kcmF3KGJhdGNoLCBnYW1lLmJpZ0ZvbnQsICLpgInmi6nlhbPljaEiLCBjeCAtIDIwZiwgeTAgLSA3MGYpOwogICAgICAgIGdhbWUuZm9udC5zZXRDb2xvcihuZXcgQ29sb3IoMC43ZiwgMC44ZiwgMWYsIDFmKSk7CiAgICAgICAgVGV4dERyYXcuZHJhdyhiYXRjaCwgZ2FtZS5mb250LCAi57Sv6K6h5oC75YiGOiAiICsgZ2FtZS5zY29yZS5nZXRUb3RhbFNjb3JlKCksIGN4IC0gMTBmLCB5MCAtIDM0Zik7CiAgICAgICAgLy8g5YWz5Y2h6Zq+5bqm5o+P6L+wCiAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBsZXZlbEJ0bnMubGVuZ3RoOyBpKyspIHsKICAgICAgICAgICAgTGV2ZWxEZWZpbml0aW9uIGx2ID0gTGV2ZWxDb25maWcuTEVWRUxTLmdldChpKTsKICAgICAgICAgICAgZ2FtZS5mb250LnNldENvbG9yKG5ldyBDb2xvcigwLjg1ZiwgMC44NWYsIDAuOWYsIDFmKSk7CiAgICAgICAgICAgIFRleHREcmF3LmRyYXcoYmF0Y2gsIGdhbWUuZm9udCwgbHYuZGVzYywgY3ggKyAxMmYsIHkwICsgaSAqIChjYXJkSCArIGdhcCkgKyBjYXJkSCAtIDE2Zik7CiAgICAgICAgfQogICAgICAgIGJhdGNoLmVuZCgpOwoKICAgICAgICBmb3IgKFVpQnV0dG9uIGIgOiBsZXZlbEJ0bnMpIGIuZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgZmFsc2UpOwogICAgICAgIGJ0bkJhY2suZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgZmFsc2UpOwogICAgfQoKICAgIHByaXZhdGUgdm9pZCBoYW5kbGVJbnB1dCgpIHsKICAgICAgICBpZiAoIUdkeC5pbnB1dC5qdXN0VG91Y2hlZCgpKSByZXR1cm47CiAgICAgICAgaW50IHggPSBHZHguaW5wdXQuZ2V0WCgpOwogICAgICAgIGludCB5ID0gR2R4LmlucHV0LmdldFkoKTsKICAgICAgICBmbG9hdCBzaCA9IEdkeC5ncmFwaGljcy5nZXRIZWlnaHQoKTsKICAgICAgICBnYW1lLmF1ZGlvLnBsYXlDbGljaygpOwogICAgICAgIGZvciAoaW50IGkgPSAwOyBpIDwgbGV2ZWxCdG5zLmxlbmd0aDsgaSsrKSB7CiAgICAgICAgICAgIGlmIChsZXZlbEJ0bnNbaV0ucmVjdC5jb250YWlucyh4LCB5KSkgewogICAgICAgICAgICAgICAgZ2FtZS5zZXRTY3JlZW4obmV3IEdhbWVTY3JlZW4oZ2FtZSwgTGV2ZWxDb25maWcuTEVWRUxTLmdldChpKS5pZCkpOwogICAgICAgICAgICAgICAgcmV0dXJuOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmIChidG5CYWNrLnJlY3QuY29udGFpbnMoeCwgeSkpIHsKICAgICAgICAgICAgZ2FtZS5zZXRTY3JlZW4obmV3IE1haW5NZW51U2NyZWVuKGdhbWUpKTsKICAgICAgICB9CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBkaXNwb3NlKCkgewogICAgICAgIGJhdGNoLmRpc3Bvc2UoKTsKICAgICAgICBzci5kaXNwb3NlKCk7CiAgICB9Cn0K
+package com.racinggame.core.screens;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.ScreenAdapter;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.racinggame.core.RacingGame;
+import com.racinggame.core.levels.LevelConfig;
+import com.racinggame.core.levels.LevelDefinition;
+import com.racinggame.core.utils.TextDraw;
+import com.racinggame.core.utils.UiButton;
+
+/** 选关：展示 3 个递增难度关卡，点击进入比赛 */
+public class LevelSelectScreen extends ScreenAdapter {
+    private final RacingGame game;
+    private final OrthographicCamera uiCam = new OrthographicCamera();
+    private final SpriteBatch batch = new SpriteBatch();
+    private final ShapeRenderer sr = new ShapeRenderer();
+
+    private UiButton[] levelBtns = new UiButton[LevelConfig.count()];
+    private UiButton btnBack;
+
+    public LevelSelectScreen(RacingGame game) {
+        this.game = game;
+    }
+
+    @Override
+    public void show() {
+        Gdx.input.setInputProcessor(null);
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+    }
+
+    @Override
+    public void resize(int width, int height) {
+        uiCam.setToOrtho(true, width, height);
+    }
+
+    @Override
+    public void render(float delta) {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+
+        float cardW = Math.min(w * 0.8f, 520f);
+        float cardH = 88f;
+        float gap = 16f;
+        float cx = w / 2f - cardW / 2f;
+        float y0 = h / 2f - (cardH * levelBtns.length + gap * (levelBtns.length - 1)) / 2f + 20f;
+
+        for (int i = 0; i < levelBtns.length; i++) {
+            LevelDefinition lv = LevelConfig.LEVELS.get(i);
+            levelBtns[i] = new UiButton(cx, y0 + i * (cardH + gap), cardW, cardH,
+                    (i + 1) + ". " + lv.name + "  (" + lv.laps + "圈/" + lv.opponentCount + "对手)");
+        }
+        btnBack = new UiButton(24f, 24f, 120f, 48f, "返回",
+                new Color(0.4f, 0.4f, 0.45f, 0.9f));
+
+        handleInput();
+
+        Gdx.gl.glClearColor(0.07f, 0.09f, 0.16f, 1f);
+        Gdx.gl.glClear(Gdx.gl.GL_COLOR_BUFFER_BIT);
+
+        sr.setProjectionMatrix(uiCam.combined);
+        batch.setProjectionMatrix(uiCam.combined);
+
+        batch.begin();
+        game.bigFont.setColor(Color.WHITE);
+        TextDraw.draw(batch, game.bigFont, "选择关卡", cx - 20f, y0 - 70f);
+        game.font.setColor(new Color(0.7f, 0.8f, 1f, 1f));
+        TextDraw.draw(batch, game.font, "累计总分: " + game.score.getTotalScore(), cx - 10f, y0 - 34f);
+        // 关卡难度描述
+        for (int i = 0; i < levelBtns.length; i++) {
+            LevelDefinition lv = LevelConfig.LEVELS.get(i);
+            game.font.setColor(new Color(0.85f, 0.85f, 0.9f, 1f));
+            TextDraw.draw(batch, game.font, lv.desc, cx + 12f, y0 + i * (cardH + gap) + cardH - 16f);
+        }
+        batch.end();
+
+        for (UiButton b : levelBtns) b.draw(sr, batch, game.font, false);
+        btnBack.draw(sr, batch, game.font, false);
+    }
+
+    private void handleInput() {
+        if (!Gdx.input.justTouched()) return;
+        int x = Gdx.input.getX();
+        int y = Gdx.input.getY();
+        float sh = Gdx.graphics.getHeight();
+        game.audio.playClick();
+        for (int i = 0; i < levelBtns.length; i++) {
+            if (levelBtns[i].rect.contains(x, y)) {
+                game.setScreen(new GameScreen(game, LevelConfig.LEVELS.get(i).id));
+                return;
+            }
+        }
+        if (btnBack.rect.contains(x, y)) {
+            game.setScreen(new MainMenuScreen(game));
+        }
+    }
+
+    @Override
+    public void dispose() {
+        batch.dispose();
+        sr.dispose();
+    }
+}

@@ -1,1 +1,28 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLmxldmVsczsKCi8qKiDljZXkuKrlhbPljaHnmoTmlbDmja7lrprkuYnvvIjnuq/mlbDmja7vvIzkvr/kuo7mianlsZXmm7TlpJrlhbPljaHvvIkgKi8KcHVibGljIGNsYXNzIExldmVsRGVmaW5pdGlvbiB7CiAgICBwdWJsaWMgZmluYWwgaW50IGlkOwogICAgcHVibGljIGZpbmFsIFN0cmluZyBuYW1lOwogICAgcHVibGljIGZpbmFsIFN0cmluZyBkZXNjOwogICAgcHVibGljIGZpbmFsIGZsb2F0IGJhc2VSYWRpdXM7ICAgLy8g6LWb6YGT5Z+656GA5Y2K5b6E77yI6LaK5aSn6LaK6ZW/77yJCiAgICBwdWJsaWMgZmluYWwgaW50IGN1cnZlQ291bnQ7ICAgICAgLy8g5byv6YGT5pWw6YeP77yI5q2j5bym5omw5Yqo5qyh5pWw77yJCiAgICBwdWJsaWMgZmluYWwgaW50IG9wcG9uZW50Q291bnQ7ICAgLy8g5a+55omL5pWw6YePCiAgICBwdWJsaWMgZmluYWwgZmxvYXQgb3Bwb25lbnRTcGVlZDsgLy8g5a+55omL55uu5qCH6YCf5bqmCiAgICBwdWJsaWMgZmluYWwgaW50IGxhcHM7ICAgICAgICAgICAgLy8g55uu5qCH5ZyI5pWwCiAgICBwdWJsaWMgZmluYWwgZmxvYXQgcGxheWVyTWF4U3BlZWQ7Ly8g546p5a625pyA6auY6YCf5bqmCgogICAgcHVibGljIExldmVsRGVmaW5pdGlvbihpbnQgaWQsIFN0cmluZyBuYW1lLCBTdHJpbmcgZGVzYywKICAgICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQgYmFzZVJhZGl1cywgaW50IGN1cnZlQ291bnQsIGludCBvcHBvbmVudENvdW50LAogICAgICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCBvcHBvbmVudFNwZWVkLCBpbnQgbGFwcywgZmxvYXQgcGxheWVyTWF4U3BlZWQpIHsKICAgICAgICB0aGlzLmlkID0gaWQ7CiAgICAgICAgdGhpcy5uYW1lID0gbmFtZTsKICAgICAgICB0aGlzLmRlc2MgPSBkZXNjOwogICAgICAgIHRoaXMuYmFzZVJhZGl1cyA9IGJhc2VSYWRpdXM7CiAgICAgICAgdGhpcy5jdXJ2ZUNvdW50ID0gY3VydmVDb3VudDsKICAgICAgICB0aGlzLm9wcG9uZW50Q291bnQgPSBvcHBvbmVudENvdW50OwogICAgICAgIHRoaXMub3Bwb25lbnRTcGVlZCA9IG9wcG9uZW50U3BlZWQ7CiAgICAgICAgdGhpcy5sYXBzID0gbGFwczsKICAgICAgICB0aGlzLnBsYXllck1heFNwZWVkID0gcGxheWVyTWF4U3BlZWQ7CiAgICB9Cn0K
+package com.racinggame.core.levels;
+
+/** 单个关卡的数据定义（纯数据，便于扩展更多关卡） */
+public class LevelDefinition {
+    public final int id;
+    public final String name;
+    public final String desc;
+    public final float baseRadius;   // 赛道基础半径（越大越长）
+    public final int curveCount;      // 弯道数量（正弦扰动次数）
+    public final int opponentCount;   // 对手数量
+    public final float opponentSpeed; // 对手目标速度
+    public final int laps;            // 目标圈数
+    public final float playerMaxSpeed;// 玩家最高速度
+
+    public LevelDefinition(int id, String name, String desc,
+                           float baseRadius, int curveCount, int opponentCount,
+                           float opponentSpeed, int laps, float playerMaxSpeed) {
+        this.id = id;
+        this.name = name;
+        this.desc = desc;
+        this.baseRadius = baseRadius;
+        this.curveCount = curveCount;
+        this.opponentCount = opponentCount;
+        this.opponentSpeed = opponentSpeed;
+        this.laps = laps;
+        this.playerMaxSpeed = playerMaxSpeed;
+    }
+}

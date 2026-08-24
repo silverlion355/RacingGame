@@ -1,1 +1,17 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHZlY3RvciB4bWxuczphbmRyb2lkPSJodHRwOi8vc2NoZW1hcy5hbmRyb2lkLmNvbS9hcGsvcmVzL2FuZHJvaWQiCiAgICBhbmRyb2lkOndpZHRoPSI0OGRwIgogICAgYW5kcm9pZDpoZWlnaHQ9IjQ4ZHAiCiAgICBhbmRyb2lkOnZpZXdwb3J0V2lkdGg9IjQ4IgogICAgYW5kcm9pZDp2aWV3cG9ydEhlaWdodD0iNDgiPgogICAgPCEtLSDnuqLoibLovabouqvova7lu5MgLS0+CiAgICA8cGF0aAogICAgICAgIGFuZHJvaWQ6ZmlsbENvbG9yPSIjZDExMjJiIgogICAgICAgIGFuZHJvaWQ6cGF0aERhdGE9Ik0yNCA0IEw0MCAxMiBMNDAgMzAgTDI0IDQ0IEw4IDMwIEw4IDEyIFoiIC8+CiAgICA8IS0tIOm7hOiJsuS4reW/g++8iOi/keS8vOWQjei9pumFjeiJsu+8iS0tPgogICAgPGNpcmNsZQogICAgICAgIGFuZHJvaWQ6ZmlsbENvbG9yPSIjZjRjMjBkIgogICAgICAgIGFuZHJvaWQ6Y3g9IjI0IgogICAgICAgIGFuZHJvaWQ6Y3k9IjI0IgogICAgICAgIGFuZHJvaWQ6cj0iOCIgLz4KPC92ZWN0b3I+Cg==
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- 红色车身轮廓 -->
+    <path
+        android:fillColor="#d1122b"
+        android:pathData="M24 4 L40 12 L40 30 L24 44 L8 30 L8 12 Z" />
+    <!-- 黄色中心（近似名车配色）-->
+    <circle
+        android:fillColor="#f4c20d"
+        android:cx="24"
+        android:cy="24"
+        android:r="8" />
+</vector>

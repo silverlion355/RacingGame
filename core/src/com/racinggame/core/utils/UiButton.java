@@ -1,1 +1,43 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuQ29sb3I7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmcyZC5CaXRtYXBGb250OwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nMmQuR2x5cGhMYXlvdXQ7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmcyZC5TcHJpdGVCYXRjaDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZ2x1dGlscy5TaGFwZVJlbmRlcmVyOwoKLyoqCiAqIOi9u+mHjyBVSSDmjInpkq7vvJrml6DpnIDlpJbpg6ggU2tpbiDotYTmupDvvIzkvb/nlKggU2hhcGVSZW5kZXJlciDnlLvlupXjgIFTcHJpdGVCYXRjaCDnlLvmloflrZfjgIIKICog5Z2Q5qCH57O75Li644CM5bem5LiK6KeS5Y6f54K577yMeSDlkJHkuIvjgI3vvIzkuI4gUmVjdC/op6bmkbjlnZDmoIfkuIDoh7TjgIIKICovCnB1YmxpYyBjbGFzcyBVaUJ1dHRvbiB7CiAgICBwdWJsaWMgZmluYWwgUmVjdCByZWN0OwogICAgcHVibGljIGZpbmFsIFN0cmluZyBsYWJlbDsKICAgIHB1YmxpYyBmaW5hbCBDb2xvciBjb2xvcjsKICAgIHByaXZhdGUgZmluYWwgR2x5cGhMYXlvdXQgbGF5b3V0ID0gbmV3IEdseXBoTGF5b3V0KCk7CgogICAgcHVibGljIFVpQnV0dG9uKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHcsIGZsb2F0IGgsIFN0cmluZyBsYWJlbCkgewogICAgICAgIHRoaXMoeCwgeSwgdywgaCwgbGFiZWwsIG5ldyBDb2xvcigwLjIzZiwgMC41MWYsIDAuOTZmLCAwLjkyZikpOwogICAgfQoKICAgIHB1YmxpYyBVaUJ1dHRvbihmbG9hdCB4LCBmbG9hdCB5LCBmbG9hdCB3LCBmbG9hdCBoLCBTdHJpbmcgbGFiZWwsIENvbG9yIGNvbG9yKSB7CiAgICAgICAgdGhpcy5yZWN0ID0gbmV3IFJlY3QoeCwgeSwgdywgaCk7CiAgICAgICAgdGhpcy5sYWJlbCA9IGxhYmVsOwogICAgICAgIHRoaXMuY29sb3IgPSBjb2xvcjsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBkcmF3KFNoYXBlUmVuZGVyZXIgc3IsIFNwcml0ZUJhdGNoIGJhdGNoLCBCaXRtYXBGb250IGZvbnQsIGJvb2xlYW4gcHJlc3NlZCkgewogICAgICAgIHNyLmJlZ2luKFNoYXBlUmVuZGVyZXIuU2hhcGVUeXBlLkZpbGxlZCk7CiAgICAgICAgc3Iuc2V0Q29sb3IocHJlc3NlZCA/IGNvbG9yLmNweSgpLm11bCgxLjE1ZikgOiBjb2xvcik7CiAgICAgICAgc3IucmVjdChyZWN0LngsIHJlY3QueSwgcmVjdC53LCByZWN0LmgpOwogICAgICAgIHNyLmVuZCgpOwoKICAgICAgICBsYXlvdXQuc2V0VGV4dChmb250LCBsYWJlbCk7CiAgICAgICAgYmF0Y2guYmVnaW4oKTsKICAgICAgICBmb250LnNldENvbG9yKENvbG9yLldISVRFKTsKICAgICAgICBmbG9hdCB0eCA9IHJlY3QueCArIChyZWN0LncgLSBsYXlvdXQud2lkdGgpIC8gMmY7CiAgICAgICAgZmxvYXQgdHkgPSByZWN0LnkgKyAocmVjdC5oICsgbGF5b3V0LmhlaWdodCkgLyAyZjsKICAgICAgICBUZXh0RHJhdy5kcmF3KGJhdGNoLCBmb250LCBsYXlvdXQsIHR4LCB0eSk7CiAgICAgICAgYmF0Y2guZW5kKCk7CiAgICB9Cn0K
+package com.racinggame.core.utils;
+
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+
+/**
+ * 轻量 UI 按钮：无需外部 Skin 资源，使用 ShapeRenderer 画底、SpriteBatch 画文字。
+ * 坐标系为「左上角原点，y 向下」，与 Rect/触摸坐标一致。
+ */
+public class UiButton {
+    public final Rect rect;
+    public final String label;
+    public final Color color;
+    private final GlyphLayout layout = new GlyphLayout();
+
+    public UiButton(float x, float y, float w, float h, String label) {
+        this(x, y, w, h, label, new Color(0.23f, 0.51f, 0.96f, 0.92f));
+    }
+
+    public UiButton(float x, float y, float w, float h, String label, Color color) {
+        this.rect = new Rect(x, y, w, h);
+        this.label = label;
+        this.color = color;
+    }
+
+    public void draw(ShapeRenderer sr, SpriteBatch batch, BitmapFont font, boolean pressed) {
+        sr.begin(ShapeRenderer.ShapeType.Filled);
+        sr.setColor(pressed ? color.cpy().mul(1.15f) : color);
+        sr.rect(rect.x, rect.y, rect.w, rect.h);
+        sr.end();
+
+        layout.setText(font, label);
+        batch.begin();
+        font.setColor(Color.WHITE);
+        float tx = rect.x + (rect.w - layout.width) / 2f;
+        float ty = rect.y + (rect.h + layout.height) / 2f;
+        TextDraw.draw(batch, font, layout, tx, ty);
+        batch.end();
+    }
+}

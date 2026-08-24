@@ -1,1 +1,47 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5tYXRoLlZlY3RvcjM7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLlBlcnNwZWN0aXZlQ2FtZXJhOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5HYW1lQ29uc3RhbnRzOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5lbnRpdGllcy5DYXI7CgovKioKICog55u45a+5IDNEIOaRhOWDj+acuu+8mui/veWwvuinhuinku+8iOm7mOiupO+8ieS4jui9puWGheesrOS4gOinhuinku+8jOWPr+WunuaXtuWIh+aNouOAggogKi8KcHVibGljIGNsYXNzIENhbWVyYUNvbnRyb2xsZXIgewogICAgcHVibGljIGVudW0gTW9kZSB7IENIQVNFLCBDT0NLUElUIH0KCiAgICBwdWJsaWMgTW9kZSBtb2RlOwogICAgcHJpdmF0ZSBmaW5hbCBQZXJzcGVjdGl2ZUNhbWVyYSBjYW07CgogICAgcHVibGljIENhbWVyYUNvbnRyb2xsZXIoUGVyc3BlY3RpdmVDYW1lcmEgY2FtLCBNb2RlIGluaXRpYWwpIHsKICAgICAgICB0aGlzLmNhbSA9IGNhbTsKICAgICAgICB0aGlzLm1vZGUgPSBpbml0aWFsOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIHRvZ2dsZSgpIHsKICAgICAgICBtb2RlID0gKG1vZGUgPT0gTW9kZS5DSEFTRSkgPyBNb2RlLkNPQ0tQSVQgOiBNb2RlLkNIQVNFOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIHVwZGF0ZShDYXIgY2FyKSB7CiAgICAgICAgVmVjdG9yMyBmd2QgPSBuZXcgVmVjdG9yMyhjYXIuZm9yd2FyZCgpLngsIDAsIGNhci5mb3J3YXJkKCkueSk7CiAgICAgICAgVmVjdG9yMyBjYXJQb3MgPSBuZXcgVmVjdG9yMyhjYXIucG9zaXRpb24ueCwgMCwgY2FyLnBvc2l0aW9uLnkpOwoKICAgICAgICBpZiAobW9kZSA9PSBNb2RlLkNIQVNFKSB7CiAgICAgICAgICAgIFZlY3RvcjMgZGVzaXJlZCA9IGNhclBvcy5jcHkoKQogICAgICAgICAgICAgICAgICAgIC5zdWIoZndkLmNweSgpLnNjbChHYW1lQ29uc3RhbnRzLkNIQVNFX0RJU1QpKQogICAgICAgICAgICAgICAgICAgIC5hZGQoMCwgR2FtZUNvbnN0YW50cy5DSEFTRV9IRUlHSFQsIDApOwogICAgICAgICAgICBjYW0ucG9zaXRpb24ubGVycChkZXNpcmVkLCAwLjEyZik7CiAgICAgICAgICAgIGNhbS5sb29rQXQoY2FyUG9zLmNweSgpLmFkZChmd2QuY3B5KCkuc2NsKEdhbWVDb25zdGFudHMuQ0hBU0VfTE9PS19BSEVBRCkpLmFkZCgwLCAxLjJmLCAwKSk7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgLy8g6L2m5YaF56ys5LiA6KeG6KeS77ya6LS06L+R6L2m5aS044CB55Wl6auYCiAgICAgICAgICAgIFZlY3RvcjMgZGVzaXJlZCA9IGNhclBvcy5jcHkoKQogICAgICAgICAgICAgICAgICAgIC5hZGQoZndkLmNweSgpLnNjbChHYW1lQ29uc3RhbnRzLkNPQ0tQSVRfRk9SV0FSRCkpCiAgICAgICAgICAgICAgICAgICAgLmFkZCgwLCBHYW1lQ29uc3RhbnRzLkNPQ0tQSVRfSEVJR0hULCAwKTsKICAgICAgICAgICAgY2FtLnBvc2l0aW9uLnNldChkZXNpcmVkKTsKICAgICAgICAgICAgY2FtLmxvb2tBdChjYXJQb3MuY3B5KCkuYWRkKGZ3ZC5jcHkoKS5zY2woMjBmKSkuYWRkKDAsIEdhbWVDb25zdGFudHMuQ09DS1BJVF9IRUlHSFQgLSAwLjNmLCAwKSk7CiAgICAgICAgfQogICAgICAgIGNhbS51cC5zZXQoMCwgMSwgMCk7CiAgICAgICAgY2FtLnVwZGF0ZSgpOwogICAgfQp9Cg==
+package com.racinggame.core.systems;
+
+import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.graphics.PerspectiveCamera;
+import com.racinggame.core.GameConstants;
+import com.racinggame.core.entities.Car;
+
+/**
+ * 相对 3D 摄像机：追尾视角（默认）与车内第一视角，可实时切换。
+ */
+public class CameraController {
+    public enum Mode { CHASE, COCKPIT }
+
+    public Mode mode;
+    private final PerspectiveCamera cam;
+
+    public CameraController(PerspectiveCamera cam, Mode initial) {
+        this.cam = cam;
+        this.mode = initial;
+    }
+
+    public void toggle() {
+        mode = (mode == Mode.CHASE) ? Mode.COCKPIT : Mode.CHASE;
+    }
+
+    public void update(Car car) {
+        Vector3 fwd = new Vector3(car.forward().x, 0, car.forward().y);
+        Vector3 carPos = new Vector3(car.position.x, 0, car.position.y);
+
+        if (mode == Mode.CHASE) {
+            Vector3 desired = carPos.cpy()
+                    .sub(fwd.cpy().scl(GameConstants.CHASE_DIST))
+                    .add(0, GameConstants.CHASE_HEIGHT, 0);
+            cam.position.lerp(desired, 0.12f);
+            cam.lookAt(carPos.cpy().add(fwd.cpy().scl(GameConstants.CHASE_LOOK_AHEAD)).add(0, 1.2f, 0));
+        } else {
+            // 车内第一视角：贴近车头、略高
+            Vector3 desired = carPos.cpy()
+                    .add(fwd.cpy().scl(GameConstants.COCKPIT_FORWARD))
+                    .add(0, GameConstants.COCKPIT_HEIGHT, 0);
+            cam.position.set(desired);
+            cam.lookAt(carPos.cpy().add(fwd.cpy().scl(20f)).add(0, GameConstants.COCKPIT_HEIGHT - 0.3f, 0));
+        }
+        cam.up.set(0, 1, 0);
+        cam.update();
+    }
+}

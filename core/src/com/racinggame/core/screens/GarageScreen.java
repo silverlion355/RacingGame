@@ -1,1 +1,109 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnNjcmVlbnM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LlNjcmVlbkFkYXB0ZXI7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLkNvbG9yOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5PcnRob2dyYXBoaWNDYW1lcmE7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLmcyZC5TcHJpdGVCYXRjaDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZ2x1dGlscy5TaGFwZVJlbmRlcmVyOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5HYW1lQ29uc3RhbnRzOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5SYWNpbmdHYW1lOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5zeXN0ZW1zLkNhbWVyYUNvbnRyb2xsZXI7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzLlRleHREcmF3OwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS51dGlscy5VaUJ1dHRvbjsKCi8qKiDovablupPvvJrpgInmi6notZvovablk4HniYzvvIjphY3oibLvvInkuI7pu5jorqTop4bop5IgKi8KcHVibGljIGNsYXNzIEdhcmFnZVNjcmVlbiBleHRlbmRzIFNjcmVlbkFkYXB0ZXIgewogICAgcHJpdmF0ZSBmaW5hbCBSYWNpbmdHYW1lIGdhbWU7CiAgICBwcml2YXRlIGZpbmFsIE9ydGhvZ3JhcGhpY0NhbWVyYSB1aUNhbSA9IG5ldyBPcnRob2dyYXBoaWNDYW1lcmEoKTsKICAgIHByaXZhdGUgZmluYWwgU3ByaXRlQmF0Y2ggYmF0Y2ggPSBuZXcgU3ByaXRlQmF0Y2goKTsKICAgIHByaXZhdGUgZmluYWwgU2hhcGVSZW5kZXJlciBzciA9IG5ldyBTaGFwZVJlbmRlcmVyKCk7CgogICAgcHJpdmF0ZSBVaUJ1dHRvbltdIGJyYW5kQnRucyA9IG5ldyBVaUJ1dHRvblszXTsKICAgIHByaXZhdGUgVWlCdXR0b24gYnRuQ2hhc2UsIGJ0bkNvY2twaXQsIGJ0bkJhY2s7CgogICAgcHVibGljIEdhcmFnZVNjcmVlbihSYWNpbmdHYW1lIGdhbWUpIHsKICAgICAgICB0aGlzLmdhbWUgPSBnYW1lOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgc2hvdygpIHsKICAgICAgICBHZHguaW5wdXQuc2V0SW5wdXRQcm9jZXNzb3IobnVsbCk7CiAgICAgICAgcmVzaXplKEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpLCBHZHguZ3JhcGhpY3MuZ2V0SGVpZ2h0KCkpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgcmVzaXplKGludCB3aWR0aCwgaW50IGhlaWdodCkgewogICAgICAgIHVpQ2FtLnNldFRvT3J0aG8odHJ1ZSwgd2lkdGgsIGhlaWdodCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCByZW5kZXIoZmxvYXQgZGVsdGEpIHsKICAgICAgICBpbnQgdyA9IEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpOwogICAgICAgIGludCBoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwoKICAgICAgICBmbG9hdCBidyA9IE1hdGgubWluKHcgKiAwLjhmLCA0MjBmKTsKICAgICAgICBmbG9hdCBiaCA9IDcwZjsKICAgICAgICBmbG9hdCBnYXAgPSAxNmY7CiAgICAgICAgZmxvYXQgY3ggPSB3IC8gMmYgLSBidyAvIDJmOwogICAgICAgIGZsb2F0IHkwID0gaCAvIDJmIC0gMTIwZjsKCiAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCAzOyBpKyspIHsKICAgICAgICAgICAgYnJhbmRCdG5zW2ldID0gbmV3IFVpQnV0dG9uKGN4LCB5MCArIGkgKiAoYmggKyBnYXApLCBidywgYmgsCiAgICAgICAgICAgICAgICAgICAgR2FtZUNvbnN0YW50cy5CUkFORF9OQU1FU1tpXSwgR2FtZUNvbnN0YW50cy5CUkFORF9DT0xPUlNbaV0uY3B5KCkubXVsKDAuOWYpKTsKICAgICAgICB9CiAgICAgICAgZmxvYXQgY2FtVyA9IGJ3IC8gMmYgLSBnYXAgLyAyZjsKICAgICAgICBidG5DaGFzZSA9IG5ldyBVaUJ1dHRvbihjeCwgeTAgKyAzICogKGJoICsgZ2FwKSwgY2FtVywgYmgsICLov73lsL7op4bop5IiKTsKICAgICAgICBidG5Db2NrcGl0ID0gbmV3IFVpQnV0dG9uKGN4ICsgY2FtVyArIGdhcCwgeTAgKyAzICogKGJoICsgZ2FwKSwgY2FtVywgYmgsICLovablhoXop4bop5IiKTsKICAgICAgICBidG5CYWNrID0gbmV3IFVpQnV0dG9uKDI0ZiwgMjRmLCAxMjBmLCA0OGYsICLov5Tlm54iLAogICAgICAgICAgICAgICAgbmV3IENvbG9yKDAuNGYsIDAuNGYsIDAuNDVmLCAwLjlmKSk7CgogICAgICAgIGhhbmRsZUlucHV0KCk7CgogICAgICAgIEdkeC5nbC5nbENsZWFyQ29sb3IoMC4wN2YsIDAuMDlmLCAwLjE2ZiwgMWYpOwogICAgICAgIEdkeC5nbC5nbENsZWFyKEdkeC5nbC5HTF9DT0xPUl9CVUZGRVJfQklUKTsKCiAgICAgICAgc3Iuc2V0UHJvamVjdGlvbk1hdHJpeCh1aUNhbS5jb21iaW5lZCk7CiAgICAgICAgYmF0Y2guc2V0UHJvamVjdGlvbk1hdHJpeCh1aUNhbS5jb21iaW5lZCk7CgogICAgICAgIGJhdGNoLmJlZ2luKCk7CiAgICAgICAgZ2FtZS5iaWdGb250LnNldENvbG9yKENvbG9yLldISVRFKTsKICAgICAgICBUZXh0RHJhdy5kcmF3KGJhdGNoLCBnYW1lLmJpZ0ZvbnQsICLovablupMiLCBjeCAtIDIwZiwgeTAgLSA2MGYpOwogICAgICAgIGJhdGNoLmVuZCgpOwoKICAgICAgICBmb3IgKGludCBpID0gMDsgaSA8IDM7IGkrKykgYnJhbmRCdG5zW2ldLmRyYXcoc3IsIGJhdGNoLCBnYW1lLmZvbnQsIGdhbWUuc2V0dGluZ3MuYnJhbmQgPT0gaSk7CiAgICAgICAgYnRuQ2hhc2UuZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgZ2FtZS5zZXR0aW5ncy5jYW1lcmFNb2RlID09IENhbWVyYUNvbnRyb2xsZXIuTW9kZS5DSEFTRSk7CiAgICAgICAgYnRuQ29ja3BpdC5kcmF3KHNyLCBiYXRjaCwgZ2FtZS5mb250LCBnYW1lLnNldHRpbmdzLmNhbWVyYU1vZGUgPT0gQ2FtZXJhQ29udHJvbGxlci5Nb2RlLkNPQ0tQSVQpOwogICAgICAgIGJ0bkJhY2suZHJhdyhzciwgYmF0Y2gsIGdhbWUuZm9udCwgZmFsc2UpOwogICAgfQoKICAgIHByaXZhdGUgdm9pZCBoYW5kbGVJbnB1dCgpIHsKICAgICAgICBpZiAoIUdkeC5pbnB1dC5qdXN0VG91Y2hlZCgpKSByZXR1cm47CiAgICAgICAgaW50IHggPSBHZHguaW5wdXQuZ2V0WCgpOwogICAgICAgIGludCB5ID0gR2R4LmlucHV0LmdldFkoKTsKICAgICAgICBmbG9hdCBzaCA9IEdkeC5ncmFwaGljcy5nZXRIZWlnaHQoKTsKICAgICAgICBnYW1lLmF1ZGlvLnBsYXlDbGljaygpOwogICAgICAgIGZvciAoaW50IGkgPSAwOyBpIDwgMzsgaSsrKSB7CiAgICAgICAgICAgIGlmIChicmFuZEJ0bnNbaV0ucmVjdC5jb250YWlucyh4LCB5KSkgewogICAgICAgICAgICAgICAgZ2FtZS5zZXR0aW5ncy5icmFuZCA9IGk7CiAgICAgICAgICAgICAgICBnYW1lLnNldHRpbmdzLnNhdmUoKTsKICAgICAgICAgICAgICAgIHJldHVybjsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBpZiAoYnRuQ2hhc2UucmVjdC5jb250YWlucyh4LCB5KSkgewogICAgICAgICAgICBnYW1lLnNldHRpbmdzLmNhbWVyYU1vZGUgPSBDYW1lcmFDb250cm9sbGVyLk1vZGUuQ0hBU0U7CiAgICAgICAgICAgIGdhbWUuc2V0dGluZ3Muc2F2ZSgpOwogICAgICAgIH0gZWxzZSBpZiAoYnRuQ29ja3BpdC5yZWN0LmNvbnRhaW5zKHgsIHkpKSB7CiAgICAgICAgICAgIGdhbWUuc2V0dGluZ3MuY2FtZXJhTW9kZSA9IENhbWVyYUNvbnRyb2xsZXIuTW9kZS5DT0NLUElUOwogICAgICAgICAgICBnYW1lLnNldHRpbmdzLnNhdmUoKTsKICAgICAgICB9IGVsc2UgaWYgKGJ0bkJhY2sucmVjdC5jb250YWlucyh4LCB5KSkgewogICAgICAgICAgICBnYW1lLnNldFNjcmVlbihuZXcgTWFpbk1lbnVTY3JlZW4oZ2FtZSkpOwogICAgICAgIH0KICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIGRpc3Bvc2UoKSB7CiAgICAgICAgYmF0Y2guZGlzcG9zZSgpOwogICAgICAgIHNyLmRpc3Bvc2UoKTsKICAgIH0KfQo=
+package com.racinggame.core.screens;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.ScreenAdapter;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.racinggame.core.GameConstants;
+import com.racinggame.core.RacingGame;
+import com.racinggame.core.systems.CameraController;
+import com.racinggame.core.utils.TextDraw;
+import com.racinggame.core.utils.UiButton;
+
+/** 车库：选择赛车品牌（配色）与默认视角 */
+public class GarageScreen extends ScreenAdapter {
+    private final RacingGame game;
+    private final OrthographicCamera uiCam = new OrthographicCamera();
+    private final SpriteBatch batch = new SpriteBatch();
+    private final ShapeRenderer sr = new ShapeRenderer();
+
+    private UiButton[] brandBtns = new UiButton[3];
+    private UiButton btnChase, btnCockpit, btnBack;
+
+    public GarageScreen(RacingGame game) {
+        this.game = game;
+    }
+
+    @Override
+    public void show() {
+        Gdx.input.setInputProcessor(null);
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+    }
+
+    @Override
+    public void resize(int width, int height) {
+        uiCam.setToOrtho(true, width, height);
+    }
+
+    @Override
+    public void render(float delta) {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+
+        float bw = Math.min(w * 0.8f, 420f);
+        float bh = 70f;
+        float gap = 16f;
+        float cx = w / 2f - bw / 2f;
+        float y0 = h / 2f - 120f;
+
+        for (int i = 0; i < 3; i++) {
+            brandBtns[i] = new UiButton(cx, y0 + i * (bh + gap), bw, bh,
+                    GameConstants.BRAND_NAMES[i], GameConstants.BRAND_COLORS[i].cpy().mul(0.9f));
+        }
+        float camW = bw / 2f - gap / 2f;
+        btnChase = new UiButton(cx, y0 + 3 * (bh + gap), camW, bh, "追尾视角");
+        btnCockpit = new UiButton(cx + camW + gap, y0 + 3 * (bh + gap), camW, bh, "车内视角");
+        btnBack = new UiButton(24f, 24f, 120f, 48f, "返回",
+                new Color(0.4f, 0.4f, 0.45f, 0.9f));
+
+        handleInput();
+
+        Gdx.gl.glClearColor(0.07f, 0.09f, 0.16f, 1f);
+        Gdx.gl.glClear(Gdx.gl.GL_COLOR_BUFFER_BIT);
+
+        sr.setProjectionMatrix(uiCam.combined);
+        batch.setProjectionMatrix(uiCam.combined);
+
+        batch.begin();
+        game.bigFont.setColor(Color.WHITE);
+        TextDraw.draw(batch, game.bigFont, "车库", cx - 20f, y0 - 60f);
+        batch.end();
+
+        for (int i = 0; i < 3; i++) brandBtns[i].draw(sr, batch, game.font, game.settings.brand == i);
+        btnChase.draw(sr, batch, game.font, game.settings.cameraMode == CameraController.Mode.CHASE);
+        btnCockpit.draw(sr, batch, game.font, game.settings.cameraMode == CameraController.Mode.COCKPIT);
+        btnBack.draw(sr, batch, game.font, false);
+    }
+
+    private void handleInput() {
+        if (!Gdx.input.justTouched()) return;
+        int x = Gdx.input.getX();
+        int y = Gdx.input.getY();
+        float sh = Gdx.graphics.getHeight();
+        game.audio.playClick();
+        for (int i = 0; i < 3; i++) {
+            if (brandBtns[i].rect.contains(x, y)) {
+                game.settings.brand = i;
+                game.settings.save();
+                return;
+            }
+        }
+        if (btnChase.rect.contains(x, y)) {
+            game.settings.cameraMode = CameraController.Mode.CHASE;
+            game.settings.save();
+        } else if (btnCockpit.rect.contains(x, y)) {
+            game.settings.cameraMode = CameraController.Mode.COCKPIT;
+            game.settings.save();
+        } else if (btnBack.rect.contains(x, y)) {
+            game.setScreen(new MainMenuScreen(game));
+        }
+    }
+
+    @Override
+    public void dispose() {
+        batch.dispose();
+        sr.dispose();
+    }
+}

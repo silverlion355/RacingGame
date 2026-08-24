@@ -1,1 +1,75 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXM7CgppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5HZHg7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmdyYXBoaWNzLkNvbG9yOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS51dGlscy5SZWN0OwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS51dGlscy5VaUJ1dHRvbjsKCi8qKgogKiDop6bmjqfmk43mjqfvvJrlt6bkvqflt6blj7PovazlkJHvvIzlj7Pkvqfmsrnpl6gv5Yi56L2m77yI5pSv5oyB5aSa54K56Kem5o6n5ZCM5pe25oyJ5LiL77yJ44CCCiAqIOWQjOaXtuaPkOS+m+mhtumDqOeahOOAjOinhuinkuWIh+aNouOAjeS4juOAjOaaguWBnOOAjei+ueayv+inpuWPkeaMiemSruOAggogKiDlnZDmoIfnu5/kuIDkuLrlt6bkuIrop5Lljp/ngrnvvIjkuI7op6bmkbggeSDovbTkuIDoh7TvvInjgIIKICovCnB1YmxpYyBjbGFzcyBUb3VjaElucHV0Q29udHJvbGxlciB7CiAgICAvLyDmuLLmn5PnlKjmjInpkq7vvIhHYW1lU2NyZWVuIOivu+WPluWFtiByZWN0IOi/m+ihjOe7mOWItu+8iQogICAgcHVibGljIFVpQnV0dG9uIGJ0bkxlZnQsIGJ0blJpZ2h0LCBidG5UaHJvdHRsZSwgYnRuQnJha2U7CiAgICBwdWJsaWMgUmVjdCByZWN0Q2FtZXJhLCByZWN0UGF1c2U7CgogICAgLy8g5pys5bin5pON5o6n57uT5p6cCiAgICBwdWJsaWMgZmxvYXQgc3RlZXIgPSAwOyAgICAgLy8gLTEg5bemIC8gKzEg5Y+zIC8gMAogICAgcHVibGljIGJvb2xlYW4gdGhyb3R0bGUgPSBmYWxzZTsKICAgIHB1YmxpYyBib29sZWFuIGJyYWtlID0gZmFsc2U7CiAgICBwdWJsaWMgYm9vbGVhbiBjYW1lcmFFZGdlID0gZmFsc2U7IC8vIOinhuinkuaMiemSruacrOW4p+aYr+WQpuWImuaMieS4iwogICAgcHVibGljIGJvb2xlYW4gcGF1c2VFZGdlID0gZmFsc2U7ICAvLyDmmoLlgZzmjInpkq7mnKzluKfmmK/lkKbliJrmjInkuIsKCiAgICBwcml2YXRlIGZpbmFsIGJvb2xlYW5bXSBwcmV2RG93biA9IG5ldyBib29sZWFuWzEwXTsKCiAgICBwdWJsaWMgdm9pZCB1cGRhdGUoKSB7CiAgICAgICAgaW50IHcgPSBHZHguZ3JhcGhpY3MuZ2V0V2lkdGgoKTsKICAgICAgICBpbnQgaCA9IEdkeC5ncmFwaGljcy5nZXRIZWlnaHQoKTsKICAgICAgICBsYXlvdXQodywgaCk7CgogICAgICAgIHN0ZWVyID0gMDsKICAgICAgICB0aHJvdHRsZSA9IGZhbHNlOwogICAgICAgIGJyYWtlID0gZmFsc2U7CiAgICAgICAgYm9vbGVhbiBjYW0gPSBmYWxzZSwgcGF1ID0gZmFsc2U7CgogICAgICAgIGludCBwdHJzID0gTWF0aC5taW4oMTAsIEdkeC5pbnB1dC5nZXRNYXhQb2ludGVycygpKTsKICAgICAgICBmb3IgKGludCBpID0gMDsgaSA8IHB0cnM7IGkrKykgewogICAgICAgICAgICBib29sZWFuIGRvd24gPSBHZHguaW5wdXQuaXNUb3VjaGVkKGkpOwogICAgICAgICAgICBpZiAoIWRvd24pIHsKICAgICAgICAgICAgICAgIHByZXZEb3duW2ldID0gZmFsc2U7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpbnQgeCA9IEdkeC5pbnB1dC5nZXRYKGkpOwogICAgICAgICAgICBpbnQgeSA9IEdkeC5pbnB1dC5nZXRZKGkpOwoKICAgICAgICAgICAgaWYgKGJ0bkxlZnQucmVjdC5jb250YWlucyh4LCB5KSkgc3RlZXIgPSAtMTsKICAgICAgICAgICAgaWYgKGJ0blJpZ2h0LnJlY3QuY29udGFpbnMoeCwgeSkpIHN0ZWVyID0gMTsKICAgICAgICAgICAgaWYgKGJ0blRocm90dGxlLnJlY3QuY29udGFpbnMoeCwgeSkpIHRocm90dGxlID0gdHJ1ZTsKICAgICAgICAgICAgaWYgKGJ0bkJyYWtlLnJlY3QuY29udGFpbnMoeCwgeSkpIGJyYWtlID0gdHJ1ZTsKICAgICAgICAgICAgaWYgKHJlY3RDYW1lcmEuY29udGFpbnMoeCwgeSkgJiYgIXByZXZEb3duW2ldKSBjYW0gPSB0cnVlOwogICAgICAgICAgICBpZiAocmVjdFBhdXNlLmNvbnRhaW5zKHgsIHkpICYmICFwcmV2RG93bltpXSkgcGF1ID0gdHJ1ZTsKCiAgICAgICAgICAgIHByZXZEb3duW2ldID0gdHJ1ZTsKICAgICAgICB9CiAgICAgICAgY2FtZXJhRWRnZSA9IGNhbTsKICAgICAgICBwYXVzZUVkZ2UgPSBwYXU7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIGxheW91dChpbnQgdywgaW50IGgpIHsKICAgICAgICBmbG9hdCBzaXplID0gTWF0aC5tYXgoNzAsIE1hdGgubWluKDE0MCwgTWF0aC5taW4odywgaCkgKiAwLjE4ZikpOwogICAgICAgIGZsb2F0IGdhcCA9IHNpemUgKiAwLjE1ZjsKICAgICAgICBmbG9hdCBtYXJnaW4gPSBzaXplICogMC4yNWY7CiAgICAgICAgZmxvYXQgeSA9IGggLSBtYXJnaW4gLSBzaXplOwoKICAgICAgICBidG5MZWZ0ID0gbmV3IFVpQnV0dG9uKG1hcmdpbiwgeSwgc2l6ZSwgc2l6ZSwgIuKXgCDlt6YiLCBuZXcgQ29sb3IoMC4yMGYsIDAuNTVmLCAwLjMwZiwgMC45ZikpOwogICAgICAgIGJ0blJpZ2h0ID0gbmV3IFVpQnV0dG9uKG1hcmdpbiArIHNpemUgKyBnYXAsIHksIHNpemUsIHNpemUsICLlj7Mg4pa2IiwgbmV3IENvbG9yKDAuMjBmLCAwLjU1ZiwgMC4zMGYsIDAuOWYpKTsKICAgICAgICBidG5UaHJvdHRsZSA9IG5ldyBVaUJ1dHRvbih3IC0gbWFyZ2luIC0gc2l6ZSwgeSwgc2l6ZSwgc2l6ZSwgIuayuemXqCIsIG5ldyBDb2xvcigwLjg1ZiwgMC40NWYsIDAuMTBmLCAwLjk1ZikpOwogICAgICAgIGJ0bkJyYWtlID0gbmV3IFVpQnV0dG9uKHcgLSBtYXJnaW4gLSBzaXplICogMiAtIGdhcCwgeSwgc2l6ZSwgc2l6ZSwgIuWIuei9pi/lgJLovaYiLCBuZXcgQ29sb3IoMC44MGYsIDAuMTVmLCAwLjE1ZiwgMC45NWYpKTsKCiAgICAgICAgZmxvYXQgczIgPSBzaXplICogMC43ZjsKICAgICAgICByZWN0Q2FtZXJhID0gbmV3IFJlY3QodyAtIG1hcmdpbiAtIHMyLCBtYXJnaW4sIHMyLCBzMik7CiAgICAgICAgcmVjdFBhdXNlID0gbmV3IFJlY3QobWFyZ2luLCBtYXJnaW4sIHMyLCBzMik7CiAgICB9Cn0K
+package com.racinggame.core.systems;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.racinggame.core.utils.Rect;
+import com.racinggame.core.utils.UiButton;
+
+/**
+ * 触控操控：左侧左右转向，右侧油门/刹车（支持多点触控同时按下）。
+ * 同时提供顶部的「视角切换」与「暂停」边沿触发按钮。
+ * 坐标统一为左上角原点（与触摸 y 轴一致）。
+ */
+public class TouchInputController {
+    // 渲染用按钮（GameScreen 读取其 rect 进行绘制）
+    public UiButton btnLeft, btnRight, btnThrottle, btnBrake;
+    public Rect rectCamera, rectPause;
+
+    // 本帧操控结果
+    public float steer = 0;     // -1 左 / +1 右 / 0
+    public boolean throttle = false;
+    public boolean brake = false;
+    public boolean cameraEdge = false; // 视角按钮本帧是否刚按下
+    public boolean pauseEdge = false;  // 暂停按钮本帧是否刚按下
+
+    private final boolean[] prevDown = new boolean[10];
+
+    public void update() {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+        layout(w, h);
+
+        steer = 0;
+        throttle = false;
+        brake = false;
+        boolean cam = false, pau = false;
+
+        int ptrs = Math.min(10, Gdx.input.getMaxPointers());
+        for (int i = 0; i < ptrs; i++) {
+            boolean down = Gdx.input.isTouched(i);
+            if (!down) {
+                prevDown[i] = false;
+                continue;
+            }
+            int x = Gdx.input.getX(i);
+            int y = Gdx.input.getY(i);
+
+            if (btnLeft.rect.contains(x, y)) steer = -1;
+            if (btnRight.rect.contains(x, y)) steer = 1;
+            if (btnThrottle.rect.contains(x, y)) throttle = true;
+            if (btnBrake.rect.contains(x, y)) brake = true;
+            if (rectCamera.contains(x, y) && !prevDown[i]) cam = true;
+            if (rectPause.contains(x, y) && !prevDown[i]) pau = true;
+
+            prevDown[i] = true;
+        }
+        cameraEdge = cam;
+        pauseEdge = pau;
+    }
+
+    private void layout(int w, int h) {
+        float size = Math.max(70, Math.min(140, Math.min(w, h) * 0.18f));
+        float gap = size * 0.15f;
+        float margin = size * 0.25f;
+        float y = h - margin - size;
+
+        btnLeft = new UiButton(margin, y, size, size, "◀ 左", new Color(0.20f, 0.55f, 0.30f, 0.9f));
+        btnRight = new UiButton(margin + size + gap, y, size, size, "右 ▶", new Color(0.20f, 0.55f, 0.30f, 0.9f));
+        btnThrottle = new UiButton(w - margin - size, y, size, size, "油门", new Color(0.85f, 0.45f, 0.10f, 0.95f));
+        btnBrake = new UiButton(w - margin - size * 2 - gap, y, size, size, "刹车/倒车", new Color(0.80f, 0.15f, 0.15f, 0.95f));
+
+        float s2 = size * 0.7f;
+        rectCamera = new Rect(w - margin - s2, margin, s2, s2);
+        rectPause = new Rect(margin, margin, s2, s2);
+    }
+}

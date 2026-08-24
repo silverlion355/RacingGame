@@ -1,1 +1,41 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLnV0aWxzOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguR2R4OwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nMmQuQml0bWFwRm9udDsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzJkLkdseXBoTGF5b3V0OwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5ncmFwaGljcy5nMmQuU3ByaXRlQmF0Y2g7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4Lm1hdGguTWF0cml4NDsKCi8qKgogKiDlnKjjgIzlt6bkuIrop5Lljp/ngrnjgIF5IOWQkeS4i+OAjeeahCBVSSDmraPkuqTnm7jmnLrkuIvvvIzmraPnoa7nu5jliLbjgJDmraPlkJHjgJHkuK3mlofmlofmnKznmoTlt6XlhbfjgIIKICoKICog6IOM5pmv77yaVUkg55u45py65L2/55SoIHNldFRvT3J0aG8odHJ1ZSnvvIh5IOWQkeS4i++8ie+8jOS4jiBsaWJHRFgg6Kem5pG45Z2Q5qCH5LiA6Ie077yMCiAqIOaMiemSruefqeW9ouS4juinpuaRuOWRveS4remDveS+nei1luivpee6puWumuOAguS9hiBCaXRtYXBGb250IOWcqOivpeaKleW9seS4i+S8muiiq+WeguebtOmVnOWDj+OAggogKiDlm6DmraTmnKzlt6XlhbflnKjnu5jliLbmlofmnKzml7bjgIzkuLTml7bjgI3liIfmjaLliLAgeSDlkJHkuIrnmoTmraPkuqTmipXlvbHvvIzlubbmioogeSDlnZDmoIfnv7vovazkuLoKICogKHNjcmVlbkhlaWdodCAtIHlEb3duKe+8jOS9v+aWh+acrOato+WQkeaYvuekuuS4lOWxj+W5leS9jee9ruS4jeWPmO+8m+e7mOWItuWQjuaBouWkjeWOn+aKleW9seefqemYte+8jAogKiDkuI3lvbHlk43mjInpkq4v5b2i54q2L+inpuaRuOeahCB5LWRvd24g57qm5a6a44CCCiAqLwpwdWJsaWMgZmluYWwgY2xhc3MgVGV4dERyYXcgewogICAgcHJpdmF0ZSBUZXh0RHJhdygpIHt9CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgTWF0cml4NCBGTElQID0gbmV3IE1hdHJpeDQoKTsKCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgZHJhdyhTcHJpdGVCYXRjaCBiYXRjaCwgQml0bWFwRm9udCBmb250LCBTdHJpbmcgdGV4dCwgZmxvYXQgeCwgZmxvYXQgeURvd24pIHsKICAgICAgICBpbnQgdyA9IEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpOwogICAgICAgIGludCBoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwogICAgICAgIE1hdHJpeDQgcHJldiA9IGJhdGNoLmdldFByb2plY3Rpb25NYXRyaXgoKTsKICAgICAgICBGTElQLnNldFRvT3J0aG8yRCgwZiwgMGYsIHcsIGgpOwogICAgICAgIGJhdGNoLnNldFByb2plY3Rpb25NYXRyaXgoRkxJUCk7CiAgICAgICAgZm9udC5kcmF3KGJhdGNoLCB0ZXh0LCB4LCBoIC0geURvd24pOwogICAgICAgIGJhdGNoLnNldFByb2plY3Rpb25NYXRyaXgocHJldik7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIGRyYXcoU3ByaXRlQmF0Y2ggYmF0Y2gsIEJpdG1hcEZvbnQgZm9udCwgR2x5cGhMYXlvdXQgbGF5b3V0LCBmbG9hdCB4LCBmbG9hdCB5RG93bikgewogICAgICAgIGludCBoID0gR2R4LmdyYXBoaWNzLmdldEhlaWdodCgpOwogICAgICAgIE1hdHJpeDQgcHJldiA9IGJhdGNoLmdldFByb2plY3Rpb25NYXRyaXgoKTsKICAgICAgICBGTElQLnNldFRvT3J0aG8yRCgwZiwgMGYsIEdkeC5ncmFwaGljcy5nZXRXaWR0aCgpLCBoKTsKICAgICAgICBiYXRjaC5zZXRQcm9qZWN0aW9uTWF0cml4KEZMSVApOwogICAgICAgIGZvbnQuZHJhdyhiYXRjaCwgbGF5b3V0LCB4LCBoIC0geURvd24pOwogICAgICAgIGJhdGNoLnNldFByb2plY3Rpb25NYXRyaXgocHJldik7CiAgICB9Cn0K
+package com.racinggame.core.utils;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Matrix4;
+
+/**
+ * 在「左上角原点、y 向下」的 UI 正交相机下，正确绘制【正向】中文文本的工具。
+ *
+ * 背景：UI 相机使用 setToOrtho(true)（y 向下），与 libGDX 触摸坐标一致，
+ * 按钮矩形与触摸命中都依赖该约定。但 BitmapFont 在该投影下会被垂直镜像。
+ * 因此本工具在绘制文本时「临时」切换到 y 向上的正交投影，并把 y 坐标翻转为
+ * (screenHeight - yDown)，使文本正向显示且屏幕位置不变；绘制后恢复原投影矩阵，
+ * 不影响按钮/形状/触摸的 y-down 约定。
+ */
+public final class TextDraw {
+    private TextDraw() {}
+
+    private static final Matrix4 FLIP = new Matrix4();
+
+    public static void draw(SpriteBatch batch, BitmapFont font, String text, float x, float yDown) {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+        Matrix4 prev = batch.getProjectionMatrix();
+        FLIP.setToOrtho2D(0f, 0f, w, h);
+        batch.setProjectionMatrix(FLIP);
+        font.draw(batch, text, x, h - yDown);
+        batch.setProjectionMatrix(prev);
+    }
+
+    public static void draw(SpriteBatch batch, BitmapFont font, GlyphLayout layout, float x, float yDown) {
+        int h = Gdx.graphics.getHeight();
+        Matrix4 prev = batch.getProjectionMatrix();
+        FLIP.setToOrtho2D(0f, 0f, Gdx.graphics.getWidth(), h);
+        batch.setProjectionMatrix(FLIP);
+        font.draw(batch, layout, x, h - yDown);
+        batch.setProjectionMatrix(prev);
+    }
+}

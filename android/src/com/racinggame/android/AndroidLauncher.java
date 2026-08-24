@@ -1,1 +1,19 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5hbmRyb2lkOwoKaW1wb3J0IGFuZHJvaWQub3MuQnVuZGxlOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguYmFja2VuZHMuYW5kcm9pZC5BbmRyb2lkQXBwbGljYXRpb247CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4LmJhY2tlbmRzLmFuZHJvaWQuQW5kcm9pZEFwcGxpY2F0aW9uQ29uZmlndXJhdGlvbjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUuUmFjaW5nR2FtZTsKCi8qKiBBbmRyb2lkIOWQr+WKqOWZqO+8muWIneWni+WMliBsaWJHRFgg5ri45oiP5bm26L+b5YWl5YWo5bGP5qiq5bGPICovCnB1YmxpYyBjbGFzcyBBbmRyb2lkTGF1bmNoZXIgZXh0ZW5kcyBBbmRyb2lkQXBwbGljYXRpb24gewogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvbkNyZWF0ZShCdW5kbGUgc2F2ZWRJbnN0YW5jZVN0YXRlKSB7CiAgICAgICAgc3VwZXIub25DcmVhdGUoc2F2ZWRJbnN0YW5jZVN0YXRlKTsKICAgICAgICBBbmRyb2lkQXBwbGljYXRpb25Db25maWd1cmF0aW9uIGNvbmZpZyA9IG5ldyBBbmRyb2lkQXBwbGljYXRpb25Db25maWd1cmF0aW9uKCk7CiAgICAgICAgY29uZmlnLnVzZUltbWVyc2l2ZU1vZGUgPSB0cnVlOyAvLyDpmpDol4/ns7vnu5/moI/vvIzmsonmtbjkvZPpqowKICAgICAgICBjb25maWcudXNlV2FrZWxvY2sgPSB0cnVlOyAgICAgIC8vIOavlOi1m+aXtuS/neaMgeWxj+W5leW4uOS6rgogICAgICAgIGluaXRpYWxpemUobmV3IFJhY2luZ0dhbWUoKSwgY29uZmlnKTsKICAgIH0KfQo=
+package com.racinggame.android;
+
+import android.os.Bundle;
+
+import com.badlogic.gdx.backends.android.AndroidApplication;
+import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import com.racinggame.core.RacingGame;
+
+/** Android 启动器：初始化 libGDX 游戏并进入全屏横屏 */
+public class AndroidLauncher extends AndroidApplication {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+        config.useImmersiveMode = true; // 隐藏系统栏，沉浸体验
+        config.useWakelock = true;      // 比赛时保持屏幕常亮
+        initialize(new RacingGame(), config);
+    }
+}

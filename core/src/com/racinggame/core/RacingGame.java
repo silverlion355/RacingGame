@@ -1,1 +1,42 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguR2FtZTsKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguZ3JhcGhpY3MuZzJkLkJpdG1hcEZvbnQ7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLnNjcmVlbnMuTWFpbk1lbnVTY3JlZW47CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLnN5c3RlbXMuQXVkaW9NYW5hZ2VyOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5zeXN0ZW1zLlNjb3JlTWFuYWdlcjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUudXRpbHMuRm9udE1hbmFnZXI7CgovKioKICog5ri45oiP5YWl5Y+j77yI57un5om/IEdhbWXvvInvvIzotJ/otKPlhajlsYDnrqHnkIbvvJrpn7PmlYjjgIHnp6/liIbjgIHorr7nva7jgIHlrZfkvZPkuI7nlYzpnaLliIfmjaLjgIIKICovCnB1YmxpYyBjbGFzcyBSYWNpbmdHYW1lIGV4dGVuZHMgR2FtZSB7CiAgICBwdWJsaWMgQXVkaW9NYW5hZ2VyIGF1ZGlvOwogICAgcHVibGljIFNjb3JlTWFuYWdlciBzY29yZTsKICAgIHB1YmxpYyBHYW1lU2V0dGluZ3Mgc2V0dGluZ3M7CiAgICBwdWJsaWMgQml0bWFwRm9udCBmb250OyAgICAgLy8g5bi46KeE5a2X5Y+3CiAgICBwdWJsaWMgQml0bWFwRm9udCBiaWdGb250OyAgLy8g5qCH6aKY5a2X5Y+3CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBjcmVhdGUoKSB7CiAgICAgICAgYXVkaW8gPSBuZXcgQXVkaW9NYW5hZ2VyKCk7CiAgICAgICAgYXVkaW8ubG9hZCgpOwoKICAgICAgICBzY29yZSA9IG5ldyBTY29yZU1hbmFnZXIoKTsKICAgICAgICBzZXR0aW5ncyA9IG5ldyBHYW1lU2V0dGluZ3MoKTsKICAgICAgICBhdWRpby5zZXRNdXRlZChzY29yZS5pc011dGVkKCkpOwoKICAgICAgICBmb250ID0gRm9udE1hbmFnZXIuY3JlYXRlRm9udCgyNik7CiAgICAgICAgYmlnRm9udCA9IEZvbnRNYW5hZ2VyLmNyZWF0ZUZvbnQoNDIpOwoKICAgICAgICBzZXRTY3JlZW4obmV3IE1haW5NZW51U2NyZWVuKHRoaXMpKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyB2b2lkIGRpc3Bvc2UoKSB7CiAgICAgICAgaWYgKGF1ZGlvICE9IG51bGwpIGF1ZGlvLmRpc3Bvc2UoKTsKICAgICAgICBpZiAoZm9udCAhPSBudWxsKSBmb250LmRpc3Bvc2UoKTsKICAgICAgICBpZiAoYmlnRm9udCAhPSBudWxsKSBiaWdGb250LmRpc3Bvc2UoKTsKICAgICAgICBzdXBlci5kaXNwb3NlKCk7CiAgICB9Cn0K
+package com.racinggame.core;
+
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.racinggame.core.screens.MainMenuScreen;
+import com.racinggame.core.systems.AudioManager;
+import com.racinggame.core.systems.ScoreManager;
+import com.racinggame.core.utils.FontManager;
+
+/**
+ * 游戏入口（继承 Game），负责全局管理：音效、积分、设置、字体与界面切换。
+ */
+public class RacingGame extends Game {
+    public AudioManager audio;
+    public ScoreManager score;
+    public GameSettings settings;
+    public BitmapFont font;     // 常规字号
+    public BitmapFont bigFont;  // 标题字号
+
+    @Override
+    public void create() {
+        audio = new AudioManager();
+        audio.load();
+
+        score = new ScoreManager();
+        settings = new GameSettings();
+        audio.setMuted(score.isMuted());
+
+        font = FontManager.createFont(26);
+        bigFont = FontManager.createFont(42);
+
+        setScreen(new MainMenuScreen(this));
+    }
+
+    @Override
+    public void dispose() {
+        if (audio != null) audio.dispose();
+        if (font != null) font.dispose();
+        if (bigFont != null) bigFont.dispose();
+        super.dispose();
+    }
+}

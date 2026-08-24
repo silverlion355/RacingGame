@@ -1,1 +1,17 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5kZXNrdG9wOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguYmFja2VuZHMubHdqZ2wzLkx3amdsM0FwcGxpY2F0aW9uOwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5iYWNrZW5kcy5sd2pnbDMuTHdqZ2wzQXBwbGljYXRpb25Db25maWd1cmF0aW9uOwppbXBvcnQgY29tLnJhY2luZ2dhbWUuY29yZS5SYWNpbmdHYW1lOwoKLyoqIOahjOmdouWQr+WKqOWZqO+8iExXSkdMM++8ie+8jOeUqOS6juacrOWcsOWGkueDn+a1i+ivle+8jOi1hOa6kOagueaMh+WQkSBhbmRyb2lkL2Fzc2V0cyAqLwpwdWJsaWMgY2xhc3MgRGVza3RvcExhdW5jaGVyIHsKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBtYWluKFN0cmluZ1tdIGFyZykgewogICAgICAgIEx3amdsM0FwcGxpY2F0aW9uQ29uZmlndXJhdGlvbiBjb25maWcgPSBuZXcgTHdqZ2wzQXBwbGljYXRpb25Db25maWd1cmF0aW9uKCk7CiAgICAgICAgY29uZmlnLnNldFRpdGxlKCLmnoHpgJ/otZvovaYgKERlc2t0b3ApIik7CiAgICAgICAgY29uZmlnLnNldFdpbmRvd2VkTW9kZSgxMjgwLCA3MjApOwogICAgICAgIGNvbmZpZy5zZXRGb3JlZ3JvdW5kRlBTKDYwKTsKICAgICAgICBjb25maWcudXNlVnN5bmModHJ1ZSk7CiAgICAgICAgbmV3IEx3amdsM0FwcGxpY2F0aW9uKG5ldyBSYWNpbmdHYW1lKCksIGNvbmZpZyk7CiAgICB9Cn0K
+package com.racinggame.desktop;
+
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.racinggame.core.RacingGame;
+
+/** 桌面启动器（LWJGL3），用于本地冒烟测试，资源根指向 android/assets */
+public class DesktopLauncher {
+    public static void main(String[] arg) {
+        Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
+        config.setTitle("极速赛车 (Desktop)");
+        config.setWindowedMode(1280, 720);
+        config.setForegroundFPS(60);
+        config.useVsync(true);
+        new Lwjgl3Application(new RacingGame(), config);
+    }
+}

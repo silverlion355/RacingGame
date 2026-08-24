@@ -1,1 +1,28 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHguR2R4OwppbXBvcnQgY29tLmJhZGxvZ2ljLmdkeC5QcmVmZXJlbmNlczsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUuc3lzdGVtcy5DYW1lcmFDb250cm9sbGVyOwoKLyoqIOeOqeWutumAiemhue+8mumAiei9puWTgeeJjOS4jum7mOiupOinhuinku+8jOaMgeS5heWMluS/neWtmCAqLwpwdWJsaWMgY2xhc3MgR2FtZVNldHRpbmdzIHsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBQUkVGID0gInJhY2luZ2dhbWVfc2V0dGluZ3MiOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIEtFWV9CUkFORCA9ICJicmFuZCI7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgS0VZX0NPQ0tQSVQgPSAiY29ja3BpdCI7CgogICAgcHVibGljIGludCBicmFuZCA9IDA7IC8vIDAg5rOV5ouJ5YipIC8gMSDkv53ml7bmjbcgLyAyIOmTtueurQogICAgcHVibGljIENhbWVyYUNvbnRyb2xsZXIuTW9kZSBjYW1lcmFNb2RlID0gQ2FtZXJhQ29udHJvbGxlci5Nb2RlLkNIQVNFOwoKICAgIHB1YmxpYyBHYW1lU2V0dGluZ3MoKSB7CiAgICAgICAgUHJlZmVyZW5jZXMgcCA9IEdkeC5hcHAuZ2V0UHJlZmVyZW5jZXMoUFJFRik7CiAgICAgICAgYnJhbmQgPSBwLmdldEludGVnZXIoS0VZX0JSQU5ELCAwKTsKICAgICAgICBjYW1lcmFNb2RlID0gcC5nZXRCb29sZWFuKEtFWV9DT0NLUElULCBmYWxzZSkgPyBDYW1lcmFDb250cm9sbGVyLk1vZGUuQ09DS1BJVCA6IENhbWVyYUNvbnRyb2xsZXIuTW9kZS5DSEFTRTsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBzYXZlKCkgewogICAgICAgIFByZWZlcmVuY2VzIHAgPSBHZHguYXBwLmdldFByZWZlcmVuY2VzKFBSRUYpOwogICAgICAgIHAucHV0SW50ZWdlcihLRVlfQlJBTkQsIGJyYW5kKTsKICAgICAgICBwLnB1dEJvb2xlYW4oS0VZX0NPQ0tQSVQsIGNhbWVyYU1vZGUgPT0gQ2FtZXJhQ29udHJvbGxlci5Nb2RlLkNPQ0tQSVQpOwogICAgICAgIHAuZmx1c2goKTsKICAgIH0KfQo=
+package com.racinggame.core;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Preferences;
+import com.racinggame.core.systems.CameraController;
+
+/** 玩家选项：选车品牌与默认视角，持久化保存 */
+public class GameSettings {
+    private static final String PREF = "racinggame_settings";
+    private static final String KEY_BRAND = "brand";
+    private static final String KEY_COCKPIT = "cockpit";
+
+    public int brand = 0; // 0 法拉利 / 1 保时捷 / 2 银箭
+    public CameraController.Mode cameraMode = CameraController.Mode.CHASE;
+
+    public GameSettings() {
+        Preferences p = Gdx.app.getPreferences(PREF);
+        brand = p.getInteger(KEY_BRAND, 0);
+        cameraMode = p.getBoolean(KEY_COCKPIT, false) ? CameraController.Mode.COCKPIT : CameraController.Mode.CHASE;
+    }
+
+    public void save() {
+        Preferences p = Gdx.app.getPreferences(PREF);
+        p.putInteger(KEY_BRAND, brand);
+        p.putBoolean(KEY_COCKPIT, cameraMode == CameraController.Mode.COCKPIT);
+        p.flush();
+    }
+}

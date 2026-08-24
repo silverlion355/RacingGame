@@ -1,1 +1,47 @@
-cGFja2FnZSBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzOwoKaW1wb3J0IGNvbS5iYWRsb2dpYy5nZHgubWF0aC5NYXRoVXRpbHM7CmltcG9ydCBjb20uYmFkbG9naWMuZ2R4Lm1hdGguVmVjdG9yMjsKaW1wb3J0IGNvbS5yYWNpbmdnYW1lLmNvcmUudXRpbHMuTWF0aFV0aWw7CmltcG9ydCBjb20ucmFjaW5nZ2FtZS5jb3JlLmVudGl0aWVzLlRyYWNrOwoKLyoqCiAqIOWvueaJiyBBSe+8muayv+i1m+mBk+i3r+eCueihjOmptu+8jOagueaNruWJjeaWueebruagh+eCueiuoeeul+i9rOWQke+8jOW8r+mBk+mAguW9k+WHj+mAn+OAggogKi8KcHVibGljIGNsYXNzIEFJQ2FyIGV4dGVuZHMgQ2FyIHsKICAgIHB1YmxpYyBpbnQgdGFyZ2V0V2F5cG9pbnQ7CiAgICBwdWJsaWMgZmxvYXQgdGFyZ2V0U3BlZWQ7CgogICAgcHVibGljIEFJQ2FyKGludCBicmFuZCwgZmxvYXQgdGFyZ2V0U3BlZWQpIHsKICAgICAgICBzdXBlcigzOGYsIDE4ZiwgMzBmLCAyLjBmLCA2ZiwgMi4yZik7CiAgICAgICAgdGhpcy5icmFuZCA9IGJyYW5kOwogICAgICAgIHRoaXMudGFyZ2V0U3BlZWQgPSB0YXJnZXRTcGVlZDsKICAgICAgICB0aGlzLm1heFNwZWVkID0gdGFyZ2V0U3BlZWQgKiAxLjI1ZjsKICAgIH0KCiAgICAvKiog566A5Y2V6Lev54K56Lef6ZqPIEFJICovCiAgICBwdWJsaWMgdm9pZCB1cGRhdGVBSShUcmFjayB0cmFjaywgZmxvYXQgZHQpIHsKICAgICAgICBWZWN0b3IyIHRhcmdldCA9IHRyYWNrLmdldFdheXBvaW50KHRhcmdldFdheXBvaW50KTsKICAgICAgICBWZWN0b3IyIHRvVGFyZ2V0ID0gbmV3IFZlY3RvcjIodGFyZ2V0LnggLSBwb3NpdGlvbi54LCB0YXJnZXQueSAtIHBvc2l0aW9uLnkpOwogICAgICAgIGZsb2F0IGRpc3QgPSB0b1RhcmdldC5sZW4oKTsKCiAgICAgICAgLy8g5Yiw6L6+5b2T5YmN55uu5qCH54K55YiZ5YiH5o2i5Yiw5LiL5LiA5LiqCiAgICAgICAgaWYgKGRpc3QgPCB0cmFjay5zZWdtZW50TGVuZ3RoKCkgKiAwLjZmKSB7CiAgICAgICAgICAgIHRhcmdldFdheXBvaW50ID0gKHRhcmdldFdheXBvaW50ICsgMSkgJSB0cmFjay5nZXRXYXlwb2ludENvdW50KCk7CiAgICAgICAgICAgIHRhcmdldCA9IHRyYWNrLmdldFdheXBvaW50KHRhcmdldFdheXBvaW50KTsKICAgICAgICAgICAgdG9UYXJnZXQuc2V0KHRhcmdldC54IC0gcG9zaXRpb24ueCwgdGFyZ2V0LnkgLSBwb3NpdGlvbi55KTsKICAgICAgICB9CgogICAgICAgIGZsb2F0IGRlc2lyZWRIZWFkaW5nID0gKGZsb2F0KSBNYXRoLmF0YW4yKHRvVGFyZ2V0LnksIHRvVGFyZ2V0LngpOwogICAgICAgIGZsb2F0IGRpZmYgPSBNYXRoVXRpbC5hbmdsZURpZmYoZGVzaXJlZEhlYWRpbmcsIGhlYWRpbmcpOwogICAgICAgIGZsb2F0IHN0ZWVyID0gTWF0aFV0aWxzLmNsYW1wKGRpZmYgKiAyLjVmLCAtMWYsIDFmKTsKCiAgICAgICAgLy8g5byv6YGT5oCl5pe25pS25rK577yM55u06YGT5YWo6YCfCiAgICAgICAgZmxvYXQgdGhyb3R0bGUgPSBNYXRoLmFicyhkaWZmKSA+IDAuOWYgPyAwLjM1ZiA6IDFmOwogICAgICAgIC8vIOiuqSBBSSDpgJ/luqbotovlkJHnm67moIfpgJ/luqYKICAgICAgICBpZiAoc3BlZWQgPCB0YXJnZXRTcGVlZCkgdGhyb3R0bGUgPSBNYXRoLm1heCh0aHJvdHRsZSwgMC43Zik7CiAgICAgICAgZWxzZSB0aHJvdHRsZSA9IDAuMWY7CgogICAgICAgIGFwcGx5Q29udHJvbChzdGVlciwgdGhyb3R0bGUsIDAsIGR0KTsKICAgIH0KfQo=
+package com.racinggame.core.entities;
+
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
+import com.racinggame.core.utils.MathUtil;
+import com.racinggame.core.entities.Track;
+
+/**
+ * 对手 AI：沿赛道路点行驶，根据前方目标点计算转向，弯道适当减速。
+ */
+public class AICar extends Car {
+    public int targetWaypoint;
+    public float targetSpeed;
+
+    public AICar(int brand, float targetSpeed) {
+        super(38f, 18f, 30f, 2.0f, 6f, 2.2f);
+        this.brand = brand;
+        this.targetSpeed = targetSpeed;
+        this.maxSpeed = targetSpeed * 1.25f;
+    }
+
+    /** 简单路点跟随 AI */
+    public void updateAI(Track track, float dt) {
+        Vector2 target = track.getWaypoint(targetWaypoint);
+        Vector2 toTarget = new Vector2(target.x - position.x, target.y - position.y);
+        float dist = toTarget.len();
+
+        // 到达当前目标点则切换到下一个
+        if (dist < track.segmentLength() * 0.6f) {
+            targetWaypoint = (targetWaypoint + 1) % track.getWaypointCount();
+            target = track.getWaypoint(targetWaypoint);
+            toTarget.set(target.x - position.x, target.y - position.y);
+        }
+
+        float desiredHeading = (float) Math.atan2(toTarget.y, toTarget.x);
+        float diff = MathUtil.angleDiff(desiredHeading, heading);
+        float steer = MathUtils.clamp(diff * 2.5f, -1f, 1f);
+
+        // 弯道急时收油，直道全速
+        float throttle = Math.abs(diff) > 0.9f ? 0.35f : 1f;
+        // 让 AI 速度趋向目标速度
+        if (speed < targetSpeed) throttle = Math.max(throttle, 0.7f);
+        else throttle = 0.1f;
+
+        applyControl(steer, throttle, 0, dt);
+    }
+}
