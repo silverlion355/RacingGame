@@ -5,6 +5,12 @@ dependencies {
     api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
 }
 
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+    }
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
