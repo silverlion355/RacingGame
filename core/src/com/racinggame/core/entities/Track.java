@@ -2,6 +2,8 @@ package com.racinggame.core.entities;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.VertexAttributes;
+import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
@@ -73,21 +75,21 @@ public class Track {
         // 外围地面（草地）
         Material groundMat = new Material(ColorAttribute.createDiffuse(new Color(0.16f, 0.40f, 0.15f, 1f)));
         mb.part("ground", GL20.GL_TRIANGLES,
-                MeshPartBuilder.VertexUsage.Position | MeshPartBuilder.VertexUsage.Normal, groundMat)
+                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, groundMat)
                 .box(-1000f, -1f, -1000f, 2000f, 1f, 2000f);
 
         // 路面
         Material roadMat = new Material(ColorAttribute.createDiffuse(new Color(0.30f, 0.31f, 0.34f, 1f)));
         MeshPartBuilder road = mb.part("road", GL20.GL_TRIANGLES,
-                MeshPartBuilder.VertexUsage.Position | MeshPartBuilder.VertexUsage.Normal, roadMat);
+                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, roadMat);
 
         // 护栏（左红右白）
         Material railLMat = new Material(ColorAttribute.createDiffuse(new Color(0.80f, 0.12f, 0.12f, 1f)));
         Material railRMat = new Material(ColorAttribute.createDiffuse(new Color(0.92f, 0.92f, 0.92f, 1f)));
         MeshPartBuilder railL = mb.part("railL", GL20.GL_TRIANGLES,
-                MeshPartBuilder.VertexUsage.Position | MeshPartBuilder.VertexUsage.Normal, railLMat);
+                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, railLMat);
         MeshPartBuilder railR = mb.part("railR", GL20.GL_TRIANGLES,
-                MeshPartBuilder.VertexUsage.Position | MeshPartBuilder.VertexUsage.Normal, railRMat);
+                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, railRMat);
 
         float y0 = GameConstants.ROAD_Y;
         float y1 = y0 + GameConstants.RAIL_HEIGHT;
