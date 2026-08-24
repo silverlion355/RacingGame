@@ -1,0 +1,29 @@
+## Java / Gradle
+*.class
+*.log
+.gradle/
+build/
+*/build/
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+## Android
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+android/libs/
+
+## Desktop
+desktop/build/
+android/build/
+core/build/
+
+## OS
+.DS_Store
+Thumbs.db
+
+## 临时文件
+_tmp_gradle/
