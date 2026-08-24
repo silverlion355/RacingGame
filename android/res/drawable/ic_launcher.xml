@@ -8,10 +8,8 @@
     <path
         android:fillColor="#d1122b"
         android:pathData="M24 4 L40 12 L40 30 L24 44 L8 30 L8 12 Z" />
-    <!-- 黄色中心（近似名车配色）-->
-    <circle
+    <!-- 黄色中心（近似名车配色），矢量图需用 path 绘制圆 -->
+    <path
         android:fillColor="#f4c20d"
-        android:cx="24"
-        android:cy="24"
-        android:r="8" />
+        android:pathData="M24,16 a8,8 0 1,0 0,16 a8,8 0 1,0 0,-16 Z" />
 </vector>
