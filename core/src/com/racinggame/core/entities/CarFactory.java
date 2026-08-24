@@ -2,6 +2,8 @@ package com.racinggame.core.entities;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.VertexAttributes;
+import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
@@ -21,7 +23,7 @@ public final class CarFactory {
         Material glassMat = new Material(ColorAttribute.createDiffuse(new Color(0.13f, 0.15f, 0.22f, 1f)));
         Material tireMat = new Material(ColorAttribute.createDiffuse(new Color(0.07f, 0.07f, 0.08f, 1f)));
 
-        int attrs = MeshPartBuilder.VertexUsage.Position | MeshPartBuilder.VertexUsage.Normal;
+        int attrs = VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal;
 
         // 车身底盘
         mb.node().translation.set(0f, 0.55f, 0f);
