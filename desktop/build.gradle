@@ -4,6 +4,9 @@ apply plugin: "application"
 // 桌面本地冒烟测试：复用 android/assets 作为资源根
 sourceSets {
     main {
+        java {
+            srcDirs = ['src']
+        }
         resources {
             srcDirs = ['../android/assets']
         }
