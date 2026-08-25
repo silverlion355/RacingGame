@@ -12,6 +12,7 @@ public class DesktopLauncher {
         config.setWindowedMode(1280, 720);
         config.setForegroundFPS(60);
         config.useVsync(true);
+        config.setSamples(4); // 桌面端 MSAA 4x 抗锯齿
         new Lwjgl3Application(new RacingGame(), config);
     }
 }
