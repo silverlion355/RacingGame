@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
+import com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 
@@ -19,8 +20,14 @@ public final class CarFactory {
         ModelBuilder mb = new ModelBuilder();
         mb.begin();
 
-        Material bodyMat = new Material(ColorAttribute.createDiffuse(bodyColor));
-        Material glassMat = new Material(ColorAttribute.createDiffuse(new Color(0.13f, 0.15f, 0.22f, 1f)));
+        Material bodyMat = new Material(
+                ColorAttribute.createDiffuse(bodyColor),
+                ColorAttribute.createSpecular(Color.WHITE),
+                FloatAttribute.createShininess(32f));
+        Material glassMat = new Material(
+                ColorAttribute.createDiffuse(new Color(0.13f, 0.15f, 0.22f, 1f)),
+                ColorAttribute.createSpecular(new Color(0.6f, 0.6f, 0.7f, 1f)),
+                FloatAttribute.createShininess(64f));
         Material tireMat = new Material(ColorAttribute.createDiffuse(new Color(0.07f, 0.07f, 0.08f, 1f)));
 
         int attrs = VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal;
