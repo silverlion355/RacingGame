@@ -14,10 +14,10 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalShadowLight;
-import com.badlogic.gdx.graphics.g3d.attributes.FogAttribute;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Matrix4;
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.racinggame.core.GameConstants;
@@ -115,16 +115,11 @@ public class GameScreen extends ScreenAdapter {
         environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.45f, 0.45f, 0.5f, 1f));
         DirectionalLight sun = new DirectionalLight();
         sun.set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.3f);
-        sun.specularColor.set(0.5f, 0.5f, 0.5f);
         environment.add(sun);
         shadowLight = new DirectionalShadowLight(1536, 1536, 90f, 90f, 1f, 400f);
         shadowLight.set(0.85f, 0.85f, 0.8f, -0.5f, -1f, -0.3f);
-        shadowLight.specularColor.set(0.4f, 0.4f, 0.4f);
         environment.add(shadowLight);
         environment.shadowMap = shadowLight;
-        environment.set(new FogAttribute(FogAttribute.FogLinear,
-                GameConstants.FOG_NEAR, GameConstants.FOG_FAR,
-                new Color(0.55f, 0.70f, 0.92f, 1f)));
         createBackground();
 
         resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
@@ -181,7 +176,7 @@ public class GameScreen extends ScreenAdapter {
         batch.begin();
         batch.draw(bgTexture, 0, 0, w, h);
         batch.end();
-        if (shadowLight != null) shadowLight.setCenter(player.position.x, 0f, player.position.y);
+        if (shadowLight != null) shadowLight.update(new Vector3(player.position.x, 0f, player.position.y), shadowLight.direction);
         modelBatch.begin(cam);
         modelBatch.render(track.instance, environment);
         modelBatch.render(player.instance, environment);
