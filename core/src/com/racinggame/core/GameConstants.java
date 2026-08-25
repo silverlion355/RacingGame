@@ -22,6 +22,12 @@ public final class GameConstants {
     /** 车内第一视角：摄像机相对车头略微前移 */
     public static final float COCKPIT_FORWARD = 0.3f;
 
+    // ===== 画质 / 光影 =====
+    public static final float FOG_NEAR = 60f;          // 距离雾起点
+    public static final float FOG_FAR = 650f;          // 距离雾终点（远处融入天空）
+    public static final float BASE_FOV = 67f;         // 基础视场角
+    public static final float MAX_FOV_BOOST = 12f;     // 高速时额外视场角（速度感）
+
     // ===== 赛道与物理（街机式简化）=====
     public static final float TRACK_WIDTH = 16f;     // 赛道宽度
     public static final float RAIL_HEIGHT = 1.6f;    // 护栏高度
