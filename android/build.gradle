@@ -65,25 +65,23 @@ android {
     }
 }
 
-// 将原生 so 从 natives 配置解压到 libs/<abi>
+// 将原生 so 从 natives 配置解压到 libs/<abi>（APK 必须包含这些 .so，否则 libGDX 无法启动 -> 闪退）
 task copyAndroidNatives {
-    doFirst {
-        file("libs/armeabi-v7a/").mkdirs()
-        file("libs/arm64-v8a/").mkdirs()
-        file("libs/x86_64/").mkdirs()
-        file("libs/x86/").mkdirs()
-    }
+    description = "Extract libGDX native (.so) libraries into jniLibs"
     doLast {
-        configurations.natives.copy().files.each { jar ->
-            def outputDir = null
-            if (jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
-            if (jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
-            if (jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
-            if (jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
-            if (outputDir != null) {
+        def abis = [
+            "armeabi-v7a": "natives-armeabi-v7a",
+            "arm64-v8a"  : "natives-arm64-v8a",
+            "x86"        : "natives-x86",
+            "x86_64"     : "natives-x86_64"
+        ]
+        abis.each { dir, suffix ->
+            def outDir = file("libs/$dir")
+            outDir.mkdirs()
+            configurations.natives.files.findAll { it.name.endsWith("$suffix.jar") }.each { jar ->
                 copy {
                     from zipTree(jar)
-                    into outputDir
+                    into outDir
                     include "*.so"
                 }
             }
@@ -91,6 +89,8 @@ task copyAndroidNatives {
     }
 }
 
-tasks.matching { it.name.contains("merge") && it.name.contains("JniLibs") }.configureEach {
-    dependsOn copyAndroidNatives
+// 关键：确保 copyAndroidNatives 在 preBuild 之前执行，否则 .so 不会被打包进 APK -> 闪退
+// （不能用 whenTaskAdded：preBuild 在插件 apply 时已存在，监听器注册太晚不会触发）
+afterEvaluate {
+    tasks.named("preBuild") { dependsOn copyAndroidNatives }
 }
