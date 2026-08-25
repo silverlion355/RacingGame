@@ -24,6 +24,11 @@ public class CameraController {
     }
 
     public void update(Car car) {
+        update(car, 0f);
+    }
+
+    public void update(Car car, float speedRatio) {
+        cam.fieldOfView = GameConstants.BASE_FOV + Math.min(1f, speedRatio) * GameConstants.MAX_FOV_BOOST;
         Vector3 fwd = new Vector3(car.forward().x, 0, car.forward().y);
         Vector3 carPos = new Vector3(car.position.x, 0, car.position.y);
 
