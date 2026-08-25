@@ -69,19 +69,20 @@ android {
 task copyAndroidNatives {
     description = "Extract libGDX native (.so) libraries into jniLibs"
     doLast {
-        def abis = [
-            "armeabi-v7a": "natives-armeabi-v7a",
-            "arm64-v8a"  : "natives-arm64-v8a",
-            "x86"        : "natives-x86",
-            "x86_64"     : "natives-x86_64"
-        ]
-        abis.each { dir, suffix ->
-            def outDir = file("libs/$dir")
-            outDir.mkdirs()
-            configurations.natives.files.findAll { it.name.endsWith("$suffix.jar") }.each { jar ->
+        file("libs/armeabi-v7a").mkdirs()
+        file("libs/arm64-v8a").mkdirs()
+        file("libs/x86").mkdirs()
+        file("libs/x86_64").mkdirs()
+        configurations.natives.files.each { jar ->
+            def outputDir = null
+            if (jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+            if (jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
+            if (jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+            if (jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
+            if (outputDir != null) {
                 copy {
                     from zipTree(jar)
-                    into outDir
+                    into outputDir
                     include "*.so"
                 }
             }
