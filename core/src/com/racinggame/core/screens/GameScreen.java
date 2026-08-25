@@ -13,6 +13,11 @@ import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
+import com.badlogic.gdx.graphics.g3d.environment.DirectionalShadowLight;
+import com.badlogic.gdx.graphics.g3d.attributes.FogAttribute;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.racinggame.core.GameConstants;
@@ -47,6 +52,8 @@ public class GameScreen extends ScreenAdapter {
     private PerspectiveCamera cam;
     private final ModelBatch modelBatch = new ModelBatch();
     private Environment environment;
+    private DirectionalShadowLight shadowLight;
+    private Texture bgTexture;
     private CameraController cameraController;
     private final TouchInputController touch = new TouchInputController();
 
@@ -103,10 +110,22 @@ public class GameScreen extends ScreenAdapter {
         cam.update();
         cameraController = new CameraController(cam, game.settings.cameraMode);
 
-        // 光照环境
+        // 光照环境：环境光 + 平行光(带高光) + 实时阴影 + 距离雾
         environment = new Environment();
-        environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.55f, 0.55f, 0.6f, 1f));
-        environment.add(new DirectionalLight().set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.35f));
+        environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.45f, 0.45f, 0.5f, 1f));
+        DirectionalLight sun = new DirectionalLight();
+        sun.set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.3f);
+        sun.specularColor.set(0.5f, 0.5f, 0.5f);
+        environment.add(sun);
+        shadowLight = new DirectionalShadowLight(1536, 1536, 90f, 90f, 1f, 400f);
+        shadowLight.set(0.85f, 0.85f, 0.8f, -0.5f, -1f, -0.3f);
+        shadowLight.specularColor.set(0.4f, 0.4f, 0.4f);
+        environment.add(shadowLight);
+        environment.shadowMap = shadowLight;
+        environment.set(new FogAttribute(FogAttribute.FogLinear,
+                GameConstants.FOG_NEAR, GameConstants.FOG_FAR,
+                new Color(0.55f, 0.70f, 0.92f, 1f)));
+        createBackground();
 
         resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
@@ -144,7 +163,7 @@ public class GameScreen extends ScreenAdapter {
             raceManager.update(delta, touch.steer, touch.throttle ? 1 : 0, touch.brake ? 1 : 0);
             game.audio.setEngineIntensity(Math.min(1f, Math.abs(player.speed) / player.maxSpeed));
             if (raceManager.playerHitThisFrame) game.audio.playCrash();
-            cameraController.update(player);
+            cameraController.update(player, Math.min(1f, Math.abs(player.speed) / player.maxSpeed));
         }
 
         // 2) 完赛 → 结算
@@ -154,8 +173,15 @@ public class GameScreen extends ScreenAdapter {
         }
 
         // 3) 渲染 3D
-        Gdx.gl.glClearColor(0.45f, 0.62f, 0.85f, 1f);
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+        // 屏幕空间渐变天空背景
+        batch.setProjectionMatrix(new Matrix4().setToOrtho2D(0, 0, w, h));
+        batch.begin();
+        batch.draw(bgTexture, 0, 0, w, h);
+        batch.end();
+        if (shadowLight != null) shadowLight.setCenter(player.position.x, 0f, player.position.y);
         modelBatch.begin(cam);
         modelBatch.render(track.instance, environment);
         modelBatch.render(player.instance, environment);
@@ -252,6 +278,22 @@ public class GameScreen extends ScreenAdapter {
         }
     }
 
+    private void createBackground() {
+        int hpx = 256, wpx = 8;
+        Pixmap px = new Pixmap(wpx, hpx, Pixmap.Format.RGBA8888);
+        Color top = new Color(0.20f, 0.45f, 0.85f, 1f);   // 天顶蓝
+        Color hor = new Color(0.62f, 0.78f, 0.95f, 1f);   // 地平线淡蓝
+        for (int y = 0; y < hpx; y++) {
+            float t = y / (float) (hpx - 1);
+            Color c = top.cpy().lerp(hor, t);
+            px.setColor(c);
+            for (int x = 0; x < wpx; x++) px.drawPixel(x, y);
+        }
+        bgTexture = new Texture(px);
+        bgTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        px.dispose();
+    }
+
     private void finishRace() {
         transitioned = true;
         int rank = raceManager.getPlayerRank();
@@ -272,6 +314,8 @@ public class GameScreen extends ScreenAdapter {
     @Override
     public void dispose() {
         disposeRace();
+        if (bgTexture != null) bgTexture.dispose();
+        if (shadowLight != null) shadowLight.dispose();
         modelBatch.dispose();
         sr.dispose();
         batch.dispose();
