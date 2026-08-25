@@ -14,7 +14,7 @@ public class AndroidLauncher extends AndroidApplication {
         AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
         config.useImmersiveMode = true; // 隐藏系统栏，沉浸体验
         config.useWakelock = true;      // 比赛时保持屏幕常亮
-        config.antialias = true;        // 开启 MSAA 抗锯齿，消除几何边缘锯齿
+        config.numSamples = 4;          // 开启 MSAA 4x 抗锯齿，消除几何边缘锯齿
         initialize(new RacingGame(), config);
     }
 }
