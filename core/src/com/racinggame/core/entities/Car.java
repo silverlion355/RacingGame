@@ -21,6 +21,13 @@ public abstract class Car {
     public float radius;           // 碰撞圆半径
     public int brand;             // 品牌/配色索引
     public ModelInstance instance;
+    public ModelInstance[] wheels = null;  // 四个车轮（独立圆柱网格）
+    public float wheelRoll = 0f;           // 车轮滚动累计角（弧度）
+    // 车轮相对车体原点的局部坐标 (x=车宽, z=前后)
+    private static final float[][] WHEEL_LOCAL = {
+            {0.92f, 1.3f}, {-0.92f, 1.3f}, {0.92f, -1.3f}, {-0.92f, -1.3f}
+    };
+    private static final float WHEEL_RADIUS = 0.35f;  // 轮胎半径（= 直径 0.7 / 2）
 
     // 比赛进度状态
     public int lapsCompleted = 0;
@@ -85,6 +92,15 @@ public abstract class Car {
         if (instance != null) {
             instance.transform.setToTranslation(position.x, 0, position.y);
             instance.transform.rotateRad(Vector3.Y, (float) (Math.PI / 2 - heading));
+        }
+        // 同步车轮：独立圆柱，跟随车体平移/旋转，并沿车宽轴(X)滚动
+        if (wheels != null) {
+            wheelRoll += (speed * dt) / WHEEL_RADIUS;
+            for (int i = 0; i < wheels.length; i++) {
+                wheels[i].transform.set(instance.transform);
+                wheels[i].transform.translate(WHEEL_LOCAL[i][0], WHEEL_RADIUS, WHEEL_LOCAL[i][1]);
+                wheels[i].transform.rotateRad(Vector3.X, wheelRoll);
+            }
         }
     }
 }
