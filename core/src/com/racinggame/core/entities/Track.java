@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
-import com.badlogic.gdx.graphics.g3d.Node;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
@@ -139,25 +138,25 @@ public class Track {
             addRibbon(edgeLine, aR, bR, nrm, 0.12f, y0 + 0.02f);
         }
 
-        // 起跑/终点线（黑白格）
+        // 起跑/终点线（黑白格，用带状三角面拼接，无需节点旋转）
         Vector2 a0 = points.get(0);
         Vector2 b0 = points.get(1);
         Vector2 dir0 = b0.cpy().sub(a0).nor();
         Vector2 nrm0 = new Vector2(-dir0.y, dir0.x);
-        float ang = (float) Math.atan2(dir0.y, dir0.x);
         int K = 16;
         float sqW = (halfWidth * 2f) / K;
+        float segLen = 1.4f;
         Material whiteM = new Material(ColorAttribute.createDiffuse(Color.WHITE));
         Material blackM = new Material(ColorAttribute.createDiffuse(Color.BLACK));
+        MeshPartBuilder startW = mb.part("startW", GL20.GL_TRIANGLES, attrs, whiteM);
+        MeshPartBuilder startB = mb.part("startB", GL20.GL_TRIANGLES, attrs, blackM);
         for (int k = 0; k < K; k++) {
             float off = -halfWidth + (k + 0.5f) * sqW;
-            Vector2 c = a0.cpy().add(nrm0.x * off, nrm0.y * off);
-            Material m = (k % 2 == 0) ? whiteM : blackM;
-            Node sn = mb.node();
-            sn.translation.set(c.x, y0 + 0.03f, c.y);
-            sn.rotation.set(Vector3.Y, ang);
-            mb.part("start", GL20.GL_TRIANGLES, attrs, m)
-                    .box(-sqW * 0.45f, -0.02f, -1.0f, sqW * 0.9f, 0.04f, 2.0f);
+            Vector2 center = a0.cpy().add(nrm0.x * off, nrm0.y * off);
+            Vector2 p1 = center.cpy().sub(dir0.x * segLen / 2f, dir0.y * segLen / 2f);
+            Vector2 p2 = center.cpy().add(dir0.x * segLen / 2f, dir0.y * segLen / 2f);
+            MeshPartBuilder sb = (k % 2 == 0) ? startW : startB;
+            addRibbon(sb, p1, p2, nrm0, sqW / 2f, y0 + 0.03f);
         }
 
         // 赛道外景：树与路灯（护栏外侧）
@@ -169,21 +168,19 @@ public class Track {
             Vector2 nm = new Vector2(-d.y, d.x);
             for (int s : new int[]{1, -1}) {
                 Vector2 base = a.cpy().add(nm.x * (halfWidth + 5f) * s, nm.y * (halfWidth + 5f) * s);
-                Node tn = mb.node();
-                tn.translation.set(base.x, 1f, base.y);
-                mb.part("trunk", GL20.GL_TRIANGLES, attrs, trunkMat).cylinder(0.3f, 2f, 8);
-                Node ln = mb.node();
-                ln.translation.set(base.x, 2.6f, base.y);
-                mb.part("leaf", GL20.GL_TRIANGLES, attrs, leafMat).cone(1.6f, 3.2f, 10);
+                mb.node().translation.set(base.x, 1f, base.y);
+                mb.part("trunk", GL20.GL_TRIANGLES, attrs, trunkMat).box(0.4f, 2f, 0.4f);
+                mb.node().translation.set(base.x, 2.9f, base.y);
+                mb.part("leaf", GL20.GL_TRIANGLES, attrs, leafMat).box(2.4f, 2.2f, 2.4f);
+                mb.node().translation.set(base.x, 4.2f, base.y);
+                mb.part("leaf2", GL20.GL_TRIANGLES, attrs, leafMat).box(1.6f, 1.6f, 1.6f);
             }
             if (i % (sceneryStep * 2) == 0) {
                 Vector2 base = a.cpy().add(nm.x * (halfWidth + 2.5f), nm.y * (halfWidth + 2.5f));
-                Node pn = mb.node();
-                pn.translation.set(base.x, 2f, base.y);
-                mb.part("pole", GL20.GL_TRIANGLES, attrs, poleMat).cylinder(0.15f, 4f, 6);
-                Node bn = mb.node();
-                bn.translation.set(base.x, 4f, base.y);
-                mb.part("bulb", GL20.GL_TRIANGLES, attrs, bulbMat).box(-0.3f, -0.3f, -0.3f, 0.6f, 0.6f, 0.6f);
+                mb.node().translation.set(base.x, 2f, base.y);
+                mb.part("pole", GL20.GL_TRIANGLES, attrs, poleMat).box(0.2f, 4f, 0.2f);
+                mb.node().translation.set(base.x, 4f, base.y);
+                mb.part("bulb", GL20.GL_TRIANGLES, attrs, bulbMat).box(0.6f, 0.6f, 0.6f);
             }
         }
 
@@ -191,13 +188,13 @@ public class Track {
     }
 
     /** 在 a→b 段上沿法线 nrm 生成一条半宽 halfW 的带状几何（用于标线） */
-    private void addRibbon(MeshPartBuilder b, Vector2 a, Vector2 b, Vector2 nrm, float halfW, float y) {
+    private void addRibbon(MeshPartBuilder builder, Vector2 a, Vector2 b, Vector2 nrm, float halfW, float y) {
         Vector2 aL = a.cpy().add(nrm.x * halfW, nrm.y * halfW);
         Vector2 aR = a.cpy().sub(nrm.x * halfW, nrm.y * halfW);
         Vector2 bL = b.cpy().add(nrm.x * halfW, nrm.y * halfW);
         Vector2 bR = b.cpy().sub(nrm.x * halfW, nrm.y * halfW);
-        b.triangle(v(aL, y), v(aR, y), v(bR, y));
-        b.triangle(v(aL, y), v(bR, y), v(bL, y));
+        builder.triangle(v(aL, y), v(aR, y), v(bR, y));
+        builder.triangle(v(aL, y), v(bR, y), v(bL, y));
     }
 
     private static Vector3 v(Vector2 p, float y) {
