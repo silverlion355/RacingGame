@@ -50,6 +50,7 @@ public class GameScreen extends ScreenAdapter {
     private RaceManager raceManager;
 
     private PerspectiveCamera cam;
+    private Model wheelModel;
     private final ModelBatch modelBatch = new ModelBatch();
     private Environment environment;
     private DirectionalShadowLight shadowLight;
@@ -78,6 +79,7 @@ public class GameScreen extends ScreenAdapter {
         LevelDefinition lv = LevelConfig.get(levelId);
 
         track = new Track(lv);
+        wheelModel = CarFactory.buildWheelModel();
 
         // 玩家车
         player = new PlayerCar(game.settings.brand, lv.playerMaxSpeed);
@@ -131,6 +133,11 @@ public class GameScreen extends ScreenAdapter {
         Model m = CarFactory.buildCarModel(color);
         carModels.add(m);
         car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(m);
+        // 四个车轮共享同一圆柱模型
+        car.wheels = new com.badlogic.gdx.graphics.g3d.ModelInstance[4];
+        for (int i = 0; i < 4; i++) {
+            car.wheels[i] = new com.badlogic.gdx.graphics.g3d.ModelInstance(wheelModel);
+        }
     }
 
     @Override
@@ -180,7 +187,11 @@ public class GameScreen extends ScreenAdapter {
         modelBatch.begin(cam);
         modelBatch.render(track.instance, environment);
         modelBatch.render(player.instance, environment);
-        for (AICar ai : aiCars) modelBatch.render(ai.instance, environment);
+        for (int i = 0; i < player.wheels.length; i++) modelBatch.render(player.wheels[i], environment);
+        for (AICar ai : aiCars) {
+            modelBatch.render(ai.instance, environment);
+            for (int i = 0; i < ai.wheels.length; i++) modelBatch.render(ai.wheels[i], environment);
+        }
         modelBatch.end();
 
         // 4) 渲染 HUD / 触控按钮
@@ -356,6 +367,7 @@ public class GameScreen extends ScreenAdapter {
     @Override
     public void dispose() {
         disposeRace();
+        if (wheelModel != null) wheelModel.dispose();
         if (bgTexture != null) bgTexture.dispose();
         if (shadowLight != null) shadowLight.dispose();
         modelBatch.dispose();
