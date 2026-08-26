@@ -224,6 +224,53 @@ public class GameScreen extends ScreenAdapter {
                 "速度 " + (int) (Math.abs(player.speed) * 3.6f) + " km/h",
                 24, h / 2f);
         batch.end();
+
+        drawMinimap();
+    }
+
+    private void drawMinimap() {
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+        float mmW = 150f, mmH = 150f;
+        float mmX = w - mmW - 20f, mmY = h - mmH - 20f;
+        int wp = track.getWaypointCount();
+        if (wp < 2) return;
+        float minX = Float.MAX_VALUE, maxX = -Float.MAX_VALUE;
+        float minY = Float.MAX_VALUE, maxY = -Float.MAX_VALUE;
+        for (int i = 0; i < wp; i++) {
+            Vector2 p = track.getWaypoint(i);
+            minX = Math.min(minX, p.x); maxX = Math.max(maxX, p.x);
+            minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y);
+        }
+        float pad = 14f;
+        float sw = (mmW - 2 * pad) / Math.max(1f, (maxX - minX));
+        float sh = (mmH - 2 * pad) / Math.max(1f, (maxY - minY));
+        float s = Math.min(sw, sh);
+        float ox = mmX + pad + ((mmW - 2 * pad) - (maxX - minX) * s) / 2f;
+        float oy = mmY + pad + ((mmH - 2 * pad) - (maxY - minY) * s) / 2f;
+
+        sr.setProjectionMatrix(uiCam.combined);
+        sr.begin(ShapeRenderer.ShapeType.Filled);
+        sr.setColor(0f, 0f, 0f, 0.45f);
+        sr.rect(mmX, mmY, mmW, mmH);
+        sr.end();
+
+        sr.begin(ShapeRenderer.ShapeType.Filled);
+        sr.setColor(0.92f, 0.92f, 0.92f, 0.9f);
+        for (int i = 0; i < wp; i++) {
+            Vector2 p = track.getWaypoint(i);
+            Vector2 q = track.getWaypoint((i + 1) % wp);
+            float x1 = ox + (p.x - minX) * s, y1 = oy + (p.y - minY) * s;
+            float x2 = ox + (q.x - minX) * s, y2 = oy + (q.y - minY) * s;
+            sr.rectLine(x1, y1, x2, y2, 3f);
+        }
+        sr.setColor(0.2f, 0.6f, 1f, 1f);
+        for (AICar ai : aiCars) {
+            sr.circle(ox + (ai.position.x - minX) * s, oy + (ai.position.y - minY) * s, 4f);
+        }
+        sr.setColor(1f, 0.2f, 0.2f, 1f);
+        sr.circle(ox + (player.position.x - minX) * s, oy + (player.position.y - minY) * s, 5f);
+        sr.end();
     }
 
     private void drawSmallButton(Rect r, String label) {
