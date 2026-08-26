@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
+import com.badlogic.gdx.graphics.g3d.Node;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
@@ -72,33 +73,44 @@ public class Track {
         ModelBuilder mb = new ModelBuilder();
         mb.begin();
 
+        int attrs = VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal;
+
         // 外围地面（草地）
         Material groundMat = new Material(ColorAttribute.createDiffuse(new Color(0.16f, 0.40f, 0.15f, 1f)));
-        mb.part("ground", GL20.GL_TRIANGLES,
-                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, groundMat)
+        mb.part("ground", GL20.GL_TRIANGLES, attrs, groundMat)
                 .box(-1000f, -1f, -1000f, 2000f, 1f, 2000f);
 
         // 路面
         Material roadMat = new Material(ColorAttribute.createDiffuse(new Color(0.30f, 0.31f, 0.34f, 1f)));
-        MeshPartBuilder road = mb.part("road", GL20.GL_TRIANGLES,
-                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, roadMat);
+        MeshPartBuilder road = mb.part("road", GL20.GL_TRIANGLES, attrs, roadMat);
 
         // 护栏（左红右白）
         Material railLMat = new Material(ColorAttribute.createDiffuse(new Color(0.80f, 0.12f, 0.12f, 1f)));
         Material railRMat = new Material(ColorAttribute.createDiffuse(new Color(0.92f, 0.92f, 0.92f, 1f)));
-        MeshPartBuilder railL = mb.part("railL", GL20.GL_TRIANGLES,
-                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, railLMat);
-        MeshPartBuilder railR = mb.part("railR", GL20.GL_TRIANGLES,
-                VertexAttributes.Usage.Position | VertexAttributes.Usage.Normal, railRMat);
+        MeshPartBuilder railL = mb.part("railL", GL20.GL_TRIANGLES, attrs, railLMat);
+        MeshPartBuilder railR = mb.part("railR", GL20.GL_TRIANGLES, attrs, railRMat);
+
+        // 标线材质（白）
+        Material lineMat = new Material(ColorAttribute.createDiffuse(new Color(0.95f, 0.95f, 0.90f, 1f)));
+        MeshPartBuilder centerLine = mb.part("centerLine", GL20.GL_TRIANGLES, attrs, lineMat);
+        MeshPartBuilder edgeLine = mb.part("edgeLine", GL20.GL_TRIANGLES, attrs, lineMat);
+
+        // 外景材质
+        Material trunkMat = new Material(ColorAttribute.createDiffuse(new Color(0.36f, 0.24f, 0.13f, 1f)));
+        Material leafMat = new Material(ColorAttribute.createDiffuse(new Color(0.10f, 0.45f, 0.12f, 1f)));
+        Material poleMat = new Material(ColorAttribute.createDiffuse(new Color(0.30f, 0.30f, 0.32f, 1f)));
+        Material bulbMat = new Material(ColorAttribute.createDiffuse(new Color(1f, 0.90f, 0.50f, 1f)),
+                ColorAttribute.createEmissive(new Color(1f, 0.85f, 0.40f, 1f)));
 
         float y0 = GameConstants.ROAD_Y;
         float y1 = y0 + GameConstants.RAIL_HEIGHT;
         Vector2 dir = new Vector2();
         Vector2 nrm = new Vector2();
 
-        for (int i = 0; i < points.size(); i++) {
+        int n = points.size();
+        for (int i = 0; i < n; i++) {
             Vector2 a = points.get(i);
-            Vector2 b = points.get((i + 1) % points.size());
+            Vector2 b = points.get((i + 1) % n);
             dir.set(b).sub(a).nor();
             nrm.set(-dir.y, dir.x); // 左法线
 
@@ -117,9 +129,75 @@ public class Track {
             // 右护栏
             railR.triangle(v(aR, y0), v(bR, y1), v(aR, y1));
             railR.triangle(v(aR, y0), v(bR, y0), v(bR, y1));
+
+            // 中线（虚线感：隔段绘制）
+            if (i % 2 == 0) {
+                addRibbon(centerLine, a, b, nrm, 0.16f, y0 + 0.02f);
+            }
+            // 两侧边线
+            addRibbon(edgeLine, aL, bL, nrm, 0.12f, y0 + 0.02f);
+            addRibbon(edgeLine, aR, bR, nrm, 0.12f, y0 + 0.02f);
+        }
+
+        // 起跑/终点线（黑白格）
+        Vector2 a0 = points.get(0);
+        Vector2 b0 = points.get(1);
+        Vector2 dir0 = b0.cpy().sub(a0).nor();
+        Vector2 nrm0 = new Vector2(-dir0.y, dir0.x);
+        float ang = (float) Math.atan2(dir0.y, dir0.x);
+        int K = 16;
+        float sqW = (halfWidth * 2f) / K;
+        Material whiteM = new Material(ColorAttribute.createDiffuse(Color.WHITE));
+        Material blackM = new Material(ColorAttribute.createDiffuse(Color.BLACK));
+        for (int k = 0; k < K; k++) {
+            float off = -halfWidth + (k + 0.5f) * sqW;
+            Vector2 c = a0.cpy().add(nrm0.x * off, nrm0.y * off);
+            Material m = (k % 2 == 0) ? whiteM : blackM;
+            Node sn = mb.node();
+            sn.translation.set(c.x, y0 + 0.03f, c.y);
+            sn.rotation.set(Vector3.Y, ang);
+            mb.part("start", GL20.GL_TRIANGLES, attrs, m)
+                    .box(-sqW * 0.45f, -0.02f, -1.0f, sqW * 0.9f, 0.04f, 2.0f);
+        }
+
+        // 赛道外景：树与路灯（护栏外侧）
+        int sceneryStep = 9;
+        for (int i = 0; i < n; i += sceneryStep) {
+            Vector2 a = points.get(i);
+            Vector2 b = points.get((i + 1) % n);
+            Vector2 d = b.cpy().sub(a).nor();
+            Vector2 nm = new Vector2(-d.y, d.x);
+            for (int s : new int[]{1, -1}) {
+                Vector2 base = a.cpy().add(nm.x * (halfWidth + 5f) * s, nm.y * (halfWidth + 5f) * s);
+                Node tn = mb.node();
+                tn.translation.set(base.x, 1f, base.y);
+                mb.part("trunk", GL20.GL_TRIANGLES, attrs, trunkMat).cylinder(0.3f, 2f, 8);
+                Node ln = mb.node();
+                ln.translation.set(base.x, 2.6f, base.y);
+                mb.part("leaf", GL20.GL_TRIANGLES, attrs, leafMat).cone(1.6f, 3.2f, 10);
+            }
+            if (i % (sceneryStep * 2) == 0) {
+                Vector2 base = a.cpy().add(nm.x * (halfWidth + 2.5f), nm.y * (halfWidth + 2.5f));
+                Node pn = mb.node();
+                pn.translation.set(base.x, 2f, base.y);
+                mb.part("pole", GL20.GL_TRIANGLES, attrs, poleMat).cylinder(0.15f, 4f, 6);
+                Node bn = mb.node();
+                bn.translation.set(base.x, 4f, base.y);
+                mb.part("bulb", GL20.GL_TRIANGLES, attrs, bulbMat).box(-0.3f, -0.3f, -0.3f, 0.6f, 0.6f, 0.6f);
+            }
         }
 
         return mb.end();
+    }
+
+    /** 在 a→b 段上沿法线 nrm 生成一条半宽 halfW 的带状几何（用于标线） */
+    private void addRibbon(MeshPartBuilder b, Vector2 a, Vector2 b, Vector2 nrm, float halfW, float y) {
+        Vector2 aL = a.cpy().add(nrm.x * halfW, nrm.y * halfW);
+        Vector2 aR = a.cpy().sub(nrm.x * halfW, nrm.y * halfW);
+        Vector2 bL = b.cpy().add(nrm.x * halfW, nrm.y * halfW);
+        Vector2 bR = b.cpy().sub(nrm.x * halfW, nrm.y * halfW);
+        b.triangle(v(aL, y), v(aR, y), v(bR, y));
+        b.triangle(v(aL, y), v(bR, y), v(bL, y));
     }
 
     private static Vector3 v(Vector2 p, float y) {
