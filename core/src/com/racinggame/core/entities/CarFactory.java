@@ -9,6 +9,9 @@ import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.attributes.FloatAttribute;
 import com.badlogic.gdx.graphics.g3d.model.Node;
 import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
+import com.badlogic.gdx.Gdx;
+import net.mgsx.gltf.loaders.glb.GLBLoader;
+import net.mgsx.gltf.scene3d.scene.SceneAsset;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
@@ -80,5 +83,19 @@ public final class CarFactory {
             n.rotation.set(Vector3.Z, MathUtils.PI / 2f);
         }
         return wheel;
+    }
+
+    /**
+     * 加载真实 glTF 车模型（.glb）。失败返回 null，由调用方回退到基础车模。
+     * 返回的 Model 已含完整材质/网格，可直接 new ModelInstance(model) 用现有 environment 渲染。
+     */
+    public static Model loadGltfCarModel(String file) {
+        try {
+            SceneAsset sa = new GLBLoader().load(Gdx.files.internal(file));
+            return sa.scene.model;
+        } catch (Exception e) {
+            Gdx.app.log("CarFactory", "glTF 加载失败，回退基础车模: " + e.getMessage());
+            return null;
+        }
     }
 }
