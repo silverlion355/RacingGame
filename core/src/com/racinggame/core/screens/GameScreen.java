@@ -29,6 +29,9 @@ import com.racinggame.core.entities.PlayerCar;
 import com.racinggame.core.entities.Track;
 import com.racinggame.core.levels.LevelConfig;
 import com.racinggame.core.levels.LevelDefinition;
+import com.badlogic.gdx.graphics.g3d.model.Node;
+import java.util.ArrayList;
+import java.util.List;
 import com.racinggame.core.systems.CameraController;
 import com.racinggame.core.systems.RaceManager;
 import com.racinggame.core.systems.TouchInputController;
@@ -57,6 +60,9 @@ public class GameScreen extends ScreenAdapter {
     private DirectionalShadowLight shadowLight;
     private final Vector3 shadowCenter = new Vector3();
     private int shadowTick = 0;
+    private Model gltfCarModel = null;                  // 真实 glTF 车模型（共享；null 则回退基础车模）
+    private static final float GLTF_CAR_SCALE = 0.005f; // ToyCar.glb 包围盒约 739，缩放至游戏单位(车长约4)
+    private static final float GLTF_CAR_YAW = 0f;       // 若真机发现车头朝后，改为 (float) Math.PI
     private Texture bgTexture;
     private CameraController cameraController;
     private final TouchInputController touch = new TouchInputController();
@@ -83,6 +89,13 @@ public class GameScreen extends ScreenAdapter {
 
         track = new Track(lv);
         wheelModel = CarFactory.buildWheelModel();
+
+        // 尝试加载真实 glTF 车模型；失败则回退基础车模（带圆柱车轮）
+        try {
+            gltfCarModel = CarFactory.loadGltfCarModel("car.glb");
+        } catch (Throwable t) {
+            gltfCarModel = null;
+        }
 
         // 玩家车
         player = new PlayerCar(game.settings.brand, lv.playerMaxSpeed);
@@ -134,13 +147,32 @@ public class GameScreen extends ScreenAdapter {
     }
 
     private void attachModel(com.racinggame.core.entities.Car car, Color color) {
-        Model m = CarFactory.buildCarModel(color);
-        carModels.add(m);
-        car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(m);
-        // 四个车轮共享同一圆柱模型
-        car.wheels = new com.badlogic.gdx.graphics.g3d.ModelInstance[4];
-        for (int i = 0; i < 4; i++) {
-            car.wheels[i] = new com.badlogic.gdx.graphics.g3d.ModelInstance(wheelModel);
+        if (gltfCarModel != null) {
+            // glTF 真实车模：整体替换车体，自动检测模型内 wheel 节点用于滚动
+            car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(gltfCarModel);
+            car.modelScale = GLTF_CAR_SCALE;
+            car.modelYaw = GLTF_CAR_YAW;
+            car.wheels = null; // 不再使用独立圆柱车轮
+            java.util.List<Node> wn = new java.util.ArrayList<>();
+            collectWheelNodes(car.instance.nodes, wn);
+            car.wheelNodes = wn.isEmpty() ? null : wn.toArray(new Node[0]);
+        } else {
+            // 基础车模 fallback：程序化车体 + 独立圆柱车轮
+            Model m = CarFactory.buildCarModel(color);
+            carModels.add(m);
+            car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(m);
+            car.wheels = new com.badlogic.gdx.graphics.g3d.ModelInstance[4];
+            for (int i = 0; i < 4; i++) {
+                car.wheels[i] = new com.badlogic.gdx.graphics.g3d.ModelInstance(wheelModel);
+            }
+        }
+    }
+
+    /** 递归收集名字含 wheel 的节点（glTF 模型若含独立轮子节点则用于滚动；ToyCar 整体 mesh 则无） */
+    private void collectWheelNodes(Iterable<Node> nodes, java.util.List<Node> out) {
+        for (Node n : nodes) {
+            if (n.name != null && n.name.toLowerCase().contains("wheel")) out.add(n);
+            if (n.children != null) collectWheelNodes(n.children, out);
         }
     }
 
@@ -195,10 +227,14 @@ public class GameScreen extends ScreenAdapter {
         modelBatch.begin(cam);
         modelBatch.render(track.instance, environment);
         modelBatch.render(player.instance, environment);
-        for (int i = 0; i < player.wheels.length; i++) modelBatch.render(player.wheels[i], environment);
+        if (player.wheels != null) {
+            for (int i = 0; i < player.wheels.length; i++) modelBatch.render(player.wheels[i], environment);
+        }
         for (AICar ai : aiCars) {
             modelBatch.render(ai.instance, environment);
-            for (int i = 0; i < ai.wheels.length; i++) modelBatch.render(ai.wheels[i], environment);
+            if (ai.wheels != null) {
+                for (int i = 0; i < ai.wheels.length; i++) modelBatch.render(ai.wheels[i], environment);
+            }
         }
         modelBatch.end();
 
@@ -371,6 +407,7 @@ public class GameScreen extends ScreenAdapter {
         if (track != null) track.dispose();
         for (Model m : carModels) m.dispose();
         carModels.clear();
+        if (gltfCarModel != null) { gltfCarModel.dispose(); gltfCarModel = null; }
     }
 
     @Override
