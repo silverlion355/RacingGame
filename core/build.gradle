@@ -3,6 +3,8 @@ apply plugin: "java-library"
 dependencies {
     api "com.badlogicgames.gdx:gdx:$gdxVersion"
     api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    // 真实 glTF 模型加载（libGDX 1.12 官方不再内置 glTF，用 gdx-gltf 替代 fbx）
+    api "com.github.mgsx-dev:gdx-gltf:2.3.0"
 }
 
 sourceSets {
