@@ -14,7 +14,15 @@ import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
-import com.badlogic.gdx.graphics.g3d.environment.DirectionalShadowLight;
+import com.badlogic.gdx.graphics.Cubemap;
+import com.badlogic.gdx.graphics.g3d.attributes.EnvironmentCubemapAttribute;
+import com.badlogic.gdx.graphics.g3d.model.Node;
+import net.mgsx.gltf.scene3d.lights.DirectionalShadowLight;
+import net.mgsx.gltf.scene3d.scene.SceneManager;
+import net.mgsx.gltf.scene3d.scene.Scene;
+import net.mgsx.gltf.scene3d.scene.SceneSkybox;
+import net.mgsx.gltf.scene3d.utils.IBLBuilder;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Matrix4;
@@ -54,15 +62,17 @@ public class GameScreen extends ScreenAdapter {
 
     private PerspectiveCamera cam;
     private Model wheelModel;
-    private final ModelBatch modelBatch = new ModelBatch();
-    private Environment environment;
-    private DirectionalShadowLight shadowLight;
+    private SceneManager sceneManager;                  // PBR + IBL + 软阴影 渲染管线
+    private DirectionalShadowLight shadowLight;          // gdx-gltf 软阴影光（含 PBR 阴影）
+    private Cubemap envCubemap;                         // IBL 反射/高光图
+    private Cubemap irrCubemap;                         // IBL 漫反射图
+    private SceneSkybox skybox;
     private final Vector3 shadowCenter = new Vector3();
-    private int shadowTick = 0;
     private Model gltfCarModel = null;                  // 真实 glTF 车模型（共享；null 则回退基础车模）
-    private static final float GLTF_CAR_SCALE = 0.005f; // ToyCar.glb 包围盒约 739，缩放至游戏单位(车长约4)
-    private static final float GLTF_CAR_YAW = 0f;       // 若真机发现车头朝后，改为 (float) Math.PI
-    private Texture bgTexture;
+    private static final float GLTF_CAR_SCALE = 0.82f;  // CesiumMilkTruck.glb 车长约4.87，缩放到游戏单位(车长约4)
+    private static final float GLTF_CAR_YAW = 0f;       // 若真机发现车头朝后/侧，改为 (float)Math.PI 或 Math.PI/2
+    private Scene trackScene;                            // 赛道场景
+    private final com.badlogic.gdx.utils.Array<Scene> carScenes = new com.badlogic.gdx.utils.Array<>();
     private CameraController cameraController;
     private final TouchInputController touch = new TouchInputController();
 
@@ -127,18 +137,33 @@ public class GameScreen extends ScreenAdapter {
         cam.update();
         cameraController = new CameraController(cam, game.settings.cameraMode);
 
-        // 光照环境：环境光 + 平行光(带高光) + 实时阴影 + 距离雾
-        environment = new Environment();
-        environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.45f, 0.45f, 0.5f, 1f));
-        DirectionalLight sun = new DirectionalLight();
-        sun.set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.3f);
-        environment.add(sun);
+        // PBR + IBL + 软阴影渲染管线（gdx-gltf SceneManager）
+        sceneManager = new SceneManager();
+        sceneManager.setCamera(cam);
+
         int shadowRes = (Gdx.app.getType() == Application.ApplicationType.Android) ? 1024 : 2048;
-        shadowLight = new DirectionalShadowLight(shadowRes, shadowRes, 60f, 60f, 1f, 250f);
-        shadowLight.set(0.85f, 0.85f, 0.8f, -0.5f, -1f, -0.3f);
-        environment.add(shadowLight);
-        environment.shadowMap = shadowLight;
-        createBackground();
+        shadowLight = new DirectionalShadowLight(shadowRes, shadowRes);
+        shadowLight.setViewport(60f, 60f, 1f, 250f);
+        shadowLight.set(1f, 0.97f, 0.9f, -0.5f, -1f, -0.35f);
+        shadowLight.direction.nor();
+        sceneManager.environment.add(shadowLight);
+        sceneManager.setAmbientLight(0.35f);
+
+        // IBL 环境光：烘焙反射/漫反射 cubemap，使 PBR 材质（车身）呈现真实金属反光
+        IBLBuilder ibl = IBLBuilder.createOutdoor(shadowLight);
+        envCubemap = ibl.buildEnvMap(256);
+        irrCubemap = ibl.buildIrradianceMap(128);
+        sceneManager.environment.set(new EnvironmentCubemapAttribute(EnvironmentCubemapAttribute.Diffuse, irrCubemap));
+        sceneManager.environment.set(new EnvironmentCubemapAttribute(EnvironmentCubemapAttribute.Specular, envCubemap));
+        ibl.dispose();
+
+        // 天空盒（复用 IBL 环境图，保证反射与天空一致）
+        skybox = new SceneSkybox(envCubemap);
+        sceneManager.setSkyBox(skybox);
+
+        // 赛道场景
+        trackScene = new Scene(track.instance);
+        sceneManager.addScene(trackScene);
 
         resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
@@ -152,16 +177,44 @@ public class GameScreen extends ScreenAdapter {
             car.modelScale = GLTF_CAR_SCALE;
             car.modelYaw = GLTF_CAR_YAW;
             car.wheels = null; // 不再使用独立圆柱车轮（glTF 模型自带车轮）
+            // 收集模型内独立轮子节点，捕获基础旋转用于滚动
+            car.wheelNodes = collectWheelNodes(car.instance.nodes);
+            if (car.wheelNodes != null && car.wheelNodes.size > 0) {
+                car.wheelBase = new com.badlogic.gdx.math.Quaternion[car.wheelNodes.size];
+                for (int i = 0; i < car.wheelNodes.size; i++) {
+                    car.wheelBase[i] = new com.badlogic.gdx.math.Quaternion(car.wheelNodes.get(i).rotation);
+                }
+            }
+            // 注册为 SceneManager 场景（PBR+IBL 渲染）
+            Scene s = new Scene(car.instance);
+            sceneManager.addScene(s);
+            carScenes.add(s);
         } else {
             // 基础车模 fallback：程序化车体 + 独立圆柱车轮
             Model m = CarFactory.buildCarModel(color);
             carModels.add(m);
             car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(m);
+            Scene body = new Scene(car.instance);
+            sceneManager.addScene(body);
+            carScenes.add(body);
             car.wheels = new com.badlogic.gdx.graphics.g3d.ModelInstance[4];
             for (int i = 0; i < 4; i++) {
                 car.wheels[i] = new com.badlogic.gdx.graphics.g3d.ModelInstance(wheelModel);
+                Scene ws = new Scene(car.wheels[i]);
+                sceneManager.addScene(ws);
+                carScenes.add(ws);
             }
         }
+    }
+
+    /** 递归收集名字含 wheel 的节点（glTF 模型若含独立轮子节点则用于滚动；圆柱体车轮模型无则空） */
+    private Array<Node> collectWheelNodes(java.lang.Iterable<Node> nodes) {
+        Array<Node> out = new Array<>();
+        for (Node n : nodes) {
+            if (n.id != null && n.id.toLowerCase().contains("wheel")) out.add(n);
+            if (n.children != null && n.children.size > 0) out.addAll(collectWheelNodes(n.children));
+        }
+        return out;
     }
 
     @Override
@@ -169,6 +222,7 @@ public class GameScreen extends ScreenAdapter {
         cam.viewportWidth = width;
         cam.viewportHeight = height;
         cam.update();
+        if (sceneManager != null) sceneManager.updateViewport(width, height);
         uiCam.setToOrtho(true, width, height);
     }
 
@@ -198,33 +252,12 @@ public class GameScreen extends ScreenAdapter {
             return;
         }
 
-        // 3) 渲染 3D
-        int w = Gdx.graphics.getWidth();
-        int h = Gdx.graphics.getHeight();
+        // 3) 渲染 3D（PBR + IBL + 软阴影，gdx-gltf SceneManager 自动处理）
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
-        // 屏幕空间渐变天空背景
-        batch.setProjectionMatrix(new Matrix4().setToOrtho2D(0, 0, w, h));
-        batch.begin();
-        batch.draw(bgTexture, 0, 0, w, h);
-        batch.end();
-        // 阴影图隔帧更新（省一半重绘），并复用 Vector3 避免每帧 GC
-        if (shadowLight != null && (shadowTick++ & 1) == 0) {
-            shadowCenter.set(player.position.x, 0f, player.position.y);
-            shadowLight.update(shadowCenter, shadowLight.direction);
-        }
-        modelBatch.begin(cam);
-        modelBatch.render(track.instance, environment);
-        modelBatch.render(player.instance, environment);
-        if (player.wheels != null) {
-            for (int i = 0; i < player.wheels.length; i++) modelBatch.render(player.wheels[i], environment);
-        }
-        for (AICar ai : aiCars) {
-            modelBatch.render(ai.instance, environment);
-            if (ai.wheels != null) {
-                for (int i = 0; i < ai.wheels.length; i++) modelBatch.render(ai.wheels[i], environment);
-            }
-        }
-        modelBatch.end();
+        // 阴影中心跟随玩家
+        if (shadowLight != null) shadowLight.setCenter(player.position.x, 0f, player.position.y);
+        sceneManager.update(delta);
+        sceneManager.render();
 
         // 4) 渲染 HUD / 触控按钮
         drawHud();
@@ -364,22 +397,6 @@ public class GameScreen extends ScreenAdapter {
         }
     }
 
-    private void createBackground() {
-        int hpx = 256, wpx = 8;
-        Pixmap px = new Pixmap(wpx, hpx, Pixmap.Format.RGBA8888);
-        Color top = new Color(0.20f, 0.45f, 0.85f, 1f);   // 天顶蓝
-        Color hor = new Color(0.62f, 0.78f, 0.95f, 1f);   // 地平线淡蓝
-        for (int y = 0; y < hpx; y++) {
-            float t = y / (float) (hpx - 1);
-            Color c = top.cpy().lerp(hor, t);
-            px.setColor(c);
-            for (int x = 0; x < wpx; x++) px.drawPixel(x, y);
-        }
-        bgTexture = new Texture(px);
-        bgTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        px.dispose();
-    }
-
     private void finishRace() {
         transitioned = true;
         int rank = raceManager.getPlayerRank();
@@ -392,6 +409,11 @@ public class GameScreen extends ScreenAdapter {
     }
 
     private void disposeRace() {
+        if (sceneManager != null) {
+            for (Scene s : carScenes) sceneManager.removeScene(s);
+            carScenes.clear();
+            if (trackScene != null) { sceneManager.removeScene(trackScene); trackScene = null; }
+        }
         if (track != null) track.dispose();
         for (Model m : carModels) m.dispose();
         carModels.clear();
@@ -402,9 +424,11 @@ public class GameScreen extends ScreenAdapter {
     public void dispose() {
         disposeRace();
         if (wheelModel != null) wheelModel.dispose();
-        if (bgTexture != null) bgTexture.dispose();
         if (shadowLight != null) shadowLight.dispose();
-        modelBatch.dispose();
+        if (skybox != null) skybox.dispose();
+        if (envCubemap != null) envCubemap.dispose();
+        if (irrCubemap != null) irrCubemap.dispose();
+        if (sceneManager != null) sceneManager.dispose();
         sr.dispose();
         batch.dispose();
     }
