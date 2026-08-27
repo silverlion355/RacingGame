@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.graphics.g3d.model.Node;
 
 /**
  * 赛车基类（街机式物理，非真实物理引擎）。
@@ -21,8 +22,11 @@ public abstract class Car {
     public float radius;           // 碰撞圆半径
     public int brand;             // 品牌/配色索引
     public ModelInstance instance;
-    public ModelInstance[] wheels = null;  // 四个车轮（独立圆柱网格）
+    public ModelInstance[] wheels = null;  // 四个车轮（独立圆柱网格，基础车模 fallback 用）
+    public Node[] wheelNodes = null;       // glTF 模型内独立轮子节点（若模型含，自动旋转）
     public float wheelRoll = 0f;           // 车轮滚动累计角（弧度）
+    public float modelScale = 1f;          // 模型缩放（glTF 模型需缩放至游戏单位）
+    public float modelYaw = 0f;            // 模型额外偏航（纠正 glTF 方位）
     // 车轮相对车体原点的局部坐标 (x=车宽, z=前后)
     private static final float[][] WHEEL_LOCAL = {
             {0.92f, 1.3f}, {-0.92f, 1.3f}, {0.92f, -1.3f}, {-0.92f, -1.3f}
@@ -88,19 +92,28 @@ public abstract class Car {
         position.x += f.x * speed * dt;
         position.y += f.y * speed * dt;
 
-        // 同步 3D 模型
+        // 同步 3D 模型（含缩放与可选偏航）
         if (instance != null) {
             instance.transform.setToTranslation(position.x, 0, position.y);
-            instance.transform.rotateRad(Vector3.Y, (float) (Math.PI / 2 - heading));
+            instance.transform.rotateRad(Vector3.Y, (float) (Math.PI / 2 - heading) + modelYaw);
+            instance.transform.scale(modelScale, modelScale, modelScale);
         }
-        // 同步车轮：独立圆柱，跟随车体平移/旋转，并沿车宽轴(X)滚动
+        // 累计车轮滚动角（两种车轮模式共用）
+        wheelRoll += (speed * dt) / WHEEL_RADIUS;
+        // 模式A：独立圆柱车轮（基础车模 fallback）
         if (wheels != null) {
-            wheelRoll += (speed * dt) / WHEEL_RADIUS;
             for (int i = 0; i < wheels.length; i++) {
                 wheels[i].transform.set(instance.transform);
                 wheels[i].transform.translate(WHEEL_LOCAL[i][0], WHEEL_RADIUS, WHEEL_LOCAL[i][1]);
                 wheels[i].transform.rotateRad(Vector3.X, wheelRoll);
             }
+        }
+        // 模式B：glTF 模型内独立轮子节点（含 wheel 节点则自动旋转；ToyCar 整体 mesh 则跳过）
+        if (wheelNodes != null) {
+            for (Node n : wheelNodes) {
+                n.rotation.setFromAxisRad(Vector3.X, wheelRoll);
+            }
+            instance.calculateTransforms();
         }
     }
 }
