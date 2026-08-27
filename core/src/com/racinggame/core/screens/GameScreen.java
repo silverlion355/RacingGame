@@ -1,6 +1,6 @@
 package com.racinggame.core.screens;
 
-import com.badlogic.gdx.ApplicationType;
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
@@ -29,7 +29,6 @@ import com.racinggame.core.entities.PlayerCar;
 import com.racinggame.core.entities.Track;
 import com.racinggame.core.levels.LevelConfig;
 import com.racinggame.core.levels.LevelDefinition;
-import com.badlogic.gdx.graphics.g3d.model.Node;
 import java.util.ArrayList;
 import java.util.List;
 import com.racinggame.core.systems.CameraController;
@@ -134,7 +133,7 @@ public class GameScreen extends ScreenAdapter {
         DirectionalLight sun = new DirectionalLight();
         sun.set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.3f);
         environment.add(sun);
-        int shadowRes = (Gdx.app.getType() == ApplicationType.Android) ? 1024 : 2048;
+        int shadowRes = (Gdx.app.getType() == Application.ApplicationType.Android) ? 1024 : 2048;
         shadowLight = new DirectionalShadowLight(shadowRes, shadowRes, 60f, 60f, 1f, 250f);
         shadowLight.set(0.85f, 0.85f, 0.8f, -0.5f, -1f, -0.3f);
         environment.add(shadowLight);
@@ -152,10 +151,7 @@ public class GameScreen extends ScreenAdapter {
             car.instance = new com.badlogic.gdx.graphics.g3d.ModelInstance(gltfCarModel);
             car.modelScale = GLTF_CAR_SCALE;
             car.modelYaw = GLTF_CAR_YAW;
-            car.wheels = null; // 不再使用独立圆柱车轮
-            java.util.List<Node> wn = new java.util.ArrayList<>();
-            collectWheelNodes(car.instance.nodes, wn);
-            car.wheelNodes = wn.isEmpty() ? null : wn.toArray(new Node[0]);
+            car.wheels = null; // 不再使用独立圆柱车轮（glTF 模型自带车轮）
         } else {
             // 基础车模 fallback：程序化车体 + 独立圆柱车轮
             Model m = CarFactory.buildCarModel(color);
@@ -165,14 +161,6 @@ public class GameScreen extends ScreenAdapter {
             for (int i = 0; i < 4; i++) {
                 car.wheels[i] = new com.badlogic.gdx.graphics.g3d.ModelInstance(wheelModel);
             }
-        }
-    }
-
-    /** 递归收集名字含 wheel 的节点（glTF 模型若含独立轮子节点则用于滚动；ToyCar 整体 mesh 则无） */
-    private void collectWheelNodes(Iterable<Node> nodes, java.util.List<Node> out) {
-        for (Node n : nodes) {
-            if (n.name != null && n.name.toLowerCase().contains("wheel")) out.add(n);
-            if (n.children != null) collectWheelNodes(n.children, out);
         }
     }
 
@@ -278,7 +266,7 @@ public class GameScreen extends ScreenAdapter {
         TextDraw.draw(batch, game.font,
                 "速度 " + (int) (Math.abs(player.speed) * 3.6f) + " km/h",
                 24, h / 2f);
-        TextDraw.draw(batch, game.font, "FPS " + Gdx.graphics.getFps(), w - 130f, 40f);
+        TextDraw.draw(batch, game.font, "FPS " + Gdx.graphics.getFramesPerSecond(), w - 130f, 40f);
         batch.end();
 
         drawMinimap();
