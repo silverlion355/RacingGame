@@ -15,7 +15,7 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.Cubemap;
-import com.badlogic.gdx.graphics.g3d.attributes.CubemapAttribute;
+import net.mgsx.gltf.scene3d.attributes.PBRCubemapAttribute;
 import com.badlogic.gdx.graphics.g3d.model.Node;
 import net.mgsx.gltf.scene3d.lights.DirectionalShadowLight;
 import net.mgsx.gltf.scene3d.scene.SceneManager;
@@ -153,8 +153,8 @@ public class GameScreen extends ScreenAdapter {
         IBLBuilder ibl = IBLBuilder.createOutdoor(shadowLight);
         envCubemap = ibl.buildEnvMap(256);
         irrCubemap = ibl.buildIrradianceMap(128);
-        sceneManager.environment.set(new CubemapAttribute(CubemapAttribute.Diffuse, irrCubemap));
-        sceneManager.environment.set(new CubemapAttribute(CubemapAttribute.Specular, envCubemap));
+        sceneManager.environment.set(new PBRCubemapAttribute(PBRCubemapAttribute.DiffuseEnv, irrCubemap));
+        sceneManager.environment.set(new PBRCubemapAttribute(PBRCubemapAttribute.SpecularEnv, envCubemap));
         ibl.dispose();
 
         // 天空盒（复用 IBL 环境图，保证反射与天空一致）
