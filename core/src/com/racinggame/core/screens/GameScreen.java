@@ -1,5 +1,6 @@
 package com.racinggame.core.screens;
 
+import com.badlogic.gdx.ApplicationType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
@@ -54,6 +55,8 @@ public class GameScreen extends ScreenAdapter {
     private final ModelBatch modelBatch = new ModelBatch();
     private Environment environment;
     private DirectionalShadowLight shadowLight;
+    private final Vector3 shadowCenter = new Vector3();
+    private int shadowTick = 0;
     private Texture bgTexture;
     private CameraController cameraController;
     private final TouchInputController touch = new TouchInputController();
@@ -118,7 +121,8 @@ public class GameScreen extends ScreenAdapter {
         DirectionalLight sun = new DirectionalLight();
         sun.set(0.9f, 0.9f, 0.85f, -0.5f, -1f, -0.3f);
         environment.add(sun);
-        shadowLight = new DirectionalShadowLight(1536, 1536, 90f, 90f, 1f, 400f);
+        int shadowRes = (Gdx.app.getType() == ApplicationType.Android) ? 1024 : 2048;
+        shadowLight = new DirectionalShadowLight(shadowRes, shadowRes, 60f, 60f, 1f, 250f);
         shadowLight.set(0.85f, 0.85f, 0.8f, -0.5f, -1f, -0.3f);
         environment.add(shadowLight);
         environment.shadowMap = shadowLight;
@@ -183,7 +187,11 @@ public class GameScreen extends ScreenAdapter {
         batch.begin();
         batch.draw(bgTexture, 0, 0, w, h);
         batch.end();
-        if (shadowLight != null) shadowLight.update(new Vector3(player.position.x, 0f, player.position.y), shadowLight.direction);
+        // 阴影图隔帧更新（省一半重绘），并复用 Vector3 避免每帧 GC
+        if (shadowLight != null && (shadowTick++ & 1) == 0) {
+            shadowCenter.set(player.position.x, 0f, player.position.y);
+            shadowLight.update(shadowCenter, shadowLight.direction);
+        }
         modelBatch.begin(cam);
         modelBatch.render(track.instance, environment);
         modelBatch.render(player.instance, environment);
@@ -234,6 +242,7 @@ public class GameScreen extends ScreenAdapter {
         TextDraw.draw(batch, game.font,
                 "速度 " + (int) (Math.abs(player.speed) * 3.6f) + " km/h",
                 24, h / 2f);
+        TextDraw.draw(batch, game.font, "FPS " + Gdx.graphics.getFps(), w - 130f, 40f);
         batch.end();
 
         drawMinimap();
