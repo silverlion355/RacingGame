@@ -15,6 +15,7 @@ captures/
 .externalNativeBuild/
 .cxx/
 android/libs/
+android/release-key.jks
 
 ## Desktop
 desktop/build/
