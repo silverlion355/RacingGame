@@ -74,6 +74,22 @@ python3 tools/gen_audio.py android/assets/audio
 - `core/utils/`：`MathUtil`、`UiButton`、`Rect`、`FontManager`
 - `GameConstants`：集中常量（视角、物理、配色、积分规则）
 
+## 发布签名（覆盖安装）
+
+`release` 构建默认不签名（沿用 debug keystore 会导致升级无法覆盖安装）。要产出可覆盖安装的正式 APK，需提供**同一份** keystore 并注入以下环境变量（CI 用 GitHub Secrets，本地用 shell 导出）：
+
+| 变量 | 说明 |
+| --- | --- |
+| `KEYSTORE_BASE64` | keystore 文件的 Base64 编码（`base64 -w0 key.jks`） |
+| `KEYSTORE_PASSWORD` | keystore 密码 |
+| `KEY_ALIAS` | 密钥别名 |
+| `KEY_PASSWORD` | 密钥密码 |
+
+- 仅当 `KEYSTORE_BASE64` 存在时，Gradle 才会对 `release` 启用 `signingConfig`；缺失时行为与原先一致（release 不签名），不影响本地开发与 debug 构建。
+- 每次发版必须让 `android/build.gradle` 的 `versionCode` **自增**，否则即便签名一致，Android 也会拒绝降级覆盖。
+- CI（`.github/workflows/build.yml`）检测到 `KEYSTORE_BASE64` Secret 时，额外执行 `android:assembleRelease` 并上传 `racing-game-release-apk` 制品；未配置 Secret 时仅出 debug APK，不报错。
+- `android/release-key.jks` 由构建过程生成，已在 `.gitignore` 忽略，**切勿提交**。
+
 ## 已知限制与后续升级
 
 - 赛车为程序化低多边形，可替换为真实 glTF/obj 模型（保留 `CarFactory` 接口即可）。

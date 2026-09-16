@@ -47,10 +47,31 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    // 发布签名：仅当提供密钥（CI Secrets / 本地环境变量）时才启用，
+    // debug 与本地开发不受影响；保证不同版本用同一 keystore 签名，支持覆盖安装。
+    def hasReleaseKey = System.getenv("KEYSTORE_BASE64") != null
+    if (hasReleaseKey) {
+        signingConfigs {
+            release {
+                def ksFile = file("$projectDir/release-key.jks")
+                if (!ksFile.exists()) {
+                    ksFile.bytes = Base64.decoder.decode(System.getenv("KEYSTORE_BASE64"))
+                }
+                storeFile ksFile
+                storePassword System.getenv("KEYSTORE_PASSWORD")
+                keyAlias System.getenv("KEY_ALIAS")
+                keyPassword System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (hasReleaseKey) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 

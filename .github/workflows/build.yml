@@ -40,3 +40,25 @@ jobs:
         with:
           name: racing-game-apk
           path: android/build/outputs/apk/**/*.apk
+
+      # 仅在仓库配置了 KEYSTORE_BASE64 Secret 时才构建签名 release APK（覆盖安装用）。
+      # 未配置时跳过，仅出 debug APK，不会报错。
+      - name: Decode release keystore (if provided)
+        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/release-key.jks
+
+      - name: Build signed release APK
+        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: chmod +x gradlew && ./gradlew android:assembleRelease
+
+      - name: Upload release APK artifact
+        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: racing-game-release-apk
+          path: android/build/outputs/apk/release/*.apk
