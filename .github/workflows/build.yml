@@ -10,6 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # ⚠️ 不要把 secrets 直接写进 step 的 if（GitHub 允许的上下文里没有 secrets）
+    #    `if: ${{ secrets.X != '' }}` 会让整个工作流判为无效 → run 创建即失败、0 个 job。
+    #    正确姿势：先降级成 job 级 env，再用 env 判断。
+    env:
+      HAS_KEYSTORE: ${{ secrets.KEYSTORE_BASE64 != '' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,20 +26,34 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      # ⚠️ 不要用 android-actions/setup-android@v3：它结尾固定执行 `sdkmanager tools`，
+      #    而 legacy tools 包已被 Google 从 SDK 仓库下架 → 该步骤必失败。
+      #    ubuntu runner 本就预装 SDK 并设好 ANDROID_HOME，直接调 sdkmanager 即可。
+      - name: Set up Android SDK
+        run: |
+          set -e
+          SDKMANAGER=$(ls "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)
+          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          # ⚠️ 不能写 `sdkmanager ... | tail -5`：管道的退出码取的是 tail 的 0，会把失败吞掉。
+          if ! "$SDKMANAGER" --install "platforms;android-34" "build-tools;34.0.0" "platform-tools" > /tmp/sdk.log 2>&1; then
+            tail -40 /tmp/sdk.log
+            echo "::error::sdkmanager install failed"
+            exit 1
+          fi
+          ls "$ANDROID_HOME/platforms"
+          ls "$ANDROID_HOME/build-tools"
 
-      - name: Accept Android licenses
-        run: yes | sdkmanager --licenses || true
-
-      - name: Install required SDK packages
-        run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - name: Report build facts
+        run: |
+          echo "== sources =="
+          ls core/src/com/racinggame/core
+          grep -n "versionCode\|versionName" android/build.gradle || true
 
       - name: Generate audio WAVs (程序化，无需下载)
         run: python3 tools/gen_audio.py android/assets/audio
 
       - name: Build debug APK
-        run: chmod +x gradlew && ./gradlew assembleDebug
+        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
@@ -41,23 +61,38 @@ jobs:
           name: racing-game-apk
           path: android/build/outputs/apk/**/*.apk
 
-      # 仅在仓库配置了 KEYSTORE_BASE64 Secret 时才构建签名 release APK（覆盖安装用）。
-      # 未配置时跳过，仅出 debug APK，不会报错。
+      # 以下是发布签名链路：仅在仓库配置了 KEYSTORE_BASE64 Secret 时才执行。
+      # 未配置时全部跳过，只出 debug APK，不会报错。
       - name: Decode release keystore (if provided)
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/release-key.jks
+        if: env.HAS_KEYSTORE == 'true'
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > android/release-key.jks
+          ls -la android/release-key.jks
 
       - name: Build signed release APK
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        if: env.HAS_KEYSTORE == 'true'
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: chmod +x gradlew && ./gradlew android:assembleRelease
+        run: chmod +x gradlew && ./gradlew android:assembleRelease --no-daemon
+
+      # 兜底：配置了密钥却产出 unsigned 包，直接判失败（覆盖安装的前提是签名一致）
+      - name: Verify release APK is signed
+        if: env.HAS_KEYSTORE == 'true'
+        run: |
+          set -e
+          APK=$(ls android/build/outputs/apk/release/*.apk | head -1)
+          echo "apk: $APK"
+          case "$APK" in
+            *unsigned*) echo "::error::release APK 未签名（KEYSTORE_* Secrets 未正确注入）"; exit 1 ;;
+          esac
 
       - name: Upload release APK artifact
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        if: env.HAS_KEYSTORE == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: racing-game-release-apk
